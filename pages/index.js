@@ -67,6 +67,7 @@ const Grid = styled.div`
   }
   li {
     padding: 3px 0;
+    font-size: 18px;
   }
 
   #sq {
