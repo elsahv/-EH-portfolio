@@ -1,11 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import JtPic from "../public/images/portfolio-pic.jpg";
 import Intro from "../components/Intro";
 
 import {
@@ -116,22 +113,40 @@ const Icon = styled.div`
 //todo SERVICES STYLES
 
 //todo WORK STYLES
-const WorkTitle = styled.h2`
+const WorkDescription = styled.div`
   // background: pink;
   margin-top: 100px;
-  padding: 0 0 20px 50px;
-  font-size: 35px;
-  text-decoration: underline;
+  padding-left: 55px;
+  display: flex;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 15px;
+    padding-bottom: 5px;
+  }
 `;
 
-const WorksDescription = styled.p`
-  padding: 0 50px;
+const WorkTitle = styled.h2`
+  font-size: 30px;
+  @media only screen and (max-width: 1024px) {
+    font-size: 25px;
+  }
+`;
+
+const WorkTagline = styled.p`
+  font-size: 20px;
+  padding-top: 9px;
+  padding-left: 8px;
+  font-weight: 700;
+  @media only screen and (max-width: 1024px) {
+    font-size: 18px;
+    padding-top: 7px;
+  }
 `;
 
 export const Website = styled.div`
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 40px auto;
+  // margin: 40px auto;
 
   &:hover {
     opacity: 0.8;
@@ -157,13 +172,13 @@ export const TopContent = styled.div`
 `;
 
 export const WebsiteTitle = styled.h3`
-  font-size: 28px;
+  font-size: 25px;
   color: #000;
   padding: 3px 0;
 
   &:hover {
     transition: 1s;
-    color: rgb(0, 123, 165);
+    color: aquamarine;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -282,14 +297,10 @@ const Home = ({ posts }) => {
         {
           //todo/* WORK */
         }
-        <WorkTitle id="work">Work</WorkTitle>
-        <WorksDescription>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          nostrum consequuntur sequi eaque repellat ab, voluptates sint quia qui
-          unde praesentium quas, veritatis eos rerum quisquam laboriosam. Unde,
-          eum officia?
-        </WorksDescription>
-
+        <WorkDescription id="work">
+          <WorkTitle>Work</WorkTitle>
+          <WorkTagline>-Some featured websites</WorkTagline>
+        </WorkDescription>
         <Wrapper>
           {posts &&
             posts.map((post, index) => (
