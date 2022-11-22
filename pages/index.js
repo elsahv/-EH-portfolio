@@ -5,8 +5,15 @@ import Image from "next/image";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import JtPic from "../public/images/joshuatreeabout.jpg";
+import JtPic from "../public/images/portfolio-pic.jpg";
 import Intro from "../components/Intro";
+
+import {
+  FaPencilAlt,
+  FaRegNewspaper,
+  FaToolbox,
+  FaDesktop,
+} from "react-icons/fa";
 
 //! STYLES
 const Wrapper = styled.div`
@@ -15,6 +22,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4em;
+
   a {
     color: #000;
     text-decoration: none;
@@ -43,6 +51,7 @@ const ServicesTitle = styled.h2`
 `;
 
 const Grid = styled.div`
+  opacity: 0.9;
   padding: 70px 40px;
   // background: pink;
   display: grid;
@@ -53,9 +62,17 @@ const Grid = styled.div`
     "a b"
     "c d";
   grid-gap: 1em;
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    padding: 3px 0;
+  }
+
   #sq {
     background: teal;
     padding: 20px;
+    border: solid 2px black;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -76,24 +93,24 @@ const Grid = styled.div`
 
 const Sq1 = styled.div`
   grid-area: a;
-  background: color: yellow;
 `;
 const Sq2 = styled.div`
   grid-area: b;
-  background: color: pink;
-
 `;
 const Sq3 = styled.div`
   grid-area: c;
-  background: color: teal;
-
 `;
 const Sq4 = styled.div`
   grid-area: d;
-  background: color: green;
-  li {
-    margin: 10px 10px;
-  }
+`;
+const GridSqTitle = styled.h2`
+  display: flex;
+  font-size: 25px;
+`;
+
+const Icon = styled.div`
+  font-size: 30px;
+  padding-left: 20px;
 `;
 //todo SERVICES STYLES
 
@@ -135,11 +152,11 @@ export const TopContent = styled.div`
   border-top: solid 1px black;
   border-left: solid 1px black;
   border-right: solid 1px black;
-  padding: 10px 10px 15px;
+  padding: 15px 20px 15px;
 `;
 
 export const WebsiteTitle = styled.h3`
-  font-size: 30px;
+  font-size: 28px;
   color: #000;
   padding: 3px 0;
 
@@ -158,7 +175,7 @@ export const WebsiteTitle = styled.h3`
 `;
 
 export const WebsiteDescription = styled.span`
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #000;
 `;
@@ -199,18 +216,15 @@ const Home = ({ posts }) => {
         {
           //todo/* SERVICES */
         }
-        <Grid id="on-creativity">
+        <Grid>
           <ServicesTitle id="services">Services</ServicesTitle>
-
           <Sq1 id="sq">
-            <h2>Web Design</h2>
-            <Image
-              className="portfolio-img"
-              src={JtPic}
-              alt="elsa hovey"
-              width="350px"
-              height="200px"
-            />
+            <GridSqTitle>
+              Web Design
+              <Icon>
+                <FaPencilAlt />
+              </Icon>
+            </GridSqTitle>
             <ul>
               <li>one and done site</li>
               <li>complex multiple pages</li>
@@ -218,15 +232,12 @@ const Home = ({ posts }) => {
             </ul>
           </Sq1>
           <Sq2 id="sq">
-            <h2>Combined Package- Web Design & Hosting</h2>
-
-            <Image
-              className="portfolio-img"
-              src={JtPic}
-              alt="elsa hovey"
-              width="350px"
-              height="200px"
-            />
+            <GridSqTitle>
+              Web Design & Hosting
+              <Icon>
+                <FaDesktop />
+              </Icon>
+            </GridSqTitle>
             <ul>
               <li>one and done site- w hosting</li>
               <li>complex multiple pages- w hosting</li>
@@ -234,28 +245,26 @@ const Home = ({ posts }) => {
             </ul>
           </Sq2>
           <Sq3 id="sq">
-            <h2>Blogging Mgmt Integration</h2>
-            <Image
-              className="portfolio-img"
-              src={JtPic}
-              alt="elsa hovey"
-              width="350px"
-              height="200px"
-            />
-            <li>Wordpress</li>
-            <li>Sanity.Io</li>
-            <li>SEO</li>
-            <li>ongoing side projects</li>
+            <GridSqTitle>
+              Blogging Mgmt Integration
+              <Icon>
+                <FaRegNewspaper />
+              </Icon>
+            </GridSqTitle>
+            <ul>
+              <li>Wordpress</li>
+              <li>Sanity.Io</li>
+              <li>SEO</li>
+              <li>ongoing side projects</li>
+            </ul>
           </Sq3>
           <Sq4 id="sq">
-            <h2>ToolBox Summary</h2>
-            <Image
-              className="portfolio-img"
-              src={JtPic}
-              alt="elsa hovey"
-              width="350px"
-              height="200px"
-            />
+            <GridSqTitle>
+              ToolBox
+              <Icon>
+                <FaToolbox />
+              </Icon>
+            </GridSqTitle>
             <ul>
               <li> Programming Languages: Javascript, PHP</li>
               <li>
