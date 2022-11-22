@@ -336,7 +336,7 @@ const Home = ({ posts }) => {
 export default Home;
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "websites"]';
+  const query = '*[_type == "websites"] | order(_createdAt asc)';
   const posts = await sanityClient.fetch(query);
   if (!posts.length) {
     return {
