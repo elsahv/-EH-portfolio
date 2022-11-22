@@ -1,81 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import JtPic from "../public/images/joshuatreeabout.jpg";
+import Intro from "../components/Intro";
 
-export const Intro = styled.div`
-  opacity: 0.8;
-  background: teal;
-  padding: 35px;
-  grid-area: rs;
-  margin-top: 40px;
-  h4 {
-    font-size: 30px;
-    color: #000;
-    padding-bottom: 10px;
-    display: flex;
-  }
-  p {
-    font-size: 22px;
-    color: #000;
-  }
-  a {
-    color: #000;
-    text-decoration: underline;
-    margin: 0 8px;
-  }
-  a:hover {
-    color: aquamarine;
-    transition: 2s;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    h4 {
-      font-size: 27px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 834px) {
-    margin-left: 40px;
-    margin-top: 50px;
-  }
-  @media only screen and (max-width: 768px) {
-    margin-left: 10px;
-    // margin-top: 50px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    margin-top: 40px;
-  }
-`;
-
-export const PageTitle = styled.h2`
-  width: 100%;
-  padding: 70px 80px 50px;
-  margin-bottom: 30px;
-  font-size: 30px;
-  text-align: left;
-  opacity: 0.8;
-  background: teal;
-  color: #000;
-  text-shadow: 1px 1px 1px rgb(0, 123, 165);
-
-  @media only screen and (max-width: 1024px) {
-    padding-left: 35px;
-    margin-bottom: 20px;
-  }
-  @media only screen and (max-width: 600px) {
-    font-size: 20px;
-    padding: 30px;
-    margin-right: 20px;
-  }
-`;
-
+//! STYLES
 const Wrapper = styled.div`
   // background: green;
   padding: 20px 70px 0 50px;
@@ -96,6 +29,85 @@ const Wrapper = styled.div`
     padding: 20px 0;
     margin: 30px 10px;
   }
+`;
+
+//todo SERVICES STYLES
+const ServicesTitle = styled.h2`
+  // background: green;
+  grid-area: t;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+  font-size: 30px;
+  text-decoration: underline;
+`;
+
+const Grid = styled.div`
+  padding: 70px 40px;
+  // background: pink;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 1fr 1fr;
+  grid-template-areas:
+    "t t"
+    "a b"
+    "c d";
+  grid-gap: 1em;
+  #sq {
+    background: teal;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 30px 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "t"
+      "a"
+      "b"
+      "c"
+      "d";
+  }
+
+  @media only screen and (max-width: 834px) {
+    padding: 30px 30px;
+  }
+`;
+
+const Sq1 = styled.div`
+  grid-area: a;
+  background: color: yellow;
+`;
+const Sq2 = styled.div`
+  grid-area: b;
+  background: color: pink;
+
+`;
+const Sq3 = styled.div`
+  grid-area: c;
+  background: color: teal;
+
+`;
+const Sq4 = styled.div`
+  grid-area: d;
+  background: color: green;
+  li {
+    margin: 10px 10px;
+  }
+`;
+//todo SERVICES STYLES
+
+//todo WORK STYLES
+const WorkTitle = styled.h2`
+  // background: pink;
+  margin-top: 100px;
+  padding: 0 0 20px 50px;
+  font-size: 35px;
+  text-decoration: underline;
+`;
+
+const WorksDescription = styled.p`
+  padding: 0 50px;
 `;
 
 export const Website = styled.div`
@@ -119,7 +131,10 @@ export const Website = styled.div`
   }
 `;
 export const TopContent = styled.div`
-  // background: teal;
+  background: teal;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
   padding: 10px 10px 15px;
 `;
 
@@ -156,10 +171,6 @@ export const ImageScreenshot = styled.div`
     @media only screen and (max-width: 1024px) {
       height: 300px;
     }
-
-    @media only screen and (max-width: 810px) {
-
-    }
   }
   }
 `;
@@ -167,8 +178,11 @@ export const ImageScreenshot = styled.div`
 export const LeftSection = styled.div`
   grid-area: left;
 `;
+//todo END WORK STYLES
 
-const featuredWebsites = ({ posts }) => {
+//! END STYLES
+
+const Home = ({ posts }) => {
   return (
     <>
       <Head>
@@ -181,22 +195,90 @@ const featuredWebsites = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Intro>
-          <h4>
-            Hi there,
-            <div style={{ marginLeft: "5px" }}>{"I'm"}</div>
-            <Link href="/#about">Elsa.</Link>
-          </h4>
-          <p>
-            Im a web developer based in Joshua Tree, CA. I create niche websites
-            and solutions for small business owners and creatives.{" "}
-          </p>
-          {/* <br /> */}
-          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-            Listed below are some of my featured websites... feel free to look
-            around!
-          </p>
-        </Intro>
+        <Intro />
+        {
+          //todo/* SERVICES */
+        }
+        <Grid id="on-creativity">
+          <ServicesTitle id="services">Services</ServicesTitle>
+
+          <Sq1 id="sq">
+            <h2>Web Design</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li>one and done site</li>
+              <li>complex multiple pages</li>
+              <li>Content mgmt integration</li>
+            </ul>
+          </Sq1>
+          <Sq2 id="sq">
+            <h2>Combined Package- Web Design & Hosting</h2>
+
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li>one and done site- w hosting</li>
+              <li>complex multiple pages- w hosting</li>
+              <li>Content mgmt integration- w hosting</li>
+            </ul>
+          </Sq2>
+          <Sq3 id="sq">
+            <h2>Blogging Mgmt Integration</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <li>Wordpress</li>
+            <li>Sanity.Io</li>
+            <li>SEO</li>
+            <li>ongoing side projects</li>
+          </Sq3>
+          <Sq4 id="sq">
+            <h2>ToolBox Summary</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li> Programming Languages: Javascript, PHP</li>
+              <li>
+                Libraries & Frameworks: React, NextJS, Node, Styled-Components,
+                bootstrap, SASS
+              </li>
+              <li>
+                Tools & Databases: Wordpress, Sanity.io, Git, Mailchimp API
+              </li>
+            </ul>
+          </Sq4>
+        </Grid>
+
+        {
+          //todo/* WORK */
+        }
+        <WorkTitle id="work">Work</WorkTitle>
+        <WorksDescription>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          nostrum consequuntur sequi eaque repellat ab, voluptates sint quia qui
+          unde praesentium quas, veritatis eos rerum quisquam laboriosam. Unde,
+          eum officia?
+        </WorksDescription>
 
         <Wrapper>
           {posts &&
@@ -230,7 +312,7 @@ const featuredWebsites = ({ posts }) => {
   );
 };
 
-export default featuredWebsites;
+export default Home;
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "websites"]';
