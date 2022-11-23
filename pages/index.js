@@ -257,9 +257,9 @@ const Home = ({ posts }) => {
             </GridSqTitle>
 
             <div>
-              Most times, people who need websites prefer not to deal with
-              maintaining it. Thankfully, I am able to work with you regarding
-              hosting and maintenance.
+              I work with one-on-one with clients regarding hosting and
+              maintenance, leaving them to fully concentrate on their
+              businesses.
             </div>
           </Sq2>
           <Sq3 id="sq">
@@ -269,12 +269,7 @@ const Home = ({ posts }) => {
                 <FaRegNewspaper />
               </Icon>
             </GridSqTitle>
-            {/* <ul>
-              <li>Wordpress</li>
-              <li>Sanity.Io</li>
-              <li>SEO</li>
-              <li>ongoing side projects</li>
-            </ul> */}
+
             <div>
               Need a blog? Youre at the right place! I work with many different
               types of tools, including Wordpress.
