@@ -64,7 +64,7 @@ const Grid = styled.div`
   }
   li {
     padding: 3px 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #sq {
@@ -241,24 +241,25 @@ const Home = ({ posts }) => {
                 <FaPencilAlt />
               </Icon>
             </GridSqTitle>
-            <ul>
-              <li>one and done site</li>
-              <li>complex multiple pages</li>
-              <li>Content mgmt integration</li>
-            </ul>
+
+            <div>
+              Create a web presence for your business. Whether you need a simple
+              one pager, or a multi-page app to build your empire... I can help!
+            </div>
           </Sq1>
           <Sq2 id="sq">
             <GridSqTitle>
-              Web Design & Hosting
+              Web + Hosting
               <Icon>
                 <FaDesktop />
               </Icon>
             </GridSqTitle>
-            <ul>
-              <li>one and done site- w hosting</li>
-              <li>complex multiple pages- w hosting</li>
-              <li>Content mgmt integration- w hosting</li>
-            </ul>
+
+            <div>
+              Most times, people who need websites prefer not to deal with
+              maintaining it. Thankfully, I am able to work with you regarding
+              hosting and maintenance.
+            </div>
           </Sq2>
           <Sq3 id="sq">
             <GridSqTitle>
@@ -267,12 +268,16 @@ const Home = ({ posts }) => {
                 <FaRegNewspaper />
               </Icon>
             </GridSqTitle>
-            <ul>
+            {/* <ul>
               <li>Wordpress</li>
               <li>Sanity.Io</li>
               <li>SEO</li>
               <li>ongoing side projects</li>
-            </ul>
+            </ul> */}
+            <div>
+              Need a blog? Youre at the right place! I work with many different
+              types of tools, including Wordpress.
+            </div>
           </Sq3>
           <Sq4 id="sq">
             <GridSqTitle>
@@ -291,6 +296,11 @@ const Home = ({ posts }) => {
                 Tools & Databases: Wordpress, Sanity.io, Git, Mailchimp API
               </li>
             </ul>
+            {/* <div>
+              Each project requires different tools, always updating and
+              changing. I mainly work with JS frameworks and PHP. View
+              arsenal...
+            </div> */}
           </Sq4>
         </Grid>
 
