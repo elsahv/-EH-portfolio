@@ -64,13 +64,14 @@ const Grid = styled.div`
   }
   li {
     padding: 3px 0;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   #sq {
     background: teal;
     padding: 20px;
     border: solid 2px black;
+    font-size: 18px;
   }
 
   @media only screen and (max-width: 1024px) {
