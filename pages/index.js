@@ -113,8 +113,8 @@ const Icon = styled.div`
 `;
 //todo SERVICES STYLES
 
-//todo WORK STYLES
-const WorkDescription = styled.div`
+//todo PORTFOLIO STYLES
+const PortfolioDescription = styled.div`
   // background: pink;
   margin-top: 100px;
   padding-left: 55px;
@@ -126,14 +126,14 @@ const WorkDescription = styled.div`
   }
 `;
 
-const WorkTitle = styled.h2`
+const PortfolioTitle = styled.h2`
   font-size: 30px;
   @media only screen and (max-width: 1024px) {
     font-size: 25px;
   }
 `;
 
-const WorkTagline = styled.p`
+const PortfolioTagline = styled.p`
   font-size: 20px;
   padding-top: 9px;
   padding-left: 8px;
@@ -212,7 +212,7 @@ export const ImageScreenshot = styled.div`
 export const LeftSection = styled.div`
   grid-area: left;
 `;
-//todo END WORK STYLES
+//todo END PORTFOLIO STYLES
 
 //! END STYLES
 
@@ -257,7 +257,7 @@ const Home = ({ posts }) => {
             </GridSqTitle>
 
             <div>
-              I work with one-on-one with clients regarding hosting and
+              I portfolio with one-on-one with clients regarding hosting and
               maintenance, leaving them to fully concentrate on their
               businesses.
             </div>
@@ -271,8 +271,8 @@ const Home = ({ posts }) => {
             </GridSqTitle>
 
             <div>
-              Need a blog? Youre at the right place! I work with many different
-              types of tools, including Wordpress.
+              Need a blog? Youre at the right place! I portfolio with many
+              different types of tools, including Wordpress.
             </div>
           </Sq3>
           <Sq4 id="sq">
@@ -285,8 +285,8 @@ const Home = ({ posts }) => {
             <ul>
               <li> Programming Languages: Javascript, PHP</li>
               <li>
-                Libraries & Frameworks: React, NextJS, Node, Styled-Components,
-                bootstrap, SASS
+                Libraries & Frameportfolios: React, NextJS, Node,
+                Styled-Components, bootstrap, SASS
               </li>
               <li>
                 Tools & Databases: Wordpress, Sanity.io, Git, Mailchimp API
@@ -294,19 +294,20 @@ const Home = ({ posts }) => {
             </ul>
             {/* <div>
               Each project requires different tools, always updating and
-              changing. I mainly work with JS frameworks and PHP. View
+              changing. I mainly portfolio with JS frameportfolios and PHP. View
               arsenal...
             </div> */}
           </Sq4>
         </Grid>
 
         {
-          //todo/* WORK */
+          //todo/* PORTFOLIO */
+          // FILTER BY CATEGORES: WTBH, JUNGLE, ALL
         }
-        <WorkDescription id="work">
-          <WorkTitle>Work</WorkTitle>
-          <WorkTagline>-Some featured websites</WorkTagline>
-        </WorkDescription>
+        <PortfolioDescription id="portfolio">
+          <PortfolioTitle>Portfolio</PortfolioTitle>
+          <PortfolioTagline>-Some featured websites</PortfolioTagline>
+        </PortfolioDescription>
         <Wrapper>
           {posts &&
             posts.map((post, index) => (
