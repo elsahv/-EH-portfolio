@@ -1,16 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Intro from "../components/Intro";
-
-import {
-  FaPencilAlt,
-  FaRegNewspaper,
-  FaToolbox,
-  FaDesktop,
-} from "react-icons/fa";
 
 //! STYLES
 const Wrapper = styled.div`
@@ -35,83 +28,6 @@ const Wrapper = styled.div`
     margin: 30px 10px;
   }
 `;
-
-//todo SERVICES STYLES
-const ServicesTitle = styled.h2`
-  // background: green;
-  grid-area: t;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 10px;
-  font-size: 30px;
-  text-decoration: underline;
-`;
-
-const Grid = styled.div`
-  opacity: 0.9;
-  padding: 70px 40px;
-  // background: pink;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50px 1fr 1fr;
-  grid-template-areas:
-    "t t"
-    "a b"
-    "c d";
-  grid-gap: 1em;
-  ul {
-    padding-left: 20px;
-  }
-  li {
-    padding: 3px 0;
-    font-size: 18px;
-  }
-
-  #sq {
-    background: teal;
-    padding: 20px;
-    border: solid 2px black;
-    font-size: 18px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    padding: 30px 10px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "t"
-      "a"
-      "b"
-      "c"
-      "d";
-  }
-
-  @media only screen and (max-width: 834px) {
-    padding: 30px 30px;
-  }
-`;
-
-const Sq1 = styled.div`
-  grid-area: a;
-`;
-const Sq2 = styled.div`
-  grid-area: b;
-`;
-const Sq3 = styled.div`
-  grid-area: c;
-`;
-const Sq4 = styled.div`
-  grid-area: d;
-`;
-const GridSqTitle = styled.h2`
-  display: flex;
-  font-size: 25px;
-`;
-
-const Icon = styled.div`
-  font-size: 30px;
-  padding-left: 20px;
-`;
-//todo SERVICES STYLES
 
 //todo PORTFOLIO STYLES
 const PortfolioDescription = styled.div`
@@ -214,6 +130,53 @@ export const LeftSection = styled.div`
 `;
 //todo END PORTFOLIO STYLES
 
+//*INTRO SECTION STYLES
+
+export const IntroSection = styled.div`
+  opacity: 0.8;
+  background: teal;
+  padding: 35px;
+  grid-area: rs;
+  margin-top: 40px;
+  h4 {
+    font-size: 30px;
+    color: #000;
+    padding-bottom: 10px;
+    display: flex;
+  }
+  p {
+    font-size: 22px;
+    color: #000;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+    margin: 0 8px;
+  }
+  a:hover {
+    color: aquamarine;
+    transition: 2s;
+  }
+  @media only screen and (max-width: 1024px) {
+    h4 {
+      font-size: 27px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 834px) {
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-left: 10px;
+    // margin-top: 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 40px;
+  }
+`;
 //! END STYLES
 
 const Home = ({ posts }) => {
@@ -229,76 +192,27 @@ const Home = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Intro />
-        {
-          //todo/* SERVICES */
-        }
-        <Grid>
-          <ServicesTitle id="services">Services</ServicesTitle>
-          <Sq1 id="sq">
-            <GridSqTitle>
-              Web Design
-              <Icon>
-                <FaPencilAlt />
-              </Icon>
-            </GridSqTitle>
-
-            <div>
-              Create a web presence for your business. Whether you need a simple
-              one pager, or a multi-page app to build your empire... I can help!
-            </div>
-          </Sq1>
-          <Sq2 id="sq">
-            <GridSqTitle>
-              Web + Hosting
-              <Icon>
-                <FaDesktop />
-              </Icon>
-            </GridSqTitle>
-
-            <div>
-              I portfolio with one-on-one with clients regarding hosting and
-              maintenance, leaving them to fully concentrate on their
-              businesses.
-            </div>
-          </Sq2>
-          <Sq3 id="sq">
-            <GridSqTitle>
-              Blogging Mgmt Integration
-              <Icon>
-                <FaRegNewspaper />
-              </Icon>
-            </GridSqTitle>
-
-            <div>
-              Need a blog? Youre at the right place! I portfolio with many
-              different types of tools, including Wordpress.
-            </div>
-          </Sq3>
-          <Sq4 id="sq">
-            <GridSqTitle>
-              ToolBox
-              <Icon>
-                <FaToolbox />
-              </Icon>
-            </GridSqTitle>
-            <ul>
-              <li> Programming Languages: Javascript, PHP</li>
-              <li>
-                Libraries & Frameportfolios: React, NextJS, Node,
-                Styled-Components, bootstrap, SASS
-              </li>
-              <li>
-                Tools & Databases: Wordpress, Sanity.io, Git, Mailchimp API
-              </li>
-            </ul>
-            {/* <div>
-              Each project requires different tools, always updating and
-              changing. I mainly portfolio with JS frameportfolios and PHP. View
-              arsenal...
-            </div> */}
-          </Sq4>
-        </Grid>
+        <IntroSection>
+          <h4>
+            Hi there,
+            <div style={{ marginLeft: "5px" }}>{"I'm"}</div>
+            <Link href="/#about">Elsa.</Link>
+          </h4>
+          <p>
+            Im a web developer based in Joshua Tree, CA. I run two web design
+            studios: one catered to:
+            <Link a href="https://writingtobetterhealth.com">
+              Registered Dietitian Nutritionists
+            </Link>
+            , and the other for:
+            <Link href="/">small business owners and creatives.</Link>
+          </p>
+          {/* <br /> */}
+          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
+            Listed below are some of my other passion projects... feel free to
+            look around!
+          </p>
+        </IntroSection>
 
         {
           //todo/* PORTFOLIO */

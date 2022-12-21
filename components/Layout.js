@@ -3,7 +3,6 @@ import GlobalStyles from "./Global";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
-import MobileFooter from "./MobileFooter";
 import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
@@ -49,8 +48,6 @@ export default function Layout({ children }) {
         <main>{children}</main>
         <Footer />
       </Wrapper>
-
-      {/* <MobileFooter /> */}
     </>
   );
 }

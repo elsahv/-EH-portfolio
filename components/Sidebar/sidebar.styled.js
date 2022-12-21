@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import { SidebarData } from "./SidebarData";
-import { IconContext } from "react-icons";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   .navbar {
     display: none;
     @media only screen and (max-width: 600px) {
@@ -89,7 +84,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const SidebarLogo = styled.div`
+export const SidebarLogo = styled.div`
   font-size: 30px;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
@@ -102,46 +97,3 @@ const SidebarLogo = styled.div`
     font-size: 20px;
   }
 `;
-
-function Navbar() {
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
-
-  return (
-    <Wrapper>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <div className="navbar">
-          <a href="#" className="menu-bars">
-            <FaIcons.FaBars onClick={showSidebar} />
-          </a>
-          <SidebarLogo>
-            Elsa Hovey-
-            <br />
-            Development/ Design
-          </SidebarLogo>
-        </div>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="navbar-toggle">
-              <a href="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
-              </a>
-            </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <a href={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-    </Wrapper>
-  );
-}
-
-export default Navbar;

@@ -4,14 +4,6 @@ import About from "../components/About";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const AboutFooter = styled.footer`
-  display: none;
-
-  @media only screen and (max-width: 600px) {
-    display: block;
-  }
-`;
-
 export const Title = styled.h2`
   font-size: 45px;
   color: black;
@@ -56,9 +48,7 @@ const contact = () => {
         <Title>Contact</Title>
         <ContactSection />
 
-        <AboutFooter id="about-mobile">
-          <About />
-        </AboutFooter>
+        <About />
       </motion.div>
     </>
   );
