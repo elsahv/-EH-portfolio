@@ -10,12 +10,12 @@ export const SidebarData = [
     icon: <FaIcons.FaCartPlus />,
     cName: "nav-text",
   },
-  {
-    title: "Mindmaps",
-    path: "/mindmaps",
-    icon: <IoIcons.IoIosPaper />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Mindmaps",
+  //   path: "/mindmaps",
+  //   icon: <IoIcons.IoIosPaper />,
+  //   cName: "nav-text",
+  // },
 
   {
     title: "Contact",

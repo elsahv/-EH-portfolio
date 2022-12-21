@@ -66,7 +66,7 @@ export const NavLinks = styled.li`
   flex-direction: column;
   text-transform: capitalize;
   text-decoration: none;
-  padding-top: 25px;
+  padding-top: 5px;
   padding-left: 5px;
   a {
     margin: 1px 0;
@@ -79,5 +79,24 @@ export const NavLinks = styled.li`
       transition: 1s;
       text-shadow: 1px 1px 1px #000;
     }
+  }
+`;
+
+export const AboutImgWrapper = styled.div`
+  width: 670px;
+  grid-area: ls;
+  border-right: solid 2px black;
+  padding-top: 335px;
+  @media only screen and (max-width: 1024px) {
+    padding-top: 785px;
+  }
+  @media only screen and (max-width: 834px) {
+    padding-top: 575px;
+  }
+  @media only screen and (max-width: 810px) {
+    padding-top: 395px;
+  }
+  @media only screen and (max-width: 800px) {
+    padding-top: 595px;
   }
 `;

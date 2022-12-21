@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Intro from "../components/Intro";
 
-//! STYLES
+//! PAGE STYLES
 const Wrapper = styled.div`
   // background: green;
   padding: 20px 70px 0 50px;
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   }
 `;
 
-//todo PORTFOLIO STYLES
+//* PORTFOLIO STYLES
 const PortfolioDescription = styled.div`
   // background: pink;
   margin-top: 100px;
@@ -128,56 +128,6 @@ export const ImageScreenshot = styled.div`
 export const LeftSection = styled.div`
   grid-area: left;
 `;
-//todo END PORTFOLIO STYLES
-
-//*INTRO SECTION STYLES
-
-export const IntroSection = styled.div`
-  opacity: 0.8;
-  background: teal;
-  padding: 35px;
-  grid-area: rs;
-  margin-top: 40px;
-  h4 {
-    font-size: 30px;
-    color: #000;
-    padding-bottom: 10px;
-    display: flex;
-  }
-  p {
-    font-size: 22px;
-    color: #000;
-  }
-  a {
-    color: #000;
-    text-decoration: underline;
-    margin: 0 8px;
-  }
-  a:hover {
-    color: aquamarine;
-    transition: 2s;
-  }
-  @media only screen and (max-width: 1024px) {
-    h4 {
-      font-size: 27px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-  @media only screen and (max-width: 834px) {
-    margin-left: 40px;
-    margin-top: 50px;
-  }
-  @media only screen and (max-width: 768px) {
-    margin-left: 10px;
-    // margin-top: 50px;
-  }
-  @media only screen and (max-width: 600px) {
-    margin-top: 40px;
-  }
-`;
-//! END STYLES
 
 const Home = ({ posts }) => {
   return (
@@ -192,28 +142,7 @@ const Home = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <IntroSection>
-          <h4>
-            Hi there,
-            <div style={{ marginLeft: "5px" }}>{"I'm"}</div>
-            <Link href="/#about">Elsa.</Link>
-          </h4>
-          <p>
-            Im a web developer based in Joshua Tree, CA. I run two web design
-            studios: one catered to:
-            <Link a href="https://writingtobetterhealth.com">
-              Registered Dietitian Nutritionists
-            </Link>
-            , and the other for:
-            <Link href="/">small business owners and creatives.</Link>
-          </p>
-          {/* <br /> */}
-          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-            Listed below are some of my other passion projects... feel free to
-            look around!
-          </p>
-        </IntroSection>
-
+        <Intro />
         {
           //todo/* PORTFOLIO */
           // FILTER BY CATEGORES: WTBH, JUNGLE, ALL

@@ -16,11 +16,7 @@ function Navbar() {
           <a href="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </a>
-          <SidebarLogo>
-            Elsa Hovey-
-            <br />
-            Development/ Design
-          </SidebarLogo>
+          <SidebarLogo>Elsa Hovey</SidebarLogo>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
