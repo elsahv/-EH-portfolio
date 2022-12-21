@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const NavSection = styled.nav`
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 500px;
   height: 100%;
   position: fixed;
   left: 0;
-  border-right: solid 2px gray;
+  border-right: solid 1px teal;
   background-color: #3aa1aa;
   z-index: 1000;
   text-decoration: none;
