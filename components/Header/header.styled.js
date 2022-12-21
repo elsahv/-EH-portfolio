@@ -5,7 +5,7 @@ export const NavSection = styled.nav`
   overflow-x: hidden;
   width: 500px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   border-right: solid 2px gray;
   background-color: #3aa1aa;
@@ -30,11 +30,6 @@ export const NavSection = styled.nav`
 
 export const Menu = styled.div`
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
   width: 100%;
 
   @media only screen and (max-width: 834px) {
