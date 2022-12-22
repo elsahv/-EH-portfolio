@@ -16,13 +16,11 @@ const Header = () => {
       <NavSection>
         <Menu>
           <MenuItems>
-            <Logo>
-              <Link href="/">Elsa Hovey</Link>
-            </Logo>
+            <Logo>Elsa Hovey</Logo>
             <NavLinks>
-              <Link href="/">Portfolio</Link> {/*about, resume*/}
+              <Link href="/#portfolio">Portfolio</Link> {/*about, resume*/}
               {/* <Link href="/mindmaps">Mindmaps</Link> */}
-              <Link href="/contact">Contact</Link>
+              <Link href="/#contact">Contact</Link>
             </NavLinks>
           </MenuItems>
           <AboutImgWrapper>

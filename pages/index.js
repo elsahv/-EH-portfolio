@@ -111,7 +111,7 @@ const Home = ({ websites }) => {
       >
         <Intro />
         <Grid>
-          <PortfolioTitle id="services">Portfolio</PortfolioTitle>
+          <PortfolioTitle id="portfolio">Portfolio</PortfolioTitle>
           {websites &&
             websites.map((website, index) => (
               <span key={index}>
@@ -134,7 +134,7 @@ const Home = ({ websites }) => {
               </span>
             ))}
         </Grid>
-        <ContactWrapper>
+        <ContactWrapper id="contact">
           <ContactGrid>
             <LeftSide>
               <AboutSection />

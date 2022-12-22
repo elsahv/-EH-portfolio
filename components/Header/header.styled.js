@@ -44,11 +44,9 @@ export const MenuItems = styled.div`
 export const Logo = styled.h1`
   font-size: 32px;
   // background: green;
-  a {
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #000;
-  }
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #000;
 
   @media only screen and (max-width: 1024px) {
     padding-top: 10px;
