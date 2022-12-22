@@ -1,17 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Intro from "../components/Intro";
-import {
-  FaPencilAlt,
-  FaRegNewspaper,
-  FaToolbox,
-  FaDesktop,
-} from "react-icons/fa";
 
-const ServicesTitle = styled.h2`
+const PortfolioTitle = styled.h2`
   // background: green;
   grid-area: t;
   display: flex;
@@ -49,19 +44,24 @@ const Sq = styled.div`
   font-size: 18px;
 `;
 
-const GridSqTitle = styled.h2`
+const WebsiteTitle = styled.h2`
   display: flex;
   font-size: 25px;
 `;
 
-const TitleIcon = styled.div`
+const TitleIconWrapper = styled.div`
   display: flex;
 `;
+
+const WebsiteDescription = styled.p``;
+const WebsiteTags = styled.span``;
 
 const Icon = styled.div`
   font-size: 30px;
   padding-left: 20px;
 `;
+
+export const ButtonsWrapper = styled.div``;
 
 export const Button = styled.button`
   background: aquamarine;
@@ -84,24 +84,28 @@ const Home = ({ websites }) => {
       >
         <Intro />
         <Grid>
-          <ServicesTitle id="services">Portfolio</ServicesTitle>
-          <>
-            {websites &&
-              websites.map((website, index) => (
-                <span key={index}>
-                  <Sq>
-                    <TitleIcon>
-                      <GridSqTitle>{website.websiteTitle}</GridSqTitle>
-                      <Icon>(i)</Icon>
-                    </TitleIcon>
-                    <p>{website.description}</p>
-                    <div>{website.tags}</div>
-                    <Button>visit site</Button>
-                    <Button>view code</Button>
-                  </Sq>
-                </span>
-              ))}
-          </>
+          <PortfolioTitle id="services">Portfolio</PortfolioTitle>
+          {websites &&
+            websites.map((website, index) => (
+              <span key={index}>
+                <Sq>
+                  <TitleIconWrapper>
+                    <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
+                    <Icon>(i)</Icon>
+                  </TitleIconWrapper>
+                  <WebsiteDescription>{website.description}</WebsiteDescription>
+                  <WebsiteTags>{website.tags}</WebsiteTags>
+                  <ButtonsWrapper>
+                    <Button>
+                      <Link href="/">visit site</Link>
+                    </Button>
+                    <Button>
+                      <Link href="/">view code</Link>
+                    </Button>
+                  </ButtonsWrapper>
+                </Sq>
+              </span>
+            ))}
         </Grid>
       </motion.div>
     </>
