@@ -1,35 +1,33 @@
 import Head from "next/head";
-import ContactSection from "../components/ContactSection";
-import About from "../components/About";
+import Image from "next/image";
+import PortfolioPic from "../public/images/portfolio-pic.jpg";
+import Intro from "../components/Intro";
+import ContactForm from "../components/ContactForm";
+import AboutSection from "../components/AboutSection";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Title = styled.h2`
-  font-size: 45px;
-  color: black;
-  margin-top: 55px;
-  margin-left: 255px;
-  padding: 30px 40px 30px 300px;
-  background: #3aa1aa;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgb(0, 123, 165);
-  text-align: right;
+export const ContactWrapper = styled.div`
+  display: flex;
+  // justify-content: center;
+`;
 
-  @media only screen and (max-width: 1024px) {
-    margin: auto;
-    padding-top: 100px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    font-size: 35px;
-    background: none;
-    margin: 0;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    padding-right: 20px;
-    color: #000;
-    text-shadow: none;
-  }
+export const ContactGrid = styled.div`
+  border: solid 2px #000;
+  margin: 65px;
+  background: teal;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+`;
+export const LeftSide = styled.div`
+  grid-area: left;
+  // border-right: solid 1px #000;
+`;
+export const RightSide = styled.div`
+  grid-area: right;
+  // border-left: solid 1px #000;
+  background: coral;
 `;
 
 const contact = () => {
@@ -45,10 +43,17 @@ const contact = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Title>Contact</Title>
-        <ContactSection />
-
-        <About />
+        <h2>Contact Elsa</h2>
+        <ContactWrapper>
+          <ContactGrid>
+            <LeftSide>
+              <AboutSection />
+            </LeftSide>
+            <RightSide>
+              <ContactForm />
+            </RightSide>
+          </ContactGrid>
+        </ContactWrapper>
       </motion.div>
     </>
   );
