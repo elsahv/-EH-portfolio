@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Intro from "../components/Intro";
 import ContactForm from "../components/ContactForm";
 import AboutSection from "../components/AboutSection";
+import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
 const PortfolioTitle = styled.h2`
   // background: green;
@@ -59,16 +60,31 @@ const WebsiteDescription = styled.p``;
 const WebsiteTags = styled.span``;
 
 const Icon = styled.div`
-  font-size: 30px;
+  font-size: 25px;
   padding-left: 20px;
 `;
 
-export const ButtonsWrapper = styled.div``;
+export const CTALinks = styled.div`
+  display: flex;
+`;
 
 export const Button = styled.button`
   background: aquamarine;
   border: 1px solid teal;
-  padding: 3px 8px;
+  padding: 0px 10px 1px;
+  font-size: 18px;
+  display: flex;
+  margin: 15px 5px 5px;
+  border: solid 1px #000;
+  a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  padding-top: 5px;
 `;
 
 //*CONTACT
@@ -89,11 +105,12 @@ export const ContactGrid = styled.div`
 export const LeftSide = styled.div`
   grid-area: left;
   border-right: solid 1px #000;
+  background: coral;
 `;
 export const RightSide = styled.div`
   grid-area: right;
   border-left: solid 1px #000;
-  background: coral;
+  background: teal;
 `;
 
 const Home = ({ websites }) => {
@@ -122,14 +139,20 @@ const Home = ({ websites }) => {
                   </TitleIconWrapper>
                   <WebsiteDescription>{website.description}</WebsiteDescription>
                   <WebsiteTags>{website.tags}</WebsiteTags>
-                  <ButtonsWrapper>
+                  <CTALinks>
                     <Button>
-                      <Link href="/">visit site</Link>
+                      <Link href={website.projectLink}>visit site</Link>
+                      <IconWrapper>
+                        <AiOutlineLink />
+                      </IconWrapper>
                     </Button>
                     <Button>
-                      <Link href="/">view code</Link>
+                      <Link href={website.codeLink}>view code</Link>
+                      <IconWrapper>
+                        <AiFillGithub />
+                      </IconWrapper>
                     </Button>
-                  </ButtonsWrapper>
+                  </CTALinks>
                 </Sq>
               </span>
             ))}
