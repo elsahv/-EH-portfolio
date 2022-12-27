@@ -2,116 +2,25 @@
 import Head from "next/head";
 import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import Intro from "../components/Intro";
 import ContactForm from "../components/ContactForm";
 import AboutSection from "../components/AboutSection";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
-
-const PortfolioTitle = styled.h2`
-  // background: green;
-  grid-area: t;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 10px;
-  font-size: 30px;
-  text-decoration: underline;
-`;
-
-const Grid = styled.div`
-  opacity: 0.9;
-  padding: 70px 40px;
-  // background: pink;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "t t"
-    "a b"
-    "c d";
-  grid-gap: 1em;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 30px 10px;
-    grid-template-columns: 1fr;
-  }
-  @media only screen and (max-width: 834px) {
-    padding: 30px 30px;
-  }
-`;
-
-const Sq = styled.div`
-  background: teal;
-  padding: 20px;
-  border: solid 2px black;
-  font-size: 18px;
-`;
-
-const WebsiteTitle = styled.h2`
-  display: flex;
-  font-size: 25px;
-`;
-
-const TitleIconWrapper = styled.div`
-  display: flex;
-`;
-
-const WebsiteDescription = styled.p``;
-const WebsiteTags = styled.span``;
-
-const Icon = styled.div`
-  font-size: 25px;
-  padding-left: 20px;
-`;
-
-export const CTALinks = styled.div`
-  display: flex;
-`;
-
-export const Button = styled.button`
-  background: aquamarine;
-  border: 1px solid teal;
-  padding: 0px 10px 1px;
-  font-size: 18px;
-  display: flex;
-  margin: 15px 5px 5px;
-  border: solid 1px #000;
-  a {
-    text-decoration: none;
-    color: #000;
-    padding: 5px;
-  }
-`;
-
-export const IconWrapper = styled.div`
-  padding-top: 5px;
-`;
-
-//*CONTACT
-
-export const ContactWrapper = styled.div`
-  display: flex;
-  // justify-content: center;
-`;
-
-export const ContactGrid = styled.div`
-  // border: solid 2px #000;
-  margin: 65px;
-  // background: teal;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "left right";
-`;
-export const LeftSide = styled.div`
-  grid-area: left;
-  border-right: solid 1px #000;
-  background: coral;
-`;
-export const RightSide = styled.div`
-  grid-area: right;
-  border-left: solid 1px #000;
-  background: teal;
-`;
+import { IconWrapper, Icon } from "../components/styles/reactIcons.styled";
+import {
+  PortfolioTitle,
+  WebsiteTitle,
+} from "../components/styles/titles.styled";
+import { Button } from "../components/styles/buttons/projectLinkBtn.styled";
+import { Sq } from "../components/styles/containers.styled";
+import { Flex } from "../components/styles/flex.styled";
+import { PortfolioGrid } from "../components/styles/grids/portfolioGrid.styled";
+import {
+  ContactGrid,
+  LeftSide,
+  RightSide,
+} from "../components/styles/grids/contactGrid.styled";
 
 const Home = ({ websites }) => {
   return (
@@ -127,19 +36,20 @@ const Home = ({ websites }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <Intro />
-        <Grid>
-          <PortfolioTitle id="portfolio">Portfolio</PortfolioTitle>
+        <PortfolioTitle id="portfolio">Portfolio</PortfolioTitle>
+
+        <PortfolioGrid>
           {websites &&
             websites.map((website, index) => (
               <span key={index}>
                 <Sq>
-                  <TitleIconWrapper>
+                  <Flex>
                     <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
                     <Icon>(i)</Icon>
-                  </TitleIconWrapper>
-                  <WebsiteDescription>{website.description}</WebsiteDescription>
-                  <WebsiteTags>{website.tags}</WebsiteTags>
-                  <CTALinks>
+                  </Flex>
+                  <div>{website.description}</div>
+                  <div>{website.tags}</div>
+                  <Flex>
                     <Button>
                       <Link href={website.projectLink}>visit site</Link>
                       <IconWrapper>
@@ -152,12 +62,12 @@ const Home = ({ websites }) => {
                         <AiFillGithub />
                       </IconWrapper>
                     </Button>
-                  </CTALinks>
+                  </Flex>
                 </Sq>
               </span>
             ))}
-        </Grid>
-        <ContactWrapper id="contact">
+        </PortfolioGrid>
+        <Flex id="contact">
           <ContactGrid>
             <LeftSide>
               <AboutSection />
@@ -166,7 +76,7 @@ const Home = ({ websites }) => {
               <ContactForm />
             </RightSide>
           </ContactGrid>
-        </ContactWrapper>
+        </Flex>
 
         {/* ADD CONTACT, ABOUT TO INDEX */}
       </motion.div>

@@ -7,8 +7,8 @@ import {
   Logo,
   NavLinks,
   AboutImgWrapper,
-} from "./header.styled";
-import JtPic from "../../public/images/joshuatreeabout.jpg";
+} from "./styles/header.styled";
+import JtPic from "../public/images/joshuatreeabout.jpg";
 
 const Header = () => {
   return (
@@ -19,7 +19,6 @@ const Header = () => {
             <Logo>Elsa Hovey</Logo>
             <NavLinks>
               <Link href="/#portfolio">Portfolio</Link> {/*about, resume*/}
-              {/* <Link href="/mindmaps">Mindmaps</Link> */}
               <Link href="/#contact">Contact</Link>
             </NavLinks>
           </MenuItems>

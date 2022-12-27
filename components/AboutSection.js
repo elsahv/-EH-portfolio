@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import PortfolioPic from "../../public/images/portfolio-pic.jpg";
+import PortfolioPic from "../public/images/portfolio-pic.jpg";
 import {
   Wrapper,
   AboutContent,
   AboutTitle,
   Paragraph,
   ImageWrapper,
-} from "./aboutSection.styled";
+} from "./styles/aboutSection.styled";
 const index = () => {
   return (
     <Wrapper>

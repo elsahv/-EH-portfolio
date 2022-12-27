@@ -4,7 +4,13 @@ import React, { useRef } from "react";
 // import { useRouter } from "next/router";
 import { motion as m } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { Wrapper, Form, Label, Input, Textarea } from "./contactForm.styled";
+import {
+  Wrapper,
+  Form,
+  Label,
+  Input,
+  Textarea,
+} from "./styles/contactForm.styled";
 
 const ContactForm = () => {
   const form = useRef();

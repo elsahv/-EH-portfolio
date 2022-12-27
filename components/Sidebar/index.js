@@ -3,7 +3,7 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./sidebarData";
 import { IconContext } from "react-icons";
-import { Wrapper, SidebarLogo } from "./sidebar.styled";
+import { Wrapper, SidebarLogo } from "../styles/sidebar.styled";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);

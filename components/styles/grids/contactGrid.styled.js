@@ -1,0 +1,20 @@
+import styled from "styled-components";
+
+export const ContactGrid = styled.div`
+  // border: solid 2px #000;
+  margin: 65px;
+  // background: teal;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+`;
+export const LeftSide = styled.div`
+  grid-area: left;
+  border-right: solid 1px #000;
+  background: coral;
+`;
+export const RightSide = styled.div`
+  grid-area: right;
+  border-left: solid 1px #000;
+  background: teal;
+`;
