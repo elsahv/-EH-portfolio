@@ -24,7 +24,7 @@ const Header = () => {
           <MenuItems>
             <Logo>Elsa Hovey</Logo>
             <p>
-              Hi there, I'm Elsa. Im a web developer based in Joshua Tree, CA.
+              Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.
             </p>
             <NavLinks>
               <Flex>

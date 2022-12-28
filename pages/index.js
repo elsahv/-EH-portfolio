@@ -9,7 +9,6 @@ import { Flex } from "../components/styles/flex.styled";
 import { Grid } from "../components/styles/grid.styled";
 import Timeline from "../components/Timeline";
 import Skills from "../components/Skills";
-import { IntroSection } from "../components/styles/intro.styled";
 import {
   PortfolioGrid,
   Sq,
@@ -18,6 +17,7 @@ import {
   Icon,
 } from "../components/styles/websites.styled";
 import Contact from "../components/Contact";
+import Intro from "../components/Intro";
 
 const Home = ({ websites }) => {
   return (
@@ -32,20 +32,7 @@ const Home = ({ websites }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <IntroSection>
-          <p>
-            I currently run two design studios: one catered to:
-            <Link a href="https://writingtobetterhealth.com">
-              registered dietitian nutritionists
-            </Link>
-            , and the other for:
-            <Link href="/">small business owners and creatives.</Link>
-          </p>
-          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-            Listed below, you can see all of my featured projects, read a little
-            bit about me, or contact me... feel free to look around!
-          </p>
-        </IntroSection>
+        <Intro />
         {/* WORKS */}
         <Title id="works">Works</Title>
         <PortfolioGrid>
