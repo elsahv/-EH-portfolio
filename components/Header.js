@@ -7,14 +7,14 @@ import {
   Logo,
   NavLinks,
   AboutImgWrapper,
-} from "./header.styled";
-import { Flex } from "../styles/flex.styled";
+} from "./styles/header.styled";
+import { Flex } from "./styles/flex.styled";
 import {
   AiFillLinkedin,
   AiOutlineInstagram,
   AiOutlineMail,
 } from "react-icons/ai";
-import JtPic from "../../public/images/joshuatreeabout.jpg";
+import JtPic from "../public/images/joshuatreeabout.jpg";
 
 const Header = () => {
   return (
@@ -23,11 +23,10 @@ const Header = () => {
         <Menu>
           <MenuItems>
             <Logo>Elsa Hovey</Logo>
+            <p>
+              Hi there, I'm Elsa. Im a web developer based in Joshua Tree, CA.
+            </p>
             <NavLinks>
-              {/*about, resume, contact*/}
-              <Link href="/#works">Works</Link>{" "}
-              <Link href="/#about">About</Link>{" "}
-              <Link href="/#contact">Contact</Link>{" "}
               <Flex>
                 <Link href="">
                   <AiOutlineMail />

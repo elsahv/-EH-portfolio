@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import GlobalStyles from "./Global";
-import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
@@ -35,7 +34,6 @@ export default function Layout({ children }) {
   return (
     <>
       <GlobalStyles />
-      <Sidebar />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
