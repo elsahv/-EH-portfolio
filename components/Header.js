@@ -8,6 +8,12 @@ import {
   NavLinks,
   AboutImgWrapper,
 } from "./styles/header.styled";
+import { Flex } from "../components/styles/flex.styled";
+import {
+  AiFillLinkedin,
+  AiOutlineInstagram,
+  AiOutlineMail,
+} from "react-icons/ai";
 import JtPic from "../public/images/joshuatreeabout.jpg";
 
 const Header = () => {
@@ -18,8 +24,21 @@ const Header = () => {
           <MenuItems>
             <Logo>Elsa Hovey</Logo>
             <NavLinks>
-              <Link href="/#portfolio">Portfolio</Link> {/*about, resume*/}
-              <Link href="/#contact">Contact</Link>
+              {/*about, resume, contact*/}
+              <Link href="/#works">Works</Link>{" "}
+              <Link href="/#about">About</Link>{" "}
+              <Link href="/#contact">Contact</Link>{" "}
+              <Flex>
+                <Link href="">
+                  <AiOutlineMail />
+                </Link>
+                <Link href="">
+                  <AiFillLinkedin />
+                </Link>
+                <Link href="">
+                  <AiOutlineInstagram />
+                </Link>
+              </Flex>
             </NavLinks>
           </MenuItems>
           <AboutImgWrapper>

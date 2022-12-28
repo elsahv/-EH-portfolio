@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContactGrid = styled.div`
   // border: solid 2px #000;
-  margin: 65px;
+  margin: 5px 25px;
   // background: teal;
   display: grid;
   grid-template-columns: 1fr 1fr;

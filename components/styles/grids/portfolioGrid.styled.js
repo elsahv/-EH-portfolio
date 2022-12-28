@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PortfolioGrid = styled.div`
   opacity: 0.9;
-  padding: 70px 40px;
+  padding: 10px 40px;
   // background: pink;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
