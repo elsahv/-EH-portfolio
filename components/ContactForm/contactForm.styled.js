@@ -1,13 +1,22 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
   color: #000;
+  // background: green;
+  display flex;
+  flex-direction: column;
+`;
+
+export const AboutContent = styled.div`
+  background: pink;
+  padding: 20px;
+`;
+export const FormWrapper = styled.div`
+  background: orange;
 `;
 
 export const Form = styled.form`
-  padding: 50px;
+  // padding: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;

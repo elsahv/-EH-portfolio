@@ -7,14 +7,14 @@ import {
   Logo,
   NavLinks,
   AboutImgWrapper,
-} from "./styles/header.styled";
-import { Flex } from "../components/styles/flex.styled";
+} from "./header.styled";
+import { Flex } from "../styles/flex.styled";
 import {
   AiFillLinkedin,
   AiOutlineInstagram,
   AiOutlineMail,
 } from "react-icons/ai";
-import JtPic from "../public/images/joshuatreeabout.jpg";
+import JtPic from "../../public/images/joshuatreeabout.jpg";
 
 const Header = () => {
   return (

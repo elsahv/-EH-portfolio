@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IntroSection } from "./styles/intro.styled";
+import { IntroSection } from "./intro.styled";
 
 const Intro = () => {
   return (
