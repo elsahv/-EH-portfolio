@@ -18,6 +18,7 @@ import {
 } from "../components/styles/websites.styled";
 import Contact from "../components/Contact";
 import Intro from "../components/Intro";
+import About from "../components/About";
 
 const Home = ({ websites }) => {
   return (
@@ -66,15 +67,8 @@ const Home = ({ websites }) => {
         </PortfolioGrid>
         {/* ABOUT */}
         <Title id="about">About</Title>
-        <p style={{ padding: "5px 50px", borderBottom: "solid 1px #000" }}>
-          I currently work as a self-employed, indie web developer. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Reiciendis,
-          necessitatibus cupiditate, dolore exceptu
-        </p>
-        <Grid>
-          <Timeline />
-          <Skills />
-        </Grid>
+        <About />
+        {/* CONTACT */}
         <Title id="contact">Contact</Title>
         <Contact />
       </motion.div>

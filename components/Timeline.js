@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const AboutTimeline = styled.div`
-  padding: 15px 145px 0 55px;
+  // padding: 15px 145px 0 55px;
   li {
     margin: 15px 0;
   }
