@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import Intro from "./Intro";
 import {
   Header,
   HeaderItems,
   Logo,
   SmIcons,
   AboutImgWrapper,
+  MobileIntro,
 } from "./styles/header.styled";
 import { Flex } from "./styles/flex.styled";
 import {
@@ -23,19 +25,20 @@ const HeaderSection = () => {
           <Logo>Elsa Hovey</Logo>
           <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
           <SmIcons>
-            <Flex>
-              <Link href="">
-                <AiOutlineMail />
-              </Link>
-              <Link href="">
-                <AiFillLinkedin />
-              </Link>
-              <Link href="">
-                <AiOutlineInstagram />
-              </Link>
-            </Flex>
+            <Link href="">
+              <AiOutlineMail />
+            </Link>
+            <a href="https://linkedin.com/">
+              <AiFillLinkedin />
+            </a>
+            <a href="https://instagram.com/">
+              <AiOutlineInstagram />
+            </a>
           </SmIcons>
         </HeaderItems>
+        <MobileIntro>
+          <Intro />
+        </MobileIntro>
         <AboutImgWrapper>
           <Image
             className="portfolio-img"

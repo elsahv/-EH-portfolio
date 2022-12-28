@@ -3,7 +3,7 @@ import Skills from "./Skills";
 import Timeline from "./Timeline";
 import styled from "styled-components";
 
-const Grid = styled.div`
+const AboutGrid = styled.div`
   padding: 50px 5x;
   //   background: green;
   display: grid;
@@ -30,7 +30,7 @@ const SkillsWrapper = styled.div`
 
 const About = () => {
   return (
-    <Grid>
+    <AboutGrid>
       <Description>
         I currently work as a self-employed, indie web developer. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Reiciendis, necessitatibus
@@ -42,7 +42,7 @@ const About = () => {
       <SkillsWrapper>
         <Skills />
       </SkillsWrapper>
-    </Grid>
+    </AboutGrid>
   );
 };
 

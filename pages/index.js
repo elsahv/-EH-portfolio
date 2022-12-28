@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { Title } from "../components/styles/title.styled";
 import { Flex } from "../components/styles/flex.styled";
-import { Grid } from "../components/styles/grid.styled";
-import Timeline from "../components/Timeline";
-import Skills from "../components/Skills";
 import {
   PortfolioGrid,
   Sq,

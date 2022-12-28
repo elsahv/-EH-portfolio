@@ -14,8 +14,8 @@ const Intro = () => {
           <Link href="/">small business owners and creatives.</Link>
         </p>
         <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-          Listed below, you can see all of my featured projects, read a little
-          bit about me, or contact me... feel free to look around!
+          Scroll down, and you can see all of my featured projects, read a
+          little bit about me, or contact me... feel free to look around!
         </p>
       </IntroSection>
     </>

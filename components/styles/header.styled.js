@@ -15,15 +15,16 @@ export const Header = styled.header`
     width: 450px;
   }
   @media only screen and (max-width: 834px) {
-    width: 350px;
-  }
-
-  @media only screen and (max-width: 768px) {
     width: 300px;
   }
 
   @media only screen and (max-width: 600px) {
-    display: none;
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: teal;
+    border-bottom: solid 1px #000;
   }
 `;
 
@@ -40,9 +41,20 @@ export const HeaderItems = styled.div`
   padding-left: 15px;
   padding-top: 50px;
   p {
-    font-size: 18px;
+    font-size: 22px;
     opacity: 0.8;
     padding: 2px;
+  }
+  @media only screen and (max-width: 1024px) {
+    p {
+      font-size: 32px;
+      margin: 10px 5px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -55,18 +67,29 @@ export const Logo = styled.h1`
 
   @media only screen and (max-width: 1024px) {
     padding-top: 10px;
+    font-size: 55px;
   }
 
   @media only screen and (max-width: 834px) {
-    font-size: 30px;
+    font-size: 40px;
   }
 `;
 
 export const SmIcons = styled.div`
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
   padding-top: 5px;
   padding-left: 5px;
+  a {
+    color: #000;
+    margin: 0 3px;
+  }
+  @media only screen and (max-width: 1024px) {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  @media only screen and (max-width: 768px) {
+  }
 `;
 
 export const AboutImgWrapper = styled.div`
@@ -85,5 +108,16 @@ export const AboutImgWrapper = styled.div`
   }
   @media only screen and (max-width: 800px) {
     padding-top: 595px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+  }
+`;
+
+export const MobileIntro = styled.div`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
   }
 `;
