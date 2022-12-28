@@ -23,7 +23,6 @@ export const PortfolioGrid = styled.div`
   // background: pink;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   grid-gap: 1em;
 
   @media only screen and (max-width: 1024px) {
@@ -63,8 +62,8 @@ export const RightSide = styled.div`
 
 export const ImageWrapper = styled.div`
   position: relative;
-  width: 310px;
-  height: 430px;
+  width: 340px;
+  // height: 500px;
   // border: solid 2px #000;
 
   @media only screen and (max-width: 1024px) {
@@ -133,7 +132,14 @@ const Home = ({ websites }) => {
         <Title id="contact">Contact</Title>
         <Flex>
           <ImageWrapper>
-            <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
+            <Image
+              src={PortfolioPic}
+              alt="elsa hovey"
+              // width="440px"
+              // height="600px"
+              layout="responsive"
+              style={{ position: "absolute" }}
+            />
           </ImageWrapper>
           <ContactForm />
         </Flex>

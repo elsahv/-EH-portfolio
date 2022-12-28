@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   color: #000;
-  // background: green;
+  background: green;
   display flex;
+  justify-content: center;
   flex-direction: column;
+  padding: 0 50px;
 `;
 
 export const AboutContent = styled.div`
-  background: pink;
-  padding: 20px;
+  // background: pink;
+  // padding: 20px;
 `;
 export const FormWrapper = styled.div`
-  background: orange;
+  // background: orange;
 `;
 
 export const Form = styled.form`
@@ -58,4 +60,5 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   height: 150px;
   border-radius: 5px;
+  width: 400px;
 `;
