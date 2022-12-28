@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavSection = styled.nav`
+export const Header = styled.header`
   overflow: hidden;
   width: 500px;
   height: 100%;
@@ -36,9 +36,14 @@ export const Menu = styled.div`
   }
 `;
 
-export const MenuItems = styled.div`
+export const HeaderItems = styled.div`
   padding-left: 15px;
   padding-top: 50px;
+  p {
+    font-size: 18px;
+    opacity: 0.8;
+    padding: 2px;
+  }
 `;
 
 export const Logo = styled.h1`
@@ -57,26 +62,11 @@ export const Logo = styled.h1`
   }
 `;
 
-export const NavLinks = styled.li`
+export const SmIcons = styled.div`
   font-size: 25px;
   display: flex;
-  flex-direction: column;
-  text-transform: capitalize;
-  text-decoration: none;
   padding-top: 5px;
   padding-left: 5px;
-  a {
-    margin: 1px 0;
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgb(0, 123, 165);
-
-    &:hover {
-      // color: aquamarine;
-      transition: 1s;
-      text-shadow: 1px 1px 1px #000;
-    }
-  }
 `;
 
 export const AboutImgWrapper = styled.div`
