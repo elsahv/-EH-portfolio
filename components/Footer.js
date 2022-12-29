@@ -3,15 +3,12 @@ import styled from "styled-components";
 export const Footer = styled.footer`
   padding: 30px 25px 20px 50px;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
   @media only screen and (max-width: 600px) {
-    padding: 20px 15px 20px 20px;
-    font-size: 15px;
   }
 `;
 const FooterSection = () => {
-  return <Footer>- Copyright @2022</Footer>;
+  return <Footer> Elsa Hovey- Copyright @2022</Footer>;
 };
 
 export default FooterSection;

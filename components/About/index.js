@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const AboutGrid = styled.div`
   padding: 50px 5x;
-  //   background: green;
+  // background: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:

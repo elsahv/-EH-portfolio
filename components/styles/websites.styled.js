@@ -18,10 +18,14 @@ export const PortfolioGrid = styled.div`
 `;
 
 export const Sq = styled.div`
-  background: teal;
+  background: #fff;
   padding: 20px;
   border: solid 2px black;
   font-size: 18px;
+  &:hover {
+    background: teal;
+    transition: 1s;
+  }
 `;
 
 export const Button = styled.button`

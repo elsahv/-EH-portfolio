@@ -5,6 +5,8 @@ const Intro = () => {
   return (
     <>
       <IntroSection>
+        <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
+
         <p>
           I currently run two design studios: one catered to:
           <Link a href="https://writingtobetterhealth.com">
