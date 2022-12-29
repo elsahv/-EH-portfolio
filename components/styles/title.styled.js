@@ -8,5 +8,8 @@ export const Title = styled.h2`
   padding-bottom: 5px;
   font-size: 30px;
   text-decoration: underline;
-  // margin-top: 150px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 20px;
+  }
 `;

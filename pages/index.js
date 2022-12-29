@@ -10,16 +10,19 @@ import Aside from "../components/Aside";
 export const IndexGrid = styled.div`
   // background: orange;
   display: grid;
-  grid-template-areas: "ls rs";
+  grid-template-areas: "ls rs rs rs ";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2em;
+  @media only screen and (max-width: 1024px) {
+    grid-gap: 1em;
+  }
 
-  @media only screen and (max-width: 834px) {
+  @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "ls"
       "rs";
   }
-  //
 `;
 
 export const PostsGrid = styled.div`
@@ -27,21 +30,28 @@ export const PostsGrid = styled.div`
   grid-area: rs;
   display: grid;
   grid-gap: 2em;
+  border-left: solid 1px #000;
   border-bottom: solid 2px #000;
+
+  .section-spacing {
+    padding-top: 150px;
+    @media only screen and (max-width: 1024px) {
+      padding-top: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 50px 0 0 20px;
+  }
+
+  @media only screen and (max-width: 834px) {
+    border-left: none;
+    border-bottom: none;
+  }
 `;
 
 export const Section = styled.section`
-  // background: teal;
-  // padding-bottom: 150px 0;
-`;
-
-export const PostsWrapper = styled.div`
-  background: #fff;
-  border-left: solid 1px black;
-
   @media only screen and (max-width: 600px) {
-    border-left: none;
-    border-top: solid 2px black;
   }
 `;
 
@@ -50,38 +60,36 @@ const test = ({ websites }) => {
     <>
       <IndexGrid>
         <Aside />
-        <PostsWrapper>
-          <PostsGrid>
-            <Section id="services">
-              <Title>Services</Title>
-              <Services />
-            </Section>
+        <PostsGrid>
+          <Section id="services">
+            <Title>Services</Title>
+            <Services />
+          </Section>
 
-            <Section id="works" style={{ paddingTop: "150px" }}>
-              <Title>Works</Title>
-              <PortfolioGrid>
-                {websites &&
-                  websites.map((website, index) => (
-                    <span key={index}>
-                      <Sq>
-                        <Flex>
-                          <h3>{website.websiteTitle}</h3>
-                          <Icon>(i)</Icon>
-                        </Flex>
-                        <div>{website.description}</div>
-                        <div>{website.tags}</div>
-                      </Sq>
-                    </span>
-                  ))}
-              </PortfolioGrid>
-            </Section>
+          <Section id="works" class="section-spacing">
+            <Title>Works</Title>
+            <PortfolioGrid>
+              {websites &&
+                websites.map((website, index) => (
+                  <span key={index}>
+                    <Sq>
+                      <Flex>
+                        <h3>{website.websiteTitle}</h3>
+                        <Icon>(i)</Icon>
+                      </Flex>
+                      <div>{website.description}</div>
+                      <div>{website.tags}</div>
+                    </Sq>
+                  </span>
+                ))}
+            </PortfolioGrid>
+          </Section>
 
-            <Section id="contact" style={{ paddingTop: "150px" }}>
-              <Title>Contact</Title>
-              <Contact />
-            </Section>
-          </PostsGrid>
-        </PostsWrapper>
+          <Section id="contact" class="section-spacing">
+            <Title>Contact</Title>
+            <Contact />
+          </Section>
+        </PostsGrid>
       </IndexGrid>
     </>
   );

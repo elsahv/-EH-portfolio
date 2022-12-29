@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
-
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import styled from "styled-components";
 
 export const AsideWrapper = styled.div`
@@ -10,11 +8,14 @@ export const AsideWrapper = styled.div`
   background: #fff;
   border-right: solid 2px black;
   border-bottom: solid 2px black;
-  width: 400px;
 
-  @media only screen and (max-width: 834px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
-    // padding: 50px;
+    border-bottom: none;
+    border-right: none;
+  }
+  @media only screen and (max-width: 600px) {
+    border-bottom: solid 2px #000;
   }
 `;
 
@@ -23,9 +24,8 @@ export const BlogBanner = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px 0;
   font-size: 20px;
-  padding: 60px 30px;
+  padding: 40px 25px;
   color: #000;
   // text-shadow: 1px 1px 1px #000;
   background: #fff;
@@ -34,16 +34,18 @@ export const BlogBanner = styled.div`
     color: #000;
     padding: 2px;
   }
-
+  p {
+    margin: 10px 2px;
+  }
   @media only screen and (max-width: 834px) {
     padding: 30px 10px;
-    // border: none;
   }
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
     padding-left: 30px;
     padding-top: 30px;
+    border-bottom: none;
   }
 
   @media only screen and (max-width: 531px) {
@@ -52,16 +54,21 @@ export const BlogBanner = styled.div`
   }
 `;
 
+export const Description = styled.p`
+  font-size: 18px;
+`;
+
 export const ImageWrapper = styled.div`
   position: relative;
   width: 300px;
   grid-area: left;
-  // height: 500px;
-  // border: solid 2px #000;
+  border: solid 2px #000;
+  margin-left: 15px;
+  margin-top: 15px;
 
   @media only screen and (max-width: 1024px) {
     width: 250px;
-    height: 350px;
+    margin: 0;
   }
 `;
 
@@ -70,29 +77,20 @@ const Aside = () => {
     <>
       <AsideWrapper>
         <BlogBanner>
-          <p style={{ paddingBottom: "10px" }}>
-            Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.
-          </p>
+          <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
           <ImageWrapper>
-            <Image
-              src={PortfolioPic}
-              alt="elsa hovey"
-              layout="responsive"
-              style={{ position: "absolute" }}
-            />
+            <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
         </BlogBanner>
         <BlogBanner>
-          <p>
+          <Description>
             I currently run two design studios: one catered to:
             <Link a href="https://writingtobetterhealth.com">
               registered dietitian nutritionists
             </Link>
             , and the other for:
             <Link href="/">small business owners and creatives.</Link>
-          </p>
-          <p>All of my featured works are here</p>
-          <BsFillArrowRightCircleFill />
+          </Description>
         </BlogBanner>
       </AsideWrapper>
     </>

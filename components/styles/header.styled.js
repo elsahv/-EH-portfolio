@@ -9,6 +9,7 @@ export const Header = styled.header`
   border-bottom: solid 2px #000;
   display: flex;
   justify-content: space-between;
+  padding: 5px 10px;
 `;
 
 export const Logo = styled.h1`
@@ -17,15 +18,8 @@ export const Logo = styled.h1`
   font-size: 32px;
   // background: green;
   color: #000;
-  // text-shadow: 1px 1px 1px #000;
-
-  @media only screen and (max-width: 1024px) {
-    padding-top: 10px;
-    font-size: 55px;
-  }
-
-  @media only screen and (max-width: 834px) {
-    font-size: 40px;
+  @media only screen and (max-width: 599px) {
+    font-size: 25px;
   }
 `;
 
@@ -53,8 +47,6 @@ export const SmIcons = styled.div`
   @media only screen and (max-width: 1024px) {
     font-size: 40px;
     margin: 10px 0;
-  }
-  @media only screen and (max-width: 768px) {
   }
 `;
 

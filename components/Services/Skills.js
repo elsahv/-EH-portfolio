@@ -1,9 +1,16 @@
-import React from "react";
+import styled from "styled-components";
+
+const SkillsTitle = styled.h3`
+  @media only screen and (max-width: 1024px) {
+    text-decoration: underline;
+    font-size: 27px;
+  }
+`;
 
 const Skills = () => {
   return (
     <div>
-      <h2>Skills</h2>
+      <SkillsTitle>Skills</SkillsTitle>
       <ul>
         <li>React</li>
         <li>CSS</li>

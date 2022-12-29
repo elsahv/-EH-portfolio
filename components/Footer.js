@@ -4,7 +4,8 @@ export const Footer = styled.footer`
   padding: 30px 25px 20px 50px;
   display: flex;
   justify-content: center;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 834px) {
+    border-top: 2px solid #000;
   }
 `;
 const FooterSection = () => {

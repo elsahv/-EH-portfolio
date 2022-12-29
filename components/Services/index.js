@@ -4,28 +4,43 @@ import Timeline from "./Timeline";
 import styled from "styled-components";
 
 const AboutGrid = styled.div`
-  padding: 50px 5x;
+  padding: 15px 50px;
   // background: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "a a"
     "b c";
+
+  @media only screen and (max-width: 1024px) {
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c";
+  }
+  @media only screen and (max-width: 600px) {
+    border-bottom: 1px solid #000;
+  }
 `;
 
 const Description = styled.p`
   grid-area: a;
-  padding: 10px 50px;
-  // border-bottom: solid 1px #000;
+  padding: 10px 0;
 `;
 const TimelineWrapper = styled.div`
   grid-area: b;
-  padding-left: 55px;
 `;
 const SkillsWrapper = styled.div`
   grid-area: c;
   padding-left: 115px;
   padding-top: 20px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
 `;
 
 const About = () => {

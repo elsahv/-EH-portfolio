@@ -2,24 +2,25 @@ import styled from "styled-components";
 
 export const PortfolioGrid = styled.div`
   opacity: 0.9;
-  padding: 10px 50px;
+  padding: 10px 30px;
   // background: pink;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
+  grid-gap: 2em;
 
   @media only screen and (max-width: 1024px) {
-    padding: 30px 10px;
+    padding: 20px 30px 0 0;
     grid-template-columns: 1fr;
+    grid-gap: 1em;
   }
   @media only screen and (max-width: 834px) {
-    padding: 30px 30px;
+    padding: auto;
   }
 `;
 
 export const Sq = styled.div`
   background: #fff;
-  padding: 20px;
+  padding: 40px 20px;
   border: solid 2px black;
   font-size: 18px;
   &:hover {
