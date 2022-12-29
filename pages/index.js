@@ -4,19 +4,11 @@ import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../client";
 import { Flex } from "../components/styles/flex.styled";
 import { Title } from "../components/styles/title.styled";
-
-import {
-  PortfolioGrid,
-  Sq,
-  Button,
-  IconWrapper,
-  Icon,
-} from "../components/styles/websites.styled";
+import { PortfolioGrid, Sq, Icon } from "../components/styles/websites.styled";
 import Aside from "../components/Aside";
 
 export const IndexGrid = styled.div`
   // background: orange;
-  height: 100vh;
   display: grid;
   grid-template-areas: "ls rs";
   grid-gap: 2em;
@@ -30,23 +22,17 @@ export const IndexGrid = styled.div`
   //
 `;
 
-export const MostRecentTitle = styled.h2`
-  padding-top: 55px;
-  text-align: center;
-  font-size: 25px;
-  text-decoration: underline;
-  color: #000;
-  // text-shadow: 1px 1px 1px #000;
-`;
-
 export const PostsGrid = styled.div`
+  padding: 80px 50px;
   grid-area: rs;
-  // padding: 50px 105px;
   display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
   border-bottom: solid 2px #000;
-  // height: 100vh;
+`;
+
+export const Section = styled.section`
+  // background: teal;
+  // padding-bottom: 150px 0;
 `;
 
 export const PostsWrapper = styled.div`
@@ -59,20 +45,20 @@ export const PostsWrapper = styled.div`
   }
 `;
 
-export const PostsSection = styled.div``;
-
 const test = ({ websites }) => {
   return (
     <>
       <IndexGrid>
         <Aside />
-
         <PostsWrapper>
-          <PostsSection>
-            <PostsGrid>
-              <Title id="services">Services</Title>
+          <PostsGrid>
+            <Section id="services">
+              <Title>Services</Title>
               <Services />
-              <Title id="works">Works</Title>
+            </Section>
+
+            <Section id="works" style={{ paddingTop: "150px" }}>
+              <Title>Works</Title>
               <PortfolioGrid>
                 {websites &&
                   websites.map((website, index) => (
@@ -88,11 +74,13 @@ const test = ({ websites }) => {
                     </span>
                   ))}
               </PortfolioGrid>
+            </Section>
 
-              <Title id="contact">Contact</Title>
+            <Section id="contact" style={{ paddingTop: "150px" }}>
+              <Title>Contact</Title>
               <Contact />
-            </PostsGrid>
-          </PostsSection>
+            </Section>
+          </PostsGrid>
         </PostsWrapper>
       </IndexGrid>
     </>

@@ -12,6 +12,8 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.h1`
+  padding-top: 10px;
+  padding-left: 10px;
   font-size: 32px;
   // background: green;
   color: #000;
@@ -32,11 +34,11 @@ export const NavMenu = styled.ul`
   display: flex;
   list-style: none;
   padding-top: 15px;
-  font-size: 30px;
-
+  font-size: 25px;
   a {
     margin: 0 5px;
     color: #000;
+    text-decoration: none;
   }
 `;
 export const SmIcons = styled.div`

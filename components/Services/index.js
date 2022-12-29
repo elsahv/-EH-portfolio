@@ -15,8 +15,8 @@ const AboutGrid = styled.div`
 
 const Description = styled.p`
   grid-area: a;
-  padding: 5px 50px;
-  border-bottom: solid 1px #000;
+  padding: 10px 50px;
+  // border-bottom: solid 1px #000;
 `;
 const TimelineWrapper = styled.div`
   grid-area: b;

@@ -16,9 +16,9 @@ const HeaderSection = () => {
         <Logo>Elsa Hovey</Logo>
         <Nav>
           <NavMenu>
-            <Link href="/#services">services</Link>
+            {/* <Link href="/#services">services</Link>
             <Link href="/#work">work</Link>
-            <Link href="/#contact">contact</Link>
+            <Link href="/#contact">contact</Link> */}
 
             <a href="https://google.com">
               <AiOutlineMail />

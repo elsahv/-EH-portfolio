@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
+
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import styled from "styled-components";
 
 export const AsideWrapper = styled.div`
@@ -28,6 +30,10 @@ export const BlogBanner = styled.div`
   // text-shadow: 1px 1px 1px #000;
   background: #fff;
   border-bottom: solid 2px black;
+  a {
+    color: #000;
+    padding: 2px;
+  }
 
   @media only screen and (max-width: 834px) {
     padding: 30px 10px;
@@ -64,13 +70,13 @@ const Aside = () => {
     <>
       <AsideWrapper>
         <BlogBanner>
-          <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
+          <p style={{ paddingBottom: "10px" }}>
+            Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.
+          </p>
           <ImageWrapper>
             <Image
               src={PortfolioPic}
               alt="elsa hovey"
-              // width="440px"
-              // height="600px"
               layout="responsive"
               style={{ position: "absolute" }}
             />
@@ -85,18 +91,9 @@ const Aside = () => {
             , and the other for:
             <Link href="/">small business owners and creatives.</Link>
           </p>
-          <p>you can see all of my featured works here</p>
+          <p>All of my featured works are here</p>
+          <BsFillArrowRightCircleFill />
         </BlogBanner>
-        {/* <ImageWrapper>
-          <Image
-            src={PortfolioPic}
-            alt="elsa hovey"
-            // width="440px"
-            // height="600px"
-            layout="responsive"
-            style={{ position: "absolute" }}
-          />
-        </ImageWrapper> */}
       </AsideWrapper>
     </>
   );
