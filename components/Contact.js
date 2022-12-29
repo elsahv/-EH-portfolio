@@ -1,5 +1,3 @@
-import Image from "next/image";
-import PortfolioPic from "../public/images/portfolio-pic.jpg";
 import styled from "styled-components";
 
 export const Flex = styled.div`
@@ -14,19 +12,6 @@ export const Flex = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.div`
-  position: relative;
-  width: 340px;
-  grid-area: left;
-  // height: 500px;
-  // border: solid 2px #000;
-
-  @media only screen and (max-width: 1024px) {
-    width: 250px;
-    height: 350px;
-  }
-`;
-
 export const ContentWrapper = styled.div`
   grid-area: right;
   padding: 25px;
@@ -38,16 +23,6 @@ export const ContentWrapper = styled.div`
 const Contact = () => {
   return (
     <Flex>
-      <ImageWrapper>
-        <Image
-          src={PortfolioPic}
-          alt="elsa hovey"
-          // width="440px"
-          // height="600px"
-          layout="responsive"
-          style={{ position: "absolute" }}
-        />
-      </ImageWrapper>
       <ContentWrapper>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga

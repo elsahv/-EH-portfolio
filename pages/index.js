@@ -1,6 +1,5 @@
-import Link from "next/link";
 import styled from "styled-components";
-import About from "../components/About";
+import Services from "../components/Services";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../client";
 import { Flex } from "../components/styles/flex.styled";
@@ -13,6 +12,7 @@ import {
   IconWrapper,
   Icon,
 } from "../components/styles/websites.styled";
+import Aside from "../components/Aside";
 
 export const IndexGrid = styled.div`
   // background: orange;
@@ -27,48 +27,7 @@ export const IndexGrid = styled.div`
       "ls"
       "rs";
   }
-`;
-
-export const BlogBanner = styled.div`
-  font-size: 20x;
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  font-size: 20px;
-  padding: 60px 30px;
-  color: #000;
-  // text-shadow: 1px 1px 1px #000;
-  background: #fff;
-  border-bottom: solid 2px black;
-
-  @media only screen and (max-width: 834px) {
-    padding: 30px 10px;
-    // border: none;
-  }
-
-  @media only screen and (max-width: 600px) {
-    font-size: 20px;
-    padding-left: 30px;
-    padding-top: 30px;
-  }
-
-  @media only screen and (max-width: 531px) {
-    font-size: 17px;
-    padding: 30px 20px;
-  }
-`;
-
-export const Aside = styled.div`
-  grid-area: ls;
-  background: #fff;
-  border-right: solid 2px black;
-  border-bottom: solid 2px black;
-  width: 400px;
-
-  @media only screen and (max-width: 834px) {
-    width: 100%;
-    // padding: 50px;
-  }
+  //
 `;
 
 export const MostRecentTitle = styled.h2`
@@ -106,33 +65,13 @@ const test = ({ websites }) => {
   return (
     <>
       <IndexGrid>
-        <Aside>
-          <BlogBanner>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
-            cupiditate eum eveniet voluptate, u
-          </BlogBanner>
-          <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
+        <Aside />
 
-          <p>
-            I currently run two design studios: one catered to:
-            <Link a href="https://writingtobetterhealth.com">
-              registered dietitian nutritionists
-            </Link>
-            , and the other for:
-            <Link href="/">small business owners and creatives.</Link>
-          </p>
-          <p>you can see all of my featured works here</p>
-          <ul>
-            <li>services</li>
-            <li>work</li>
-            <li>contact</li>
-          </ul>
-        </Aside>
         <PostsWrapper>
           <PostsSection>
             <PostsGrid>
-              <Title id="services">About</Title>
-              <About />
+              <Title id="services">Services</Title>
+              <Services />
               <Title id="works">Works</Title>
               <PortfolioGrid>
                 {websites &&
@@ -149,8 +88,7 @@ const test = ({ websites }) => {
                     </span>
                   ))}
               </PortfolioGrid>
-              {/* <Title id="services">About</Title>
-              <About /> */}
+
               <Title id="contact">Contact</Title>
               <Contact />
             </PostsGrid>
