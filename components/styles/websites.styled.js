@@ -24,7 +24,7 @@ export const Sq = styled.div`
   border: solid 2px black;
   font-size: 18px;
   &:hover {
-    background: teal;
+    // background: teal;
     transition: 1s;
   }
 `;

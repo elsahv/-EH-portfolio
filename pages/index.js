@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import Link from "next/link";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../client";
@@ -6,6 +6,8 @@ import { Flex } from "../components/styles/flex.styled";
 import { Title } from "../components/styles/title.styled";
 import { PortfolioGrid, Sq, Icon } from "../components/styles/websites.styled";
 import Aside from "../components/Aside";
+import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import styled from "styled-components";
 
 export const IndexGrid = styled.div`
   // background: orange;
@@ -58,6 +60,37 @@ const Description = styled.p`
   padding: 10px 50px;
 `;
 
+export const ButtonWrapper = styled.div`
+  // background: maroon;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+export const Button = styled.button`
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  width: 130px;
+  font-size: 18px;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+  }
+  &:hover {
+    background: teal;
+    transition: 1s;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  padding-top: 6px;
+`;
+
 const test = ({ websites }) => {
   return (
     <>
@@ -69,7 +102,7 @@ const test = ({ websites }) => {
             <Services />
           </Section>
 
-          <Section id="works" class="section-spacing">
+          <Section id="works" className="section-spacing">
             <Title>Works</Title>
             <Description>Here are my latest web designs</Description>
             <PortfolioGrid>
@@ -83,13 +116,29 @@ const test = ({ websites }) => {
                       </Flex>
                       <div>{website.description}</div>
                       <div>{website.tags}</div>
+                      {/* <Flex> */}
+                      <ButtonWrapper>
+                        <Button>
+                          <Link href={website.projectLink}>visit site</Link>
+                          <IconWrapper>
+                            <AiOutlineLink />
+                          </IconWrapper>
+                        </Button>
+                        <Button>
+                          <Link href={website.codeLink}>view code</Link>
+                          <IconWrapper>
+                            <AiFillGithub />
+                          </IconWrapper>
+                        </Button>
+                      </ButtonWrapper>
+                      {/* </Flex> */}
                     </Sq>
                   </span>
                 ))}
             </PortfolioGrid>
           </Section>
 
-          <Section id="contact" class="section-spacing">
+          <Section id="contact" className="section-spacing">
             <Title>Contact</Title>
             <Contact />
           </Section>
