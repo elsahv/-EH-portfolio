@@ -75,15 +75,22 @@ export const Button = styled.button`
   width: 130px;
   font-size: 18px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   a {
     text-decoration: none;
     color: #000;
     padding: 5px;
   }
+  a:hover {
+    color: aquamarine;
+    transition: 1s;
+  }
   &:hover {
     background: teal;
     transition: 1s;
+    color: aquamarine;
   }
 `;
 
@@ -116,22 +123,16 @@ const test = ({ websites }) => {
                       </Flex>
                       <div>{website.description}</div>
                       <div>{website.tags}</div>
-                      {/* <Flex> */}
                       <ButtonWrapper>
                         <Button>
                           <Link href={website.projectLink}>visit site</Link>
-                          <IconWrapper>
-                            <AiOutlineLink />
-                          </IconWrapper>
+                          <AiOutlineLink />
                         </Button>
                         <Button>
                           <Link href={website.codeLink}>view code</Link>
-                          <IconWrapper>
-                            <AiFillGithub />
-                          </IconWrapper>
+                          <AiFillGithub />
                         </Button>
                       </ButtonWrapper>
-                      {/* </Flex> */}
                     </Sq>
                   </span>
                 ))}
