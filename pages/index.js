@@ -37,7 +37,7 @@ export const PostsGrid = styled.div`
   display: grid;
   grid-gap: 2em;
   border-left: solid 1px #000;
-  border-bottom: solid 2px #000;
+  border-bottom: solid 1px #000;
 
   .section-spacing {
     padding-top: 150px;

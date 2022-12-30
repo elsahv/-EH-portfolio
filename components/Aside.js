@@ -27,8 +27,6 @@ export const BlogBanner = styled.div`
   flex-direction: column;
   padding: 40px 25px;
   color: #000;
-  // text-shadow: 1px 1px 1px #000;
-  // border-bottom: solid 2px black;
   a {
     color: #000;
     padding: 2px;
