@@ -54,6 +54,9 @@ export const Section = styled.section`
   @media only screen and (max-width: 600px) {
   }
 `;
+const Description = styled.p`
+  padding: 10px 50px;
+`;
 
 const test = ({ websites }) => {
   return (
@@ -68,6 +71,7 @@ const test = ({ websites }) => {
 
           <Section id="works" class="section-spacing">
             <Title>Works</Title>
+            <Description>Here are my latest web designs</Description>
             <PortfolioGrid>
               {websites &&
                 websites.map((website, index) => (

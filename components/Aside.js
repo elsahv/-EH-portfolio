@@ -28,7 +28,7 @@ export const BlogBanner = styled.div`
   color: #000;
   // text-shadow: 1px 1px 1px #000;
   background: #fff;
-  border-bottom: solid 2px black;
+  // border-bottom: solid 2px black;
   a {
     color: #000;
     padding: 2px;
@@ -81,17 +81,8 @@ const Aside = () => {
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
         </BlogBanner>
-        <BlogBanner>
-          <Description>
-            I currently run two design studios: one catered to:
-            <Link a href="https://writingtobetterhealth.com">
-              registered dietitian nutritionists
-            </Link>
-            , and the other for:
-            <Link href="/">small business owners and creatives.</Link>
-          </Description>
-        </BlogBanner>
-        <BlogBanner>
+
+        <BlogBanner style={{ borderTop: "solid 2px #000" }}>
           <Timeline />
         </BlogBanner>
       </AsideWrapper>

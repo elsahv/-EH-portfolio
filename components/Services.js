@@ -25,7 +25,8 @@ const AboutGrid = styled.div`
 
 const Description = styled.p`
   grid-area: a;
-  padding: 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
 `;
 const TimelineWrapper = styled.div`
   grid-area: b;
@@ -75,11 +76,11 @@ const About = () => {
               Create a web presence for your business. Whether you need a simple
               one pager, or a multi-page app to build your empire... I can help!
             </li>
-            <li>
+            {/* <li>
               <TimelineDate>Web + Hosting</TimelineDate>I work one-on-one with
               clients regarding hosting and maintenance, leaving them to fully
               concentrate on their businesses.
-            </li>
+            </li> */}
             <li>
               <TimelineDate>Blogging Content Mgmt Integration</TimelineDate>
               Need a blog? Youre at the right place! I portfolio with many
