@@ -44,11 +44,21 @@ export const Button = styled.button`
   }
 `;
 
-export const Icon = styled.div`
-  font-size: 25px;
-  padding-left: 20px;
+export const WebsiteTitle = styled.h3`
+  padding-bottom: 5px;
+  font-size: 22px;
+
+  @media only screen and (max-width: 531px) {
+    font-size: 20px;
+  }
 `;
 
-export const IconWrapper = styled.div`
-  padding-top: 6px;
+export const WebsiteDescription = styled.p`
+  @media only screen and (max-width: 531px) {
+  }
+`;
+
+export const WebsiteTag = styled.div`
+  @media only screen and (max-width: 531px) {
+  }
 `;

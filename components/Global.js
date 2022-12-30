@@ -8,9 +8,15 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Cormorant Garamond', serif;
     scroll-behavior: smooth;
   }
-
+body {
+  background: lightgray;
+  @media only screen and (max-width: 1024px) {
+  background: none;
+  }
+}
   html {
     scroll-behavior: smooth;
+
   }
 
 `;

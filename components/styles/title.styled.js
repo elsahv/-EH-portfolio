@@ -9,6 +9,6 @@ export const Title = styled.h2`
   text-decoration: underline;
 
   @media only screen and (max-width: 1024px) {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 `;

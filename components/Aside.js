@@ -10,13 +10,14 @@ export const AsideWrapper = styled.div`
   border-right: solid 2px black;
   border-bottom: solid 2px black;
 
+  @media only screen and (max-width: 1024px) {
+    border-bottom: none;
+  }
+
   @media only screen and (max-width: 600px) {
     width: 100%;
     border-bottom: none;
     border-right: none;
-  }
-  @media only screen and (max-width: 600px) {
-    border-bottom: solid 2px #000;
   }
 `;
 
@@ -27,7 +28,6 @@ export const BlogBanner = styled.div`
   padding: 40px 25px;
   color: #000;
   // text-shadow: 1px 1px 1px #000;
-  background: #fff;
   // border-bottom: solid 2px black;
   a {
     color: #000;
@@ -36,8 +36,8 @@ export const BlogBanner = styled.div`
   p {
     margin: 10px 2px;
   }
-  @media only screen and (max-width: 834px) {
-    padding: 30px 10px;
+  @media only screen and (max-width: 1024px) {
+    padding: 30px 20px;
   }
 
   @media only screen and (max-width: 600px) {

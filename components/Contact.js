@@ -17,7 +17,7 @@ export const ContentWrapper = styled.div`
   padding: 25px 50px;
 
   @media only screen and (max-width: 1024px) {
-    padding: 0 0 50px 10px;
+    padding: 10px 20px 20px;
   }
 `;
 

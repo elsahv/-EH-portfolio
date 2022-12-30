@@ -2,22 +2,24 @@ import Link from "next/link";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../client";
-import { Flex } from "../components/styles/flex.styled";
 import { Title } from "../components/styles/title.styled";
-import { PortfolioGrid, Sq, Icon } from "../components/styles/websites.styled";
+import {
+  PortfolioGrid,
+  Sq,
+  WebsiteTitle,
+  WebsiteDescription,
+  WebsiteTag,
+} from "../components/styles/websites.styled";
 import Aside from "../components/Aside";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styled from "styled-components";
 
 export const IndexGrid = styled.div`
-  // background: orange;
+  // background: #fff;
   display: grid;
   grid-template-areas: "ls rs rs rs ";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2em;
-  @media only screen and (max-width: 1024px) {
-    grid-gap: 1em;
-  }
+  grid-gap: 1em;
 
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
@@ -28,7 +30,9 @@ export const IndexGrid = styled.div`
 `;
 
 export const PostsGrid = styled.div`
-  padding: 80px 50px;
+  background: #fff;
+
+  padding: 80px 20px;
   grid-area: rs;
   display: grid;
   grid-gap: 2em;
@@ -43,12 +47,9 @@ export const PostsGrid = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 50px 0 0 20px;
-  }
-
-  @media only screen and (max-width: 834px) {
     border-left: none;
     border-bottom: none;
+    padding: 50px 0 0 20px;
   }
 `;
 
@@ -58,6 +59,10 @@ export const Section = styled.section`
 `;
 const Description = styled.p`
   padding: 10px 50px;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -117,12 +122,11 @@ const test = ({ websites }) => {
                 websites.map((website, index) => (
                   <span key={index}>
                     <Sq>
-                      <Flex>
-                        <h3>{website.websiteTitle}</h3>
-                        <Icon>(i)</Icon>
-                      </Flex>
-                      <div>{website.description}</div>
-                      <div>{website.tags}</div>
+                      <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
+                      <WebsiteDescription>
+                        {website.description}
+                      </WebsiteDescription>
+                      {/* <WebsiteTag>-{website.tags}</WebsiteTag> */}
                       <ButtonWrapper>
                         <Button>
                           <Link href={website.projectLink}>visit site</Link>
