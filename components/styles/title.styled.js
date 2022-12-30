@@ -5,7 +5,6 @@ export const Title = styled.h2`
   display: flex;
   align-items: flex-end;
   padding-left: 50px;
-  padding-bottom: 5px;
   font-size: 30px;
   text-decoration: underline;
 

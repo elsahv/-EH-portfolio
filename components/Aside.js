@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 import styled from "styled-components";
+import Timeline from "./Timeline";
 
 export const AsideWrapper = styled.div`
   grid-area: ls;
@@ -20,11 +21,9 @@ export const AsideWrapper = styled.div`
 `;
 
 export const BlogBanner = styled.div`
-  font-size: 17px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 20px;
   padding: 40px 25px;
   color: #000;
   // text-shadow: 1px 1px 1px #000;
@@ -91,6 +90,9 @@ const Aside = () => {
             , and the other for:
             <Link href="/">small business owners and creatives.</Link>
           </Description>
+        </BlogBanner>
+        <BlogBanner>
+          <Timeline />
         </BlogBanner>
       </AsideWrapper>
     </>

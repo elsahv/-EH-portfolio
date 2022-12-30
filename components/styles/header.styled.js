@@ -28,11 +28,15 @@ export const NavMenu = styled.ul`
   display: flex;
   list-style: none;
   padding-top: 15px;
-  font-size: 25px;
+  font-size: 30px;
   a {
     margin: 0 5px;
     color: #000;
     text-decoration: none;
+    &:hover {
+      color: teal;
+      transition: 1s;
+    }
   }
 `;
 export const SmIcons = styled.div`
@@ -40,10 +44,11 @@ export const SmIcons = styled.div`
   display: flex;
   padding-top: 5px;
   padding-left: 5px;
+
   a {
-    color: #000;
     margin: 0 3px;
   }
+
   @media only screen and (max-width: 1024px) {
     font-size: 40px;
     margin: 10px 0;

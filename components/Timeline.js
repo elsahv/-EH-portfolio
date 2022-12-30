@@ -17,6 +17,7 @@ const Timeline = () => {
       <AboutTimeline>
         <ul>
           <li>
+            <h2 style={{ paddingBottom: "10px" }}>A little bit about me...</h2>
             <TimelineDate> 2020-2022:</TimelineDate>
             Career transition, built projects. Built Wtbh to utilize skills and
             nutrition interests. Built the laughing coyote for working with
