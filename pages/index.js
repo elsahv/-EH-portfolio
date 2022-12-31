@@ -24,8 +24,8 @@ export const IndexGrid = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "ls"
-      "rs";
+      "rs"
+      "ls";
   }
 `;
 
