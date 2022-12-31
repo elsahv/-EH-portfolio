@@ -28,7 +28,7 @@ main {
   }
   section {
     padding: 15px 50px;
-    margin: 40px 20px;
+    margin: 90px 20px;
     // background: green;
   }
   .title {

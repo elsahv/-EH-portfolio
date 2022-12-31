@@ -124,7 +124,10 @@ const test = ({ websites }) => {
                 ))}
             </PortfolioGrid>
           </section>
-
+          <section id="mindmaps">
+            <h2 className="title">Mindmaps</h2>
+            {/* <Mindmaps /> */}
+          </section>
           <section id="contact">
             <h2 className="title">Contact</h2>
             <Contact />
