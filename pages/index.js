@@ -2,7 +2,6 @@ import Link from "next/link";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../client";
-import { Title } from "../components/styles/title.styled";
 import {
   PortfolioGrid,
   Sq,
@@ -31,37 +30,20 @@ export const IndexGrid = styled.div`
 
 export const PostsGrid = styled.div`
   background: #fff;
-
-  padding: 80px 20px;
+  // padding: 80px 20px;
   grid-area: rs;
   display: grid;
   grid-gap: 2em;
   border-left: solid 1px #000;
   border-bottom: solid 1px #000;
 
-  .section-spacing {
-    padding-top: 150px;
-    @media only screen and (max-width: 1024px) {
-      padding-top: 50px;
-    }
+ 
   }
 
   @media only screen and (max-width: 1024px) {
     border-left: none;
     border-bottom: none;
     padding: 50px 0 0 20px;
-  }
-`;
-
-export const Section = styled.section`
-  @media only screen and (max-width: 600px) {
-  }
-`;
-const Description = styled.p`
-  padding: 10px 50px;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 10px 20px;
   }
 `;
 
@@ -109,14 +91,14 @@ const test = ({ websites }) => {
       <IndexGrid>
         <Aside />
         <PostsGrid>
-          <Section id="services">
-            <Title>Services</Title>
+          <section id="services">
+            <h2 className="title">Services</h2>
             <Services />
-          </Section>
+          </section>
 
-          <Section id="works" className="section-spacing">
-            <Title>Works</Title>
-            <Description>Here are my latest web designs</Description>
+          <section id="works">
+            <h2 className="title">Works</h2>
+            <p>Here are my latest web designs</p>
             <PortfolioGrid>
               {websites &&
                 websites.map((website, index) => (
@@ -141,12 +123,12 @@ const test = ({ websites }) => {
                   </span>
                 ))}
             </PortfolioGrid>
-          </Section>
+          </section>
 
-          <Section id="contact" className="section-spacing">
-            <Title>Contact</Title>
+          <section id="contact">
+            <h2 className="title">Contact</h2>
             <Contact />
-          </Section>
+          </section>
         </PostsGrid>
       </IndexGrid>
     </>

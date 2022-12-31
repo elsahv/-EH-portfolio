@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const AboutGrid = styled.div`
-  padding: 15px 50px;
+  // padding: 15px 50px;
   // background: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,9 +23,9 @@ const AboutGrid = styled.div`
   }
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   grid-area: a;
-  padding-bottom: 15px;
+  // padding-bottom: 15px;
   border-bottom: 1px solid #000;
 `;
 const TimelineWrapper = styled.div`
@@ -33,8 +33,8 @@ const TimelineWrapper = styled.div`
 `;
 const SkillsWrapper = styled.div`
   grid-area: c;
-  padding-left: 115px;
-  padding-top: 20px;
+  // padding-left: 115px;
+  // padding-top: 20px;
   list-style: none;
   ul {
     list-style-type: none;
@@ -50,6 +50,7 @@ const SkillsWrapper = styled.div`
 `;
 const SkillsTitle = styled.h3`
   text-decoration: underline;
+  padding-top: 20px;
 
   @media only screen and (max-width: 1024px) {
     text-decoration: underline;
@@ -76,25 +77,27 @@ const About = () => {
   return (
     <AboutGrid>
       <Description>
-        I currently work as a self-employed, indie web developer. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Reiciendis, necessitatibus
-        cupiditate, dolore exceptu
+        <p>
+          I currently work as a self-employed, indie web developer. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Reiciendis,
+          necessitatibus cupiditate, dolore exceptu
+        </p>
       </Description>
       <TimelineWrapper>
         <AboutTimeline>
           <AboutContent>
             <TimelineDate> Web Design</TimelineDate>
-            <p>
+            <span>
               Create a web presence for your business. Whether you need a simple
               one pager, or a multi-page app to build your empire... I can help!
-            </p>
+            </span>
           </AboutContent>
           <AboutContent>
             <TimelineDate>Blogging Content Mgmt Integration</TimelineDate>
-            <p>
+            <span>
               Need a blog? Youre at the right place! I portfolio with many
               different types of tools, including Wordpress.
-            </p>
+            </span>
           </AboutContent>
         </AboutTimeline>
       </TimelineWrapper>

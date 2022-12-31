@@ -9,19 +9,34 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 body {
-  background: lightgray;
   @media only screen and (max-width: 1024px) {
   background: none;
   }
+}
+main {
+  background: lightgray;
+
 }
   html {
     scroll-behavior: smooth;
   }
   p{
     font-size: 17px;
+    margin: 5px 0;
+    // color: blue;
+
+  }
+  section {
+    padding: 15px 50px;
+    margin: 40px 20px;
+    // background: green;
+  }
+  .title {
+    padding: 10px 0;
+    font-size: 30px;
+    text-decoration: underline;
     // color: blue;
   }
-
 `;
 
 export default GlobalStyles;

@@ -14,7 +14,7 @@ export const Flex = styled.div`
 
 export const ContentWrapper = styled.div`
   grid-area: right;
-  padding: 25px 50px;
+  // padding: 25px 50px;
 
   @media only screen and (max-width: 1024px) {
     padding: 10px 20px 20px;
