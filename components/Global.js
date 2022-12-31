@@ -16,7 +16,10 @@ body {
 }
   html {
     scroll-behavior: smooth;
-
+  }
+  p{
+    font-size: 17px;
+    // color: blue;
   }
 
 `;
