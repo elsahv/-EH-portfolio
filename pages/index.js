@@ -9,7 +9,6 @@ import styled from "styled-components";
 // STYLES
 
 export const IndexWrapper = styled.div`
-  // background: #fff;
   display: grid;
   grid-template-areas: "ls rs rs rs ";
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -39,7 +38,7 @@ export const IndexContainer = styled.div`
   @media only screen and (max-width: 600px) {
     border-left: none;
     border-bottom: none;
-    padding: 50px 0 0 20px;
+    padding: 50px 0 0 7px;
   }
 `;
 
@@ -127,7 +126,7 @@ export const Button = styled.button`
 
 // END STYLES
 
-const test = ({ websites }) => {
+const Home = ({ websites }) => {
   return (
     <>
       <IndexWrapper>
@@ -180,7 +179,7 @@ const test = ({ websites }) => {
   );
 };
 
-export default test;
+export default Home;
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "websites"] | order(_createdAt asc)';

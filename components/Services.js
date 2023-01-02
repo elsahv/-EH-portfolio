@@ -63,6 +63,12 @@ const Sq = styled.div`
   li {
     padding-top: 5px;
   }
+  @media only screen and (max-width: 1024px) {
+    padding: 0;
+    li {
+      padding-top: 0px;
+    }
+  }
 `;
 
 const About = () => {
