@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   background: lightgray;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 600px) {
     border-top: 2px solid #000;
   }
 `;

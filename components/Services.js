@@ -33,8 +33,7 @@ const TimelineWrapper = styled.div`
 `;
 const SkillsWrapper = styled.div`
   grid-area: c;
-  // padding-left: 115px;
-  // padding-top: 20px;
+
   list-style: none;
   ul {
     list-style-type: none;
@@ -45,7 +44,7 @@ const SkillsWrapper = styled.div`
 
   @media only screen and (max-width: 1024px) {
     padding-left: 0px;
-    padding-top: 40px;
+    // padding-top: 40px;
   }
 `;
 const SkillsTitle = styled.h3`
@@ -54,7 +53,8 @@ const SkillsTitle = styled.h3`
 
   @media only screen and (max-width: 1024px) {
     text-decoration: underline;
-    font-size: 27px;
+    // font-size: 27px;
+    // padding-top: 30px;
   }
 `;
 
@@ -67,6 +67,9 @@ const AboutTimeline = styled.div`
 
 const TimelineDate = styled.div`
   font-weight: bold;
+  @media only screen and (max-width: 1024px) {
+    text-decoration: underline;
+  }
 `;
 
 const AboutContent = styled.div`
@@ -87,17 +90,17 @@ const About = () => {
         <AboutTimeline>
           <AboutContent>
             <TimelineDate> Web Design</TimelineDate>
-            <span>
+            <p>
               Create a web presence for your business. Whether you need a simple
               one pager, or a multi-page app to build your empire... I can help!
-            </span>
+            </p>
           </AboutContent>
           <AboutContent>
             <TimelineDate>Blogging Content Mgmt Integration</TimelineDate>
-            <span>
+            <p>
               Need a blog? Youre at the right place! I portfolio with many
               different types of tools, including Wordpress.
-            </span>
+            </p>
           </AboutContent>
         </AboutTimeline>
       </TimelineWrapper>

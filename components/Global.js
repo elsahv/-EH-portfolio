@@ -8,35 +8,51 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Cormorant Garamond', serif;
     scroll-behavior: smooth;
   }
-body {
-  @media only screen and (max-width: 1024px) {
-  background: none;
-  }
-}
+ 
 main {
   background: lightgray;
-
+  @media only screen and (max-width: 1024px) {
+  // background: none;
+  }
 }
   html {
     scroll-behavior: smooth;
   }
   p{
     font-size: 17px;
-    margin: 5px 0;
-    // color: blue;
-
+    margin: 5px 0 3px 0;
+    // color: red;
+    opacity: 0.9;
+    @media only screen and (max-width: 1024px) {
+     font-size: 16px;
+    }
   }
+ 
   section {
     padding: 15px 50px;
     margin: 40px 20px;
     // background: green;
+  @media only screen and (max-width: 1024px) {
+  padding: 0;
+  margin: 0px;
+  }
   }
   .title {
-    padding: 10px 0;
-    font-size: 30px;
+    font-size: 32px;
     text-decoration: underline;
     // color: blue;
+  @media only screen and (max-width: 1024px) {
+  padding: 0 0 0 5px;
+    font-size: 32px;
+
   }
+  }
+  .section-spacing {
+    @media only screen and (max-width: 1024px) {
+      padding-top: 85px;
+      }
+  }
+
 `;
 
 export default GlobalStyles;
