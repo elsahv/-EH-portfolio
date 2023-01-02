@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TimelineWrapper = styled.div`
-  // padding: 15px 145px 0 55px;
+  padding: 15px;
   li {
     margin: 15px 0;
     list-style: none;

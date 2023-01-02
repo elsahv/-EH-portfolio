@@ -59,9 +59,9 @@ const Title = styled.h3`
 const Sq = styled.div`
   // background: green;
   padding: 5px;
-  margin: 10px 0;
+  margin: 20px 0;
   li {
-    padding-top: 5px;
+    padding-top: 2px;
   }
   @media only screen and (max-width: 1024px) {
     padding: 0;

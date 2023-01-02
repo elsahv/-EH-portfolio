@@ -39,6 +39,7 @@ export const IndexContainer = styled.div`
     border-left: none;
     border-bottom: none;
     padding: 50px 0 0 7px;
+    
   }
 `;
 

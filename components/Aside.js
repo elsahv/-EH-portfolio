@@ -17,7 +17,7 @@ export const AsideWrapper = styled.div`
   }
 `;
 
-export const BlogBanner = styled.div`
+export const AsideContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -72,16 +72,16 @@ const Aside = () => {
   return (
     <>
       <AsideWrapper>
-        <BlogBanner>
+        <AsideContainer>
           <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
           <ImageWrapper>
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
-        </BlogBanner>
+        </AsideContainer>
 
-        <BlogBanner style={{ borderTop: "solid 2px #000" }}>
+        <AsideContainer style={{ borderTop: "solid 2px #000" }}>
           <Timeline />
-        </BlogBanner>
+        </AsideContainer>
       </AsideWrapper>
     </>
   );
