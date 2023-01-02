@@ -20,11 +20,12 @@ main {
   }
   p{
     font-size: 17px;
-    margin: 5px 0 3px 0;
+    margin: 1px 0 3px 0;
     // color: red;
     opacity: 0.9;
     @media only screen and (max-width: 1024px) {
-     font-size: 16px;
+      margin: 1px 0 5px 0;
+
     }
   }
  

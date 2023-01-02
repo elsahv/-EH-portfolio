@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const AboutGrid = styled.div`
-  // padding: 15px 50px;
+const Wrapper = styled.div`
   // background: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "a a"
     "b c";
+  grid-gap: 1em;
 
   @media only screen and (max-width: 1024px) {
     padding: 10px;
@@ -23,15 +23,15 @@ const AboutGrid = styled.div`
   }
 `;
 
-const Description = styled.div`
+const Description = styled.p`
   grid-area: a;
-  // padding-bottom: 15px;
+  padding: 5px 0;
   border-bottom: 1px solid #000;
 `;
-const TimelineWrapper = styled.div`
+const ServicesContainer = styled.div`
   grid-area: b;
 `;
-const SkillsWrapper = styled.div`
+const SkillsContainer = styled.div`
   grid-area: c;
 
   list-style: none;
@@ -47,79 +47,66 @@ const SkillsWrapper = styled.div`
     // padding-top: 40px;
   }
 `;
-const SkillsTitle = styled.h3`
-  text-decoration: underline;
-  padding-top: 20px;
 
-  @media only screen and (max-width: 1024px) {
-    text-decoration: underline;
-    // font-size: 27px;
-    // padding-top: 30px;
-  }
-`;
-
-const AboutTimeline = styled.div`
-  // padding: 15px 145px 0 55px;
-  li {
-    margin: 15px 0;
-  }
-`;
-
-const TimelineDate = styled.div`
+const Title = styled.h3`
   font-weight: bold;
+  text-decoration: underline;
   @media only screen and (max-width: 1024px) {
     text-decoration: underline;
   }
 `;
 
-const AboutContent = styled.div`
-  margin: 15px 0;
+const Sq = styled.div`
+  // background: green;
+  padding: 5px;
+  margin: 10px 0;
+  li {
+    padding-top: 5px;
+  }
 `;
 
 const About = () => {
   return (
-    <AboutGrid>
+    <Wrapper>
       <Description>
-        <p>
-          I currently work as a self-employed, indie web developer. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Reiciendis,
-          necessitatibus cupiditate, dolore exceptu
-        </p>
+        I currently work as a self-employed, indie web developer. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Reiciendis, necessitatibus
+        cupiditate, dolore exceptu
       </Description>
-      <TimelineWrapper>
-        <AboutTimeline>
-          <AboutContent>
-            <TimelineDate> Web Design</TimelineDate>
-            <p>
-              Create a web presence for your business. Whether you need a simple
-              one pager, or a multi-page app to build your empire... I can help!
-            </p>
-          </AboutContent>
-          <AboutContent>
-            <TimelineDate>Blogging Content Mgmt Integration</TimelineDate>
-            <p>
-              Need a blog? Youre at the right place! I portfolio with many
-              different types of tools, including Wordpress.
-            </p>
-          </AboutContent>
-        </AboutTimeline>
-      </TimelineWrapper>
-      <SkillsWrapper>
-        <SkillsTitle>Skills</SkillsTitle>
-        <ul>
-          <li>
-            <b>Programming Languages:</b> Javascript, PHP
-          </li>
-          <li>
-            <b>Libraries & Frameworks: </b> React, NextJS, Node,
-            Styled-Components, bootstrap, SASS
-          </li>
-          <li>
-            <b>Tools & Databases:</b> Wordpress, Sanity.io, Git, Mailchimp API
-          </li>
-        </ul>
-      </SkillsWrapper>
-    </AboutGrid>
+      <ServicesContainer>
+        <Sq>
+          <Title> Web Design</Title>
+          <p>
+            Create a web presence for your business. Whether you need a simple
+            one pager, or a multi-page app to build your empire... I can help!
+          </p>
+        </Sq>
+        <Sq>
+          <Title>Blogging Content Mgmt Integration</Title>
+          <p>
+            Need a blog? Youre at the right place! I portfolio with many
+            different types of tools, including Wordpress.
+          </p>
+        </Sq>
+      </ServicesContainer>
+      <SkillsContainer>
+        <Sq>
+          <Title>Skills</Title>
+          <ul>
+            <li>
+              <b>Programming Languages:</b> Javascript, PHP
+            </li>
+            <li>
+              <b>Libraries & Frameworks: </b> React, NextJS, Node,
+              Styled-Components, bootstrap, SASS
+            </li>
+            <li>
+              <b>Tools & Databases:</b> Wordpress, Sanity.io, Git, Mailchimp API
+            </li>
+          </ul>
+        </Sq>
+      </SkillsContainer>
+    </Wrapper>
   );
 };
 

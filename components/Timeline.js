@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AboutTimeline = styled.div`
+const TimelineWrapper = styled.div`
   // padding: 15px 145px 0 55px;
   li {
     margin: 15px 0;
@@ -15,7 +15,7 @@ const TimelineDate = styled.div`
 const Timeline = () => {
   return (
     <>
-      <AboutTimeline>
+      <TimelineWrapper>
         <ul>
           <li>
             <h2 style={{ paddingBottom: "10px" }}>A little bit about me...</h2>
@@ -39,7 +39,7 @@ const Timeline = () => {
             <p>Completed Bachelors Degree in Nutrition and Food Science</p>
           </li>
         </ul>
-      </AboutTimeline>
+      </TimelineWrapper>
     </>
   );
 };

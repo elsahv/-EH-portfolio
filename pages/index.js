@@ -6,9 +6,44 @@ import Aside from "../components/Aside";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styled from "styled-components";
 
-
 // STYLES
-export const PortfolioGrid = styled.div`
+
+export const IndexWrapper = styled.div`
+  // background: #fff;
+  display: grid;
+  grid-template-areas: "ls rs rs rs ";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ls"
+      "rs";
+  }
+`;
+
+export const IndexContainer = styled.div`
+  background: #fff;
+  grid-area: rs;
+  display: grid;
+  grid-gap: 2em;
+  border-left: solid 1px #000;
+  border-bottom: solid 1px #000;
+  @media only screen and (max-width: 1024px) {
+  padding: 60px 10px 0px 20px;
+
+  }
+  }
+
+  @media only screen and (max-width: 600px) {
+    border-left: none;
+    border-bottom: none;
+    padding: 50px 0 0 20px;
+  }
+`;
+
+export const WebsitesContainer = styled.div`
   opacity: 0.9;
   // background: teal;
   padding-top: 10px;
@@ -51,45 +86,10 @@ export const WebsiteDescription = styled.p`
   }
 `;
 
-export const WebsiteTag = styled.div`
-  @media only screen and (max-width: 531px) {
-  }
-`;
-
-export const IndexGrid = styled.div`
-  // background: #fff;
-  display: grid;
-  grid-template-areas: "ls rs rs rs ";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1em;
-
-  @media only screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "ls"
-      "rs";
-  }
-`;
-
-export const PostsGrid = styled.div`
-  background: #fff;
-  grid-area: rs;
-  display: grid;
-  grid-gap: 2em;
-  border-left: solid 1px #000;
-  border-bottom: solid 1px #000;
-  @media only screen and (max-width: 1024px) {
-  padding: 60px 10px 0px 20px;
-
-  }
-  }
-
-  @media only screen and (max-width: 600px) {
-    border-left: none;
-    border-bottom: none;
-    padding: 50px 0 0 20px;
-  }
-`;
+// export const WebsiteTag = styled.div`
+//   @media only screen and (max-width: 531px) {
+//   }
+// `;
 
 export const ButtonWrapper = styled.div`
   // background: maroon;
@@ -125,22 +125,18 @@ export const Button = styled.button`
   }
 `;
 
-export const IconWrapper = styled.div`
-  padding-top: 6px;
-`;
 // END STYLES
 
 const test = ({ websites }) => {
   return (
     <>
-      <IndexGrid>
+      <IndexWrapper>
         <Aside />
-        <PostsGrid>
+        <IndexContainer>
           <section id="services">
             <h2 className="title">Services</h2>
             <Services />
           </section>
-
           <section id="works" className="section-spacing">
             <h2 className="title">Works</h2>
             <p style={{ padding: "0 5px" }}>
@@ -148,7 +144,7 @@ const test = ({ websites }) => {
               consectetur adipisicing elit. Quo deserunt corporis, itaque
               possimus eos sunt eve
             </p>
-            <PortfolioGrid>
+            <WebsitesContainer>
               {websites &&
                 websites.map((website, index) => (
                   <span key={index}>
@@ -171,15 +167,15 @@ const test = ({ websites }) => {
                     </Sq>
                   </span>
                 ))}
-            </PortfolioGrid>
+            </WebsitesContainer>
           </section>
 
           <section id="contact" className="section-spacing">
             <h2 className="title">Contact</h2>
             <Contact />
           </section>
-        </PostsGrid>
-      </IndexGrid>
+        </IndexContainer>
+      </IndexWrapper>
     </>
   );
 };
