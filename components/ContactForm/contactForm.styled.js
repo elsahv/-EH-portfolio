@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #000;
+  // background: green;
 `;
 
 export const Form = styled.form`
-  padding: 50px;
+  // background: green;
+  padding-left: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    background: aquamarine;
+    // background: aquamarine;
     border: solid 2px #000;
     padding-left: 10px;
     padding-top: 5px;
-    color: gray;
+    color: #000;
     font-size: 18px;
   }
   .btn {
@@ -44,10 +46,10 @@ export const Label = styled.label`
 export const Input = styled.input`
   height: 40px;
   border-radius: 5px;
-  width: 400px;
+  width: 500px;
 `;
 export const Textarea = styled.textarea`
   height: 150px;
   border-radius: 5px;
-  margin: 30px 0;
+  // margin: 30px 0;
 `;

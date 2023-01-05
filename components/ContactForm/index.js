@@ -60,6 +60,7 @@ const ContactForm = () => {
           ) : (
             ""
           )}
+          Name
         </Label>
         <Input
           className="input-fields"
@@ -68,7 +69,7 @@ const ContactForm = () => {
           onChange={handleChange}
           type="text"
           name="name"
-          placeholder="Enter name"
+          // placeholder="Enter name"
         />
 
         {/* EMAIL */}
@@ -78,6 +79,7 @@ const ContactForm = () => {
           ) : (
             ""
           )}
+          Email
         </Label>
         <Input
           className="input-fields"
@@ -86,10 +88,11 @@ const ContactForm = () => {
           onChange={handleChange}
           type="email"
           name="email"
-          placeholder="Enter email"
+          // placeholder="Enter email"
         />
 
         {/* MESSAGE */}
+        <Label>Message</Label>
         <Textarea
           className="input-fields"
           value={values.message}
@@ -97,7 +100,7 @@ const ContactForm = () => {
           onChange={handleChange}
           id="message"
           name="message"
-          placeholder="Enter Message"
+          // placeholder="Enter Message"
         />
 
         {/* BUTTON */}

@@ -25,6 +25,7 @@ export const IndexWrapper = styled.div`
 
 export const IndexContainer = styled.div`
   background: #fff;
+  // opacity: 0.9;
   grid-area: rs;
   display: grid;
   grid-gap: 2em;
@@ -65,6 +66,7 @@ export const Sq = styled.div`
   padding: 40px 20px;
   border: solid 2px black;
   font-size: 18px;
+  border-radius: 5px;
   &:hover {
     // background: teal;
     transition: 1s;
@@ -176,6 +178,12 @@ const Home = ({ websites }) => {
 
           <section id="contact" className="section-spacing">
             <h2 className="title">Contact</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+              dignissimos facilis voluptatem, nostrum, magnam deleniti,
+              perspiciatis tempore voluptatum esse iusto minima libero quibusdam
+              fugit fuga expedita illo omnis praesentium? Similique?
+            </p>
             <ContactForm />
           </section>
         </IndexContainer>
