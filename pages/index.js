@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import Services from "../components/Services";
-import Contact from "../components/Contact";
+import ContactForm from "../components/ContactForm";
 import { sanityClient, urlFor } from "../client";
 import Aside from "../components/Aside";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
@@ -176,7 +176,7 @@ const Home = ({ websites }) => {
 
           <section id="contact" className="section-spacing">
             <h2 className="title">Contact</h2>
-            <Contact />
+            <ContactForm />
           </section>
         </IndexContainer>
       </IndexWrapper>
