@@ -1,3 +1,4 @@
+const today = new Date();
 import styled from "styled-components";
 
 export const Footer = styled.footer`
@@ -10,7 +11,11 @@ export const Footer = styled.footer`
   }
 `;
 const FooterSection = () => {
-  return <Footer> Elsa Hovey- Copyright @2022</Footer>;
+  return (
+    <Footer>
+      <p>Copyright &copy; {today.getFullYear()}</p>
+    </Footer>
+  );
 };
 
 export default FooterSection;
