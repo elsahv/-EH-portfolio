@@ -21,6 +21,7 @@ main {
   p{
     font-size: 17px;
     margin: 5px 0;
+    line-height: 1.5;
     // color: red;
     opacity: 0.9;
     @media only screen and (max-width: 1024px) {

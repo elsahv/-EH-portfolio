@@ -21,10 +21,9 @@ const Timeline = () => {
             <h2 style={{ paddingBottom: "10px" }}>A little bit about me...</h2>
             <TimelineDate> 2020-2022:</TimelineDate>
             <p>
-              Career transition, built projects. Built Wtbh to utilize skills
-              and nutrition interests. Built the laughing coyote for working
-              with creatives. Built RQ for mern stack development and fill a
-              void regarding small businesses in Morongo Basin
+              Career transition: built projects. Built Wtbh to utilize skills
+              and nutrition interests, and the Indoor Jungle Project for
+              blogging about plants, fish, clay.
             </p>
           </li>
           <li>

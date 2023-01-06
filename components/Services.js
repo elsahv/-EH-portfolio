@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   // background: green;
+  // padding-left: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -25,26 +26,16 @@ const Wrapper = styled.div`
 
 const Description = styled.p`
   grid-area: a;
-  padding: 5px 0;
+  padding: 5px 0 10px;
   border-bottom: 1px solid #000;
 `;
-const ServicesContainer = styled.div`
+const LeftSide = styled.div`
   grid-area: b;
 `;
-const SkillsContainer = styled.div`
+const RightSide = styled.div`
   grid-area: c;
-
-  list-style: none;
-  ul {
-    list-style-type: none;
-    li {
-      margin: 5px 0;
-    }
-  }
-
   @media only screen and (max-width: 1024px) {
     padding-left: 0px;
-    // padding-top: 40px;
   }
 `;
 
@@ -59,15 +50,12 @@ const Title = styled.h3`
 const Sq = styled.div`
   // background: green;
   padding: 5px;
-  margin: 20px 0;
   li {
-    padding-top: 2px;
+    padding: 3px 0;
+    list-style: none;
   }
   @media only screen and (max-width: 1024px) {
     padding: 0;
-    li {
-      padding-top: 0px;
-    }
   }
 `;
 
@@ -75,43 +63,38 @@ const About = () => {
   return (
     <Wrapper>
       <Description>
-        I currently work as a self-employed, indie web developer. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Reiciendis, necessitatibus
-        cupiditate, dolore exceptu
+        Ive been studying javascript/ web design, and building projects to learn
+        along the way. I am currently building two different online communites,
+        one catered towards Registered Dietians/Nutritionists, and the other for
+        creatives and content writers.
       </Description>
-      <ServicesContainer>
+      <LeftSide>
         <Sq>
-          <Title> Web Design</Title>
-          <p>
-            Create a web presence for your business. Whether you need a simple
-            one pager, or a multi-page app to build your empire... I can help!
-          </p>
+          <Title>Programming Languages: </Title>
+          <li>Javascript</li>
+          <li>PHP</li>
         </Sq>
         <Sq>
-          <Title>Blogging Content Mgmt Integration</Title>
-          <p>
-            Need a blog? Youre at the right place! I portfolio with many
-            different types of tools, including Wordpress.
-          </p>
+          <Title style={{ marginTop: "15px" }}>Libraries & Frameworks:</Title>
+          <li>React</li>
+          <li>NextJS</li>
+          <li>Node</li>
+          <li>Styled-Components</li>
+          <li>Bootstrap</li>
+          <li>SASS</li>
         </Sq>
-      </ServicesContainer>
-      <SkillsContainer>
+      </LeftSide>
+      <RightSide>
         <Sq>
-          <Title>Skills</Title>
+          <Title>Tools & Databases:</Title>
           <ul>
-            <li>
-              <b>Programming Languages:</b> Javascript, PHP
-            </li>
-            <li>
-              <b>Libraries & Frameworks: </b> React, NextJS, Node,
-              Styled-Components, bootstrap, SASS
-            </li>
-            <li>
-              <b>Tools & Databases:</b> Wordpress, Sanity.io, Git, Mailchimp API
-            </li>
+            <li>Wordpress</li>
+            <li>Sanity.io</li>
+            <li>Git</li>
+            <li>Mailchimp API</li>
           </ul>
         </Sq>
-      </SkillsContainer>
+      </RightSide>
     </Wrapper>
   );
 };

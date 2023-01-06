@@ -141,16 +141,12 @@ const Home = ({ websites }) => {
         <Aside />
         <IndexContainer>
           <section id="services">
-            <h2 className="title">Services</h2>
+            <h2 className="title">Skills</h2>
             <Services />
           </section>
           <section id="works" className="section-spacing">
             <h2 className="title">Latest Projects</h2>
-            <p>
-              Here are my latest web designs. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Quo deserunt corporis, itaque
-              possimus eos sunt eve
-            </p>
+            <p>My latest and greatest website projects so far...</p>
             <WebsitesContainer>
               {websites &&
                 websites.map((website, index) => (
@@ -180,11 +176,10 @@ const Home = ({ websites }) => {
           <section id="contact" className="section-spacing">
             <h2 className="title">Contact</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-              dignissimos facilis voluptatem, nostrum, magnam deleniti,
-              perspiciatis tempore voluptatum esse iusto minima libero quibusdam
-              fugit fuga expedita illo omnis praesentium? Similique?
+              Has my portfolio piqued your interest? If so, you can reach me at
+              devdesignsbyelsa@gmail.com, or simply fill out the form below!
             </p>
+            <p>Looking forward to hearing from you!</p>
             <ContactForm />
           </section>
         </IndexContainer>
