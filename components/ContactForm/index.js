@@ -69,7 +69,6 @@ const ContactForm = () => {
           onChange={handleChange}
           type="text"
           name="name"
-          // placeholder="Enter name"
         />
 
         {/* EMAIL */}
@@ -104,7 +103,7 @@ const ContactForm = () => {
         />
 
         {/* BUTTON */}
-        <Input className="btn" type="submit" value="enter" />
+        <Input className="btn" type="submit" value="send message" />
         {successMessage && (
           <p style={{ color: "green" }}>
             <RiMailSendLine size={20} />

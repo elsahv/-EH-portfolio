@@ -22,19 +22,18 @@ export const Form = styled.form`
     font-size: 18px;
   }
   .btn {
-    background: teal;
-    width: 110px;
+    background: #007ea7;
+    color: #fff;
+    width: 30%;
     padding: 0px 5px;
     margin-top: 25px;
-    color: #fff;
     border: solid 2px #000;
     text-shadow: 1px 1px 1px #000;
     font-size: 17px;
     cursor: pointer;
     &:hover {
-      background: coral;
-      color: #000;
-      text-shadow: 1px 1px 1px #fff;
+      background: #0892a5;
+      color: aquamarine;
       transition: 1s;
     }
   }

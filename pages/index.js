@@ -109,6 +109,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   // color: #000;
+  border-radius: 3px;
   a {
     text-decoration: none;
     color: #fff;
