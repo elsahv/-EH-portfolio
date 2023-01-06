@@ -101,28 +101,26 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #fff;
-  color: #000;
+  background: #0892a5;
   border: 1px solid #000;
   width: 130px;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  // color: #000;
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     padding: 5px;
   }
   a:hover {
-    color: aquamarine;
     transition: 1s;
+    color: aquamarine;
+    text-shadow: 1px 1px 1px #000;
   }
   &:hover {
-    background: teal;
     transition: 1s;
-    color: aquamarine;
   }
 `;
 
@@ -144,8 +142,8 @@ const Home = ({ websites }) => {
             <Services />
           </section>
           <section id="works" className="section-spacing">
-            <h2 className="title">Works</h2>
-            <p style={{ padding: "0 5px" }}>
+            <h2 className="title">Latest Projects</h2>
+            <p>
               Here are my latest web designs. Lorem ipsum, dolor sit amet
               consectetur adipisicing elit. Quo deserunt corporis, itaque
               possimus eos sunt eve
