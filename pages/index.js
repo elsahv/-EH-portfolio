@@ -112,12 +112,14 @@ export const Button = styled.button`
   a {
     text-decoration: none;
     color: #fff;
+    text-shadow: 1px 1px 1px #000;
+
     padding: 5px;
   }
   a:hover {
     transition: 1s;
     color: aquamarine;
-    text-shadow: 1px 1px 1px #000;
+    // text-shadow: 1px 1px 1px #000;
   }
   &:hover {
     transition: 1s;
