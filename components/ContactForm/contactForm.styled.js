@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  color: #000;
+  // color: #000;
   // background: green;
 `;
 
