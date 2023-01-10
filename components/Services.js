@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   // background: green;
-  // padding-left: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -51,7 +50,7 @@ const Sq = styled.div`
   // background: green;
   padding: 5px;
   li {
-    padding: 3px 0;
+    // padding: 3px 0;
     list-style: none;
   }
   @media only screen and (max-width: 1024px) {
@@ -63,8 +62,10 @@ const About = () => {
   return (
     <Wrapper>
       <Description>
-        Ive been studying javascript/ web design, and building projects to learn
-        along the way. I am currently building two different online communites,
+        {/* Ive been studying javascript/ web design, and building projects to learn
+        along the way.  */}
+        Goal: To find occupation in javascript web development, and build up my
+        skills further. I am currently building two different online communites,
         one catered towards Registered Dietians/Nutritionists, and the other for
         creatives and content writers.
       </Description>

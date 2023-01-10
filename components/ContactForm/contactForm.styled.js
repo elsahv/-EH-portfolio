@@ -14,21 +14,27 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    // background: aquamarine;
+    background: #0892a5;
     border: solid 2px #000;
     padding-left: 10px;
     padding-top: 5px;
-    color: #000;
+    color: aquamarine;
+    // opacity: 0.8;
     font-size: 18px;
+    &:hover {
+      opacity: 0.7;
+      color: aquamarine;
+      transition: 1s;
+      background: #0892a5;
+    }
   }
   .btn {
-    background: #007ea7;
-    color: #fff;
+    background: aquamarine;
+    color: #000;
     width: 30%;
     padding: 0px 5px;
     margin-top: 25px;
     border: solid 2px #000;
-    text-shadow: 1px 1px 1px #000;
     font-size: 17px;
     cursor: pointer;
     &:hover {
@@ -43,12 +49,12 @@ export const Label = styled.label`
   font-size: 20px;
 `;
 export const Input = styled.input`
-  height: 40px;
+  height: 50px;
   border-radius: 5px;
   width: 500px;
 `;
 export const Textarea = styled.textarea`
-  height: 150px;
+  height: 170px;
   border-radius: 5px;
-  // margin: 30px 0;
+  margin: 40px 0;
 `;

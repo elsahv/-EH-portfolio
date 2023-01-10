@@ -70,6 +70,7 @@ export const Sq = styled.div`
   &:hover {
     // background: teal;
     transition: 1s;
+    // background: aquamarine;
   }
 `;
 
@@ -101,29 +102,30 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #0892a5;
+  background: aquamarine;
   border: 1px solid #000;
   width: 130px;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // color: #000;
+  color: #000;
   border-radius: 3px;
   a {
     text-decoration: none;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-
+    color: #000;
+    background: aquamarine;
+    // text-shadow: 1px 1px 1px #000;
     padding: 5px;
   }
   a:hover {
     transition: 1s;
-    color: aquamarine;
+    background: #fff;
     // text-shadow: 1px 1px 1px #000;
   }
   &:hover {
     transition: 1s;
+    background: #fff;
   }
 `;
 
@@ -179,7 +181,11 @@ const Home = ({ websites }) => {
               Has my portfolio piqued your interest? If so, you can reach me at
               devdesignsbyelsa@gmail.com, or simply fill out the form below!
             </p>
-            <p>Looking forward to hearing from you!</p>
+            <p
+              style={{ borderBottom: "solid 1px #000", paddingBottom: "10px" }}
+            >
+              Looking forward to hearing from you!
+            </p>
             <ContactForm />
           </section>
         </IndexContainer>
