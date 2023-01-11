@@ -1,10 +1,11 @@
 import Link from "next/link";
-
 import {
   AiFillLinkedin,
   AiOutlineInstagram,
   AiOutlineMail,
 } from "react-icons/ai";
+import { motion } from "framer-motion";
+
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -98,22 +99,28 @@ export const MobileIntro = styled.div`
 const HeaderSection = () => {
   return (
     <>
-      <Header>
-        <Logo>Elsa Hovey</Logo>
-        <Nav>
-          <NavMenu>
-            <Link href="/#contact">
-              <AiOutlineMail />
-            </Link>
-            <a href="https://linkedin.com">
-              <AiFillLinkedin />
-            </a>
-            <a href="https://instagram.com">
-              <AiOutlineInstagram />
-            </a>
-          </NavMenu>
-        </Nav>
-      </Header>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <Header>
+          <Logo>Elsa Hovey</Logo>
+          <Nav>
+            <NavMenu>
+              <Link href="/#contact">
+                <AiOutlineMail />
+              </Link>
+              <a href="https://linkedin.com">
+                <AiFillLinkedin />
+              </a>
+              <a href="https://instagram.com">
+                <AiOutlineInstagram />
+              </a>
+            </NavMenu>
+          </Nav>
+        </Header>
+      </motion.div>
     </>
   );
 };
