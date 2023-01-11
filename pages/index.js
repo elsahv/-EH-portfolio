@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-
 import Services from "../components/Services";
 import ContactForm from "../components/ContactForm";
 import { sanityClient, urlFor } from "../client";

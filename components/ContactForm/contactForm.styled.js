@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 export const Form = styled.form`
   // background: green;
   padding-left: 5px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -37,10 +38,17 @@ export const Form = styled.form`
     border: solid 2px #000;
     font-size: 17px;
     cursor: pointer;
+
     &:hover {
       background: #0892a5;
       color: aquamarine;
       transition: 1s;
+    }
+    @media only screen and (max-width: 820px) {
+      font-size: 15px;
+    }
+    @media only screen and (max-width: 599px) {
+      width: 130px;
     }
   }
 `;
@@ -52,6 +60,13 @@ export const Input = styled.input`
   height: 50px;
   border-radius: 5px;
   width: 500px;
+
+  @media only screen and (max-width: 820px) {
+    width: 400px;
+  }
+  @media only screen and (max-width: 531px) {
+    width: 330px;
+  }
 `;
 export const Textarea = styled.textarea`
   height: 170px;
