@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   AiFillLinkedin,
   AiOutlineInstagram,
@@ -7,8 +9,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
-  background: #fff;
-  position: sticky;
+  background: #0892a5;
+  position: relative;
   top: 0;
   z-index: 1000;
   border-bottom: solid 2px #000;
@@ -22,7 +24,8 @@ export const Logo = styled.h1`
   padding-left: 10px;
   font-size: 32px;
   // background: green;
-  color: #000;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
   @media only screen and (max-width: 599px) {
     font-size: 25px;
   }
@@ -34,9 +37,12 @@ export const NavMenu = styled.ul`
   list-style: none;
   padding-top: 15px;
   font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+
   a {
     margin: 0 5px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     &:hover {
       color: teal;
@@ -96,9 +102,9 @@ const HeaderSection = () => {
         <Logo>Elsa Hovey</Logo>
         <Nav>
           <NavMenu>
-            <a href="https://google.com">
+            <Link href="/#contact">
               <AiOutlineMail />
-            </a>
+            </Link>
             <a href="https://linkedin.com">
               <AiFillLinkedin />
             </a>
