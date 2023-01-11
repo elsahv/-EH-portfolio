@@ -56,6 +56,13 @@ export const Label = styled.label`
   padding: 25px 0 5px 1px;
   font-size: 20px;
 `;
+
+export const ErrorStyles = styled.div`
+  color: maroon;
+  font-size: 15px;
+  text-transform: lowercase;
+`;
+
 export const Input = styled.input`
   height: 50px;
   border-radius: 5px;
@@ -71,5 +78,40 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   height: 170px;
   border-radius: 5px;
-  margin: 40px 0;
+  // margin: 40px 0;
+`;
+
+export const SuccessMessageStyles = styled.div`
+  font-size: 25px;
+  color: teal;
+  padding: 10px;
+  margin-top: 20px;
+  background: aquamarine;
+  border: 2px solid #0892a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60%;
+  height: 470px;
+  // opacity: 0.7;
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    font-size: 20px;
+    padding: 0 50px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 55%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  font-size: 35px;
+  margin-right: 5px;
 `;

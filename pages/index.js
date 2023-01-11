@@ -180,9 +180,7 @@ const Home = ({ websites }) => {
               Has my portfolio piqued your interest? If so, you can reach me at
               devdesignsbyelsa@gmail.com, or simply fill out the form below!
             </p>
-            <p
-              style={{ borderBottom: "solid 1px #000", paddingBottom: "10px" }}
-            >
+            <p style={{ borderBottom: "", paddingBottom: "10px" }}>
               Looking forward to hearing from you!
             </p>
             <ContactForm />

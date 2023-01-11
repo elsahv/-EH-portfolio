@@ -3,7 +3,16 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { RiMailSendLine } from "react-icons/ri"; /* ---- REACT ICONS*/
-import { Wrapper, Form, Label, Input, Textarea } from "./contactForm.styled";
+import {
+  Wrapper,
+  Form,
+  Label,
+  ErrorStyles,
+  Input,
+  Textarea,
+  SuccessMessageStyles,
+  IconWrapper,
+} from "./contactForm.styled";
 
 const ContactForm = () => {
   const [successMessage, setSuccessMessage] = useState(false);
@@ -18,7 +27,7 @@ const ContactForm = () => {
       .email("invalid email")
       .max(32, "max 32 characters")
       .required("Please write your email"),
-    message: Yup.string(),
+    message: Yup.string().required("please write your message"),
   });
   const initialValues = {
     name: "",
@@ -56,7 +65,7 @@ const ContactForm = () => {
         {/* NAME */}
         <Label htmlFor="name">
           {errors.name && touched.name ? (
-            <div style={{ color: "red" }}>{errors.name}</div>
+            <ErrorStyles>{errors.name}</ErrorStyles>
           ) : (
             ""
           )}
@@ -74,7 +83,7 @@ const ContactForm = () => {
         {/* EMAIL */}
         <Label>
           {errors.email && touched.email ? (
-            <div style={{ color: "red" }}>{errors.email}</div>
+            <ErrorStyles>{errors.email}</ErrorStyles>
           ) : (
             ""
           )}
@@ -90,6 +99,13 @@ const ContactForm = () => {
         />
 
         {/* MESSAGE */}
+        <Label>
+          {errors.message && touched.message ? (
+            <ErrorStyles>{errors.message}</ErrorStyles>
+          ) : (
+            ""
+          )}
+        </Label>
         <Textarea
           className="input-fields"
           value={values.message}
@@ -103,10 +119,12 @@ const ContactForm = () => {
         {/* BUTTON */}
         <Input className="btn" type="submit" value="send message" />
         {successMessage && (
-          <p style={{ color: "green" }}>
-            <RiMailSendLine size={20} />
-            Message Sent
-          </p>
+          <SuccessMessageStyles>
+            <IconWrapper>
+              <RiMailSendLine />
+            </IconWrapper>
+            Message Sent! You will be contacted within 1 business day
+          </SuccessMessageStyles>
         )}
       </Form>
     </Wrapper>
