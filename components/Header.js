@@ -3,6 +3,7 @@ import {
   AiFillLinkedin,
   AiOutlineInstagram,
   AiOutlineMail,
+  AiOutlineGithub,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
 
@@ -116,6 +117,9 @@ const HeaderSection = () => {
               </a>
               <a href="https://instagram.com">
                 <AiOutlineInstagram />
+              </a>
+              <a href="https://instagram.com">
+                <AiOutlineGithub />
               </a>
             </NavMenu>
           </Nav>
