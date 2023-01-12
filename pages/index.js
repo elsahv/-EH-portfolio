@@ -1,15 +1,44 @@
 import Link from "next/link";
 import Head from "next/head";
-import Services from "../components/Services";
+import Image from "next/image";
 import ContactForm from "../components/ContactForm";
 import { sanityClient, urlFor } from "../client";
 import Aside from "../components/Aside";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
-
 import styled from "styled-components";
 
 // STYLES
+
+const Wrapper = styled.div`
+  // background: green;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a a"
+    "b c";
+  grid-gap: 1em;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c";
+  }
+  @media only screen and (max-width: 600px) {
+    border-bottom: 1px solid #000;
+  }
+`;
+
+const Description = styled.p`
+  grid-area: a;
+  padding: 5px 0 10px;
+  border-bottom: 1px solid #000;
+  //
+`;
+
 export const IndexWrapper = styled.div`
   display: grid;
   grid-template-areas: "ls rs rs rs ";
@@ -60,50 +89,69 @@ export const WebsitesContainer = styled.div`
   @media only screen and (max-width: 834px) {
     padding: auto;
   }
-`;
 
-export const Sq = styled.div`
-  background: #fff;
-  padding: 40px 20px;
-  border: solid 2px black;
-  font-size: 18px;
-  border-radius: 5px;
-  &:hover {
-    // background: teal;
-    transition: 1s;
-    // background: aquamarine;
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+    grid-gap: 3em;
   }
 `;
 
-export const WebsiteTitle = styled.h3`
-  padding-bottom: 5px;
-  font-size: 22px;
+export const Sq = styled.div`
+  border: solid 2px #000;
+  margin: 10px 0;
+  border-radius: 5px;
+`;
 
+export const WebsiteTitle = styled.h3`
+  font-size: 20px;
+  // padding: 10px;
   @media only screen and (max-width: 531px) {
-    font-size: 20px;
+  }
+`;
+
+const Sq2 = styled.div`
+  // background: green;
+  padding: 15px 10px;
+`;
+
+const ImgWrapper = styled.div`
+  .img {
+    border-bottom: solid 2px #000;
+    border-top: solid 2px #000;
   }
 `;
 
 export const WebsiteDescription = styled.p`
+  padding: 5px 0;
   @media only screen and (max-width: 531px) {
   }
 `;
 
-// export const WebsiteTag = styled.div`
-//   @media only screen and (max-width: 531px) {
-//   }
-// `;
+export const WebsiteTags = styled.div`
+  padding: 10px;
+  @media only screen and (max-width: 531px) {
+  }
+`;
 
 export const ButtonWrapper = styled.div`
-  // background: maroon;
-  width: 270px;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  // background: blue;
+  margin: 20px 0 0 5px 10px;
+  width: 45%;
+  @media only screen and (max-width: 834px) {
+    width: 60%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 599px) {
+    width: 82%;
+  }
 `;
 
 export const Button = styled.button`
-  background: aquamarine;
+  background: #fff;
   border: 1px solid #000;
   width: 130px;
   font-size: 18px;
@@ -115,18 +163,20 @@ export const Button = styled.button`
   a {
     text-decoration: none;
     color: #000;
-    background: aquamarine;
+    // background: aquamarine;
     // text-shadow: 1px 1px 1px #000;
     padding: 5px;
   }
   a:hover {
     transition: 1s;
-    background: #fff;
+    background: #0892a5;
+    color: aquamarine;
     // text-shadow: 1px 1px 1px #000;
   }
   &:hover {
     transition: 1s;
-    background: #fff;
+    background: #0892a5;
+    color: aquamarine;
   }
 `;
 
@@ -150,8 +200,18 @@ const Home = ({ websites }) => {
           <IndexContainer>
             <section id="services">
               <h2 className="title">Skills</h2>
-              <Services />
+
+              <Wrapper>
+                <Description>
+                  Goal: To find occupation in javascript web development, and
+                  build up my skills further. I am currently building two
+                  different online communites, one catered towards Registered
+                  Dietians/Nutritionists, and the other for creatives and
+                  content writers.
+                </Description>
+              </Wrapper>
             </section>
+
             <section id="works" className="section-spacing">
               <h2 className="title">Latest Projects</h2>
               <p>My latest and greatest website projects so far...</p>
@@ -160,21 +220,34 @@ const Home = ({ websites }) => {
                   websites.map((website, index) => (
                     <span key={index}>
                       <Sq>
-                        <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
-                        <WebsiteDescription>
-                          {website.description}
-                        </WebsiteDescription>
-                        {/* <WebsiteTag>-{website.tags}</WebsiteTag> */}
-                        <ButtonWrapper>
-                          <Button>
-                            <Link href={website.projectLink}>visit site</Link>
-                            <AiOutlineLink />
-                          </Button>
-                          <Button>
-                            <Link href={website.codeLink}>view code</Link>
-                            <AiFillGithub />
-                          </Button>
-                        </ButtonWrapper>
+                        <WebsiteTags>-{website.tags}</WebsiteTags>
+
+                        <ImgWrapper>
+                          <img
+                            src={urlFor(website.websiteImg)}
+                            width="100%"
+                            alt=""
+                            className="img"
+                          />
+                        </ImgWrapper>
+                        <Sq2>
+                          <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
+
+                          <WebsiteDescription>
+                            {website.description}
+                          </WebsiteDescription>
+
+                          <ButtonWrapper>
+                            <Button>
+                              <Link href={website.projectLink}>visit site</Link>
+                              <AiOutlineLink />
+                            </Button>
+                            <Button>
+                              <Link href={website.codeLink}>view code</Link>
+                              <AiFillGithub />
+                            </Button>
+                          </ButtonWrapper>
+                        </Sq2>
                       </Sq>
                     </span>
                   ))}
