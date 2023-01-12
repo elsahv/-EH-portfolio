@@ -15,12 +15,11 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    background: #0892a5;
+    background: #fff;
     border: solid 2px #000;
     padding-left: 10px;
     padding-top: 5px;
-    color: aquamarine;
-    // opacity: 0.8;
+    color: #000;
     font-size: 18px;
     &:hover {
       opacity: 0.7;

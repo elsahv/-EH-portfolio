@@ -152,7 +152,7 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #fff;
+  background: #0892a5;
   border: 1px solid #000;
   width: 130px;
   font-size: 18px;

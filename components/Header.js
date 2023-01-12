@@ -10,7 +10,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
-  background: #0892a5;
+  // background: #0892a5;
+  background: #fff;
   position: relative;
   top: 0;
   z-index: 1000;
@@ -25,8 +26,8 @@ export const Logo = styled.h1`
   padding-left: 10px;
   font-size: 32px;
   // background: green;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: #000;
+  // text-shadow: 1px 1px 1px #000;
   @media only screen and (max-width: 599px) {
     font-size: 25px;
   }
