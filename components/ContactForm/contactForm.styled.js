@@ -34,7 +34,7 @@ export const Form = styled.form`
     width: 30%;
     padding: 0px 5px;
     margin-top: 25px;
-    border: solid 2px #000;
+    border: solid 1px #000;
     font-size: 17px;
     cursor: pointer;
 
