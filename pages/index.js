@@ -79,7 +79,7 @@ export const WebsitesContainer = styled.div`
   padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
+  grid-gap: 3em;
 
   @media only screen and (max-width: 1024px) {
     padding: 20px 30px 0 0;
@@ -100,6 +100,7 @@ export const Sq = styled.div`
   border: solid 2px #000;
   margin: 10px 0;
   border-radius: 5px;
+  // background: teal;
 `;
 
 export const WebsiteTitle = styled.h3`
