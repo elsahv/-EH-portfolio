@@ -97,7 +97,7 @@ export const WebsitesContainer = styled.div`
 `;
 
 export const Sq = styled.div`
-  border: solid 2px #000;
+  border: solid 2px gray;
   margin: 10px 0;
   border-radius: 5px;
   // background: teal;
@@ -117,8 +117,8 @@ const Sq2 = styled.div`
 
 const ImgWrapper = styled.div`
   .img {
-    border-bottom: solid 2px #000;
-    border-top: solid 2px #000;
+    border-bottom: solid 1px #000;
+    border-top: solid 1px #000;
   }
 `;
 

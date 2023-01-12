@@ -16,7 +16,7 @@ export const Form = styled.form`
   flex-direction: column;
   .input-fields {
     background: #fff;
-    border: solid 2px #000;
+    border: solid 2px gray;
     padding-left: 10px;
     padding-top: 5px;
     color: #000;

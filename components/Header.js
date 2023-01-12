@@ -39,12 +39,11 @@ export const NavMenu = styled.ul`
   list-style: none;
   padding-top: 15px;
   font-size: 30px;
-  color: #fff;
   cursor: pointer;
 
   a {
     margin: 0 5px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     &:hover {
       color: teal;
