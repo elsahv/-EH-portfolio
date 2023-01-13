@@ -37,8 +37,9 @@ const Timeline = () => {
             <TimelineDate> 2016-2020:</TimelineDate>
             <p>
               Worked in restaurants and assisted living kitchens. Worked as a
-              Dietary Manager from 2018-2020, loved it until I tired of kichens.
-              Became interested with programming and started building my skills.
+              Dietary Manager from 2018-2020.... loved it until I desired a
+              change, mainly for finding more creative employment. Became
+              interested with programming and started building my skills.
             </p>
           </li>
           <li>
