@@ -31,19 +31,20 @@ export const AsideContainer = styled.div`
     margin: 10px 2px;
   }
   @media only screen and (max-width: 1024px) {
-    padding: 30px 35px;
+    padding: 10px 5px;
+    font-size: 15px;
   }
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
-    padding-left: 30px;
-    padding-top: 30px;
+    // padding-left: 30px;
+    // padding-top: 30px;
     border-bottom: none;
   }
 
   @media only screen and (max-width: 531px) {
     font-size: 17px;
-    padding: 30px 20px;
+    // padding: 30px 20px;
   }
 `;
 
@@ -61,10 +62,10 @@ export const ImageWrapper = styled.div`
 
   @media only screen and (max-width: 1024px) {
     width: 210px;
-    margin: 0;
+    margin-right: 20px;
   }
   @media only screen and (max-width: 834px) {
-    width: 200px;
+    // width: 200px;
   }
 `;
 

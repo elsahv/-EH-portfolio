@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 const TimelineWrapper = styled.div`
   padding: 15px;
+  // background: teal;
+  h2 {
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+    }
+  }
   li {
     margin: 15px 0;
     list-style: none;

@@ -39,6 +39,12 @@ const Description = styled.p`
   //
 `;
 
+const WebsitesGridDescription = styled.div`
+  @media only screen and (max-width: 600px) {
+    padding: 0 10px;
+  }
+`;
+
 export const IndexWrapper = styled.div`
   display: grid;
   grid-template-areas: "ls rs rs rs ";
@@ -185,6 +191,14 @@ export const Button = styled.button`
   }
 `;
 
+export const ContactCTA = styled.div`
+  p {
+    margin: 5px;
+  }
+  @media only screen and (max-width: 834px) {
+    padding: 7px 10px 0 5px;
+  }
+`;
 // END STYLES
 
 const Home = ({ websites }) => {
@@ -211,15 +225,17 @@ const Home = ({ websites }) => {
                   Goal: To find occupation in javascript web development, and
                   build up my skills further. I am currently building two
                   different online communites, one catered towards Registered
-                  Dietians/Nutritionists, and the other for creatives and
+                  Dietitans/Nutritionists, and the other for creatives and
                   content writers.
                 </Description>
               </Wrapper>
             </section>
 
             <section id="works" className="section-spacing">
-              <h2 className="title">Latest Projects</h2>
-              <p>My latest and greatest website projects so far...</p>
+              <WebsitesGridDescription>
+                <h2 style={{ padding: "5px 0" }}>Latest Projects</h2>
+                <p>My latest and greatest website projects so far...</p>
+              </WebsitesGridDescription>
               <WebsitesContainer>
                 {websites &&
                   websites.map((website, index) => (
@@ -263,14 +279,16 @@ const Home = ({ websites }) => {
 
             <section id="contact" className="section-spacing">
               <h2 className="title">Contact</h2>
-              <p>
-                Has my portfolio piqued your interest? If so, you can reach me
-                at devdesignsbyelsa@gmail.com, or simply fill out the form
-                below!
-              </p>
-              <p style={{ borderBottom: "", paddingBottom: "10px" }}>
-                Looking forward to hearing from you!
-              </p>
+              <ContactCTA>
+                <p>
+                  Has my portfolio piqued your interest? If so, you can reach me
+                  at devdesignsbyelsa@gmail.com, or simply fill out the form
+                  below!
+                </p>
+                <p style={{ paddingTop: "20px" }}>
+                  Looking forward to hearing from you!
+                </p>
+              </ContactCTA>
               <ContactForm />
             </section>
           </IndexContainer>
