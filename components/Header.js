@@ -112,13 +112,10 @@ const HeaderSection = () => {
               <Link href="/#contact">
                 <AiOutlineMail />
               </Link>
-              <a href="https://linkedin.com">
+              <a href="https://www.linkedin.com/in/elsa-hovey/">
                 <AiFillLinkedin />
               </a>
-              <a href="https://instagram.com">
-                <AiOutlineInstagram />
-              </a>
-              <a href="https://instagram.com">
+              <a href="https://github.com/elsahv">
                 <AiOutlineGithub />
               </a>
             </NavMenu>
