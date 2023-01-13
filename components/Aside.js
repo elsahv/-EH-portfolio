@@ -31,7 +31,7 @@ export const AsideContainer = styled.div`
     margin: 10px 2px;
   }
   @media only screen and (max-width: 1024px) {
-    padding: 10px 5px;
+    padding: 20px 10px;
     font-size: 15px;
   }
 

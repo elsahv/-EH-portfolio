@@ -7,37 +7,9 @@ import Aside from "../components/Aside";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import Intro from "../components/Intro";
 
 // STYLES
-
-const Wrapper = styled.div`
-  // background: green;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "a a"
-    "b c";
-  grid-gap: 1em;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "a a"
-      "b b"
-      "c c";
-  }
-  @media only screen and (max-width: 600px) {
-    border-bottom: 1px solid #000;
-  }
-`;
-
-const Description = styled.p`
-  grid-area: a;
-  padding: 5px 0 10px;
-  border-bottom: 1px solid #000;
-  //
-`;
 
 const WebsitesGridDescription = styled.div`
   @media only screen and (max-width: 600px) {
@@ -218,22 +190,12 @@ const Home = ({ websites }) => {
           <Aside />
           <IndexContainer>
             <section id="services">
-              <h2 className="title">Skills</h2>
-
-              <Wrapper>
-                <Description>
-                  Goal: To find occupation in javascript web development, and
-                  build up my skills further. I am currently building two
-                  different online communites, one catered towards Registered
-                  Dietitans/Nutritionists, and the other for creatives and
-                  content writers.
-                </Description>
-              </Wrapper>
+              <Intro />
             </section>
 
             <section id="works" className="section-spacing">
               <WebsitesGridDescription>
-                <h2 style={{ padding: "5px 0" }}>Latest Projects</h2>
+                <h2 className="title">Latest Projects</h2>
                 <p>My latest and greatest website projects so far...</p>
               </WebsitesGridDescription>
               <WebsitesContainer>
@@ -285,7 +247,7 @@ const Home = ({ websites }) => {
                   at devdesignsbyelsa@gmail.com, or simply fill out the form
                   below!
                 </p>
-                <p style={{ paddingTop: "20px" }}>
+                <p style={{ paddingTop: "15px" }}>
                   Looking forward to hearing from you!
                 </p>
               </ContactCTA>

@@ -44,14 +44,14 @@ main {
     text-decoration: underline;
     // color: blue;
   @media only screen and (max-width: 1024px) {
-  padding: 0 0 0 5px;
+  // padding: 0 0 0 5px;
     font-size: 32px;
 
   }
   }
   .section-spacing {
     @media only screen and (max-width: 1024px) {
-      padding-top: 85px;
+      padding-top: 65px;
       }
   }
 
