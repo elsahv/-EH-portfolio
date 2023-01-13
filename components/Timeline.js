@@ -27,21 +27,26 @@ const Timeline = () => {
             <h2 style={{ paddingBottom: "10px" }}>A little bit about me...</h2>
             <TimelineDate> 2020-2022:</TimelineDate>
             <p>
-              Career transition: built projects. Built Wtbh to utilize skills
-              and nutrition interests, and the Indoor Jungle Project for
-              blogging about plants, fish, clay.
+              Taught myself programming and web design through various (and
+              super helpful!) youtube developers. Also utilized other resources
+              such as: freecodecamp, the odin project, geeks for geeks.
             </p>
+            <p>Spent this time building my featured projects</p>
           </li>
           <li>
-            <TimelineDate> 2018-2020:</TimelineDate>
+            <TimelineDate> 2016-2020:</TimelineDate>
             <p>
-              Worked as a Dietary Manager, loved it until I didnt. Became
-              obsessed with programming and started building my skills.
+              Worked in restaurants and assisted living kitchens. Worked as a
+              Dietary Manager from 2018-2020, loved it until I tired of kichens.
+              Became interested with programming and started building my skills.
             </p>
           </li>
           <li>
-            <TimelineDate>2016:</TimelineDate>
-            <p>Completed Bachelors Degree in Nutrition and Food Science</p>
+            <TimelineDate>2016</TimelineDate>
+            <p>
+              Completed Bachelors of Science in Nutrition and Food Science, Cal
+              State San Bernardino
+            </p>
           </li>
         </ul>
       </TimelineWrapper>

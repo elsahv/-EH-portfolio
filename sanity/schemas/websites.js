@@ -4,16 +4,16 @@ export default {
   type: "document",
   fields: [
     {
-      name: "Website title",
-      title: "websiteTitle",
+      name: "websitetitle",
+      title: "Website Title",
       type: "string",
     },
 
-    // {
-    //   name: "description",
-    //   title: "Description",
-    //   type: "string",
-    // },
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
     {
       name: "projectLink",
       title: "Project Link",
@@ -32,28 +32,18 @@ export default {
         hotspot: true,
       },
     },
-    // {
-    //   name: "images",
-    //   title: "Images",
-    //   type: "array",
-    //   of: [{ type: "skillImage" }],
-    // },
+
     {
-      name: "body",
-      title: "Body",
-      type: "blockContent",
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [
+        {
+          name: "tag",
+          title: "Tag",
+          type: "string",
+        },
+      ],
     },
-    // {
-    //   name: "tags",
-    //   title: "Tags",
-    //   type: "array",
-    //   of: [
-    //     {
-    //       name: "tag",
-    //       title: "Tag",
-    //       type: "string",
-    //     },
-    //   ],
-    // },
   ],
 };

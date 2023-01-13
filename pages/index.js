@@ -196,7 +196,6 @@ const Home = ({ websites }) => {
             <section id="works" className="section-spacing">
               <WebsitesGridDescription>
                 <h2 className="title">Latest Projects</h2>
-                <p>My latest and greatest website projects so far...</p>
               </WebsitesGridDescription>
               <WebsitesContainer>
                 {websites &&

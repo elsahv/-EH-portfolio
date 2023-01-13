@@ -44,8 +44,8 @@ main {
     text-decoration: underline;
     // color: blue;
   @media only screen and (max-width: 1024px) {
-  // padding: 0 0 0 5px;
-    font-size: 32px;
+  padding: 0 0 0 5px;
+    font-size: 27px;
 
   }
   }
