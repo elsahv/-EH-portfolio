@@ -7,6 +7,7 @@ import websites from "./websites";
 import services from "./services";
 import test from "./test";
 import blockContent from "./blockContent";
+import skillImage from "./skillImage";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,6 +20,7 @@ export default createSchema({
     services,
     blockContent,
     test,
+    skillImage,
     /* Your types here! */
   ]),
 });

@@ -123,13 +123,14 @@ const ImgWrapper = styled.div`
 `;
 
 export const WebsiteDescription = styled.p`
+  // font-style: italic;
   padding: 5px 0;
   @media only screen and (max-width: 531px) {
   }
 `;
 
 export const WebsiteTags = styled.div`
-  padding: 10px;
+  padding: 12px 10px;
   @media only screen and (max-width: 531px) {
   }
 `;
@@ -179,6 +180,9 @@ export const Button = styled.button`
     background: #0892a5;
     color: aquamarine;
   }
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 // END STYLES
@@ -221,7 +225,10 @@ const Home = ({ websites }) => {
                   websites.map((website, index) => (
                     <span key={index}>
                       <Sq>
-                        <WebsiteTags>-{website.tags}</WebsiteTags>
+                        <WebsiteTags>
+                          <b style={{ paddingRight: "7px" }}>made with:</b>
+                          <i>{website.tags}</i>
+                        </WebsiteTags>
 
                         <ImgWrapper>
                           <img
@@ -237,7 +244,6 @@ const Home = ({ websites }) => {
                           <WebsiteDescription>
                             {website.description}
                           </WebsiteDescription>
-
                           <ButtonWrapper>
                             <Button>
                               <Link href={website.projectLink}>visit site</Link>
