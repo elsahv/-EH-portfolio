@@ -91,7 +91,10 @@ const Aside = () => {
     <>
       <AsideWrapper>
         <AsideContainer>
-          <p>Hi there, Im Elsa. Im a web developer based in Joshua Tree, CA.</p>
+          <p>
+            Hi there, {"I'm"} Elsa. {"I'm"} a web developer based in Joshua
+            Tree, CA.
+          </p>
           <ImageWrapper>
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>

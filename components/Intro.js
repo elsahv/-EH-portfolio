@@ -23,11 +23,13 @@ const Intro = () => {
   return (
     <section>
       <Description>
+        {/* (<p>{"I've seen the movie."}</p>) */}
         <p>
-          - Welcome to my portfolio! For the past couple of years, Ive been
-          teaching myself programming and web design using Javascript, and
-          Javascript frameworks. My most ambitious project involves building a
-          web design side hustle for
+          - Welcome to my portfolio! For the last couple years, {"I've"} gained
+          an interest in programming using Javascript and Javascript frameworks.
+          Along with my passion for learning unique web designs, I have built
+          (and am currently building!) a few different websites. My most
+          ambitious project involves building a web design side hustle for
           <a href="https://writingtobetterhealth.com">
             Dietitans/Nutritionists.
           </a>
