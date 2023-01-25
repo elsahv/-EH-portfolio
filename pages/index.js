@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { sanityClient, urlFor } from "../client";
+import sanityClient from "../utils/client";
+
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
 import styled from "styled-components";

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
-import { sanityClient, urlFor } from "../client";
+import { urlFor } from "../utils/image";
+
 import styled from "styled-components";
 
 export const Sq = styled.div`
