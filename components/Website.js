@@ -101,14 +101,17 @@ export default function Card({ website }) {
           <b style={{ paddingRight: "7px" }}>made with:</b>
           <i>{website.tags}</i>
         </WebsiteTags>
-        <ImgWrapper>
-          <img
-            src={urlFor(website.websiteImg)}
-            width="100%"
-            alt=""
-            className="img"
-          />
-        </ImgWrapper>
+      </Sq2>
+
+      <ImgWrapper>
+        <img
+          src={urlFor(website.websiteImg)}
+          width="100%"
+          alt=""
+          className="img"
+        />
+      </ImgWrapper>
+      <Sq2>
         <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
         <WebsiteDescription>{website.description}</WebsiteDescription>
 
