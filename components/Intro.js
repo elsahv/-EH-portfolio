@@ -21,7 +21,7 @@ const Description = styled.div`
 
 const Intro = () => {
   return (
-    <div>
+    <section>
       <Description>
         <p>
           - Welcome to my portfolio! For the past couple of years, Ive been
@@ -42,7 +42,7 @@ const Intro = () => {
           <Link href="/#contact">here.</Link>
         </p>
       </Description>
-    </div>
+    </section>
   );
 };
 

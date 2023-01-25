@@ -7,6 +7,15 @@ export const Wrapper = styled.div`
   // background: green;
 `;
 
+export const ContactCTA = styled.div`
+  p {
+    margin: 5px;
+  }
+  @media only screen and (max-width: 834px) {
+    padding: 7px 10px 0 5px;
+  }
+`;
+
 export const Form = styled.form`
   // background: green;
   padding-left: 5px;

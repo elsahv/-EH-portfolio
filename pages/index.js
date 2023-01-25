@@ -1,23 +1,15 @@
-import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import ContactForm from "../components/ContactForm";
 import { sanityClient, urlFor } from "../client";
 import Aside from "../components/Aside";
-import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Intro from "../components/Intro";
+import Website from "../components/Website";
+import Contact from "../components/Contact";
 
 // STYLES
-
-const WebsitesGridDescription = styled.div`
-  @media only screen and (max-width: 600px) {
-    padding: 0 10px;
-  }
-`;
-
-export const IndexWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-areas: "ls rs rs rs ";
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -31,7 +23,7 @@ export const IndexWrapper = styled.div`
   }
 `;
 
-export const IndexContainer = styled.div`
+export const Container = styled.div`
   background: #fff;
   // opacity: 0.9;
   grid-area: rs;
@@ -51,7 +43,7 @@ export const IndexContainer = styled.div`
   }
 `;
 
-export const WebsitesContainer = styled.div`
+export const WebsitesGrid = styled.div`
   opacity: 0.9;
   // background: teal;
   padding-top: 10px;
@@ -73,104 +65,6 @@ export const WebsitesContainer = styled.div`
     grid-gap: 3em;
   }
 `;
-
-export const Sq = styled.div`
-  border: solid 2px gray;
-  margin: 10px 0;
-  border-radius: 5px;
-  // background: teal;
-`;
-
-export const WebsiteTitle = styled.h3`
-  font-size: 20px;
-  // padding: 10px;
-  @media only screen and (max-width: 531px) {
-  }
-`;
-
-const Sq2 = styled.div`
-  // background: green;
-  padding: 15px 10px;
-`;
-
-const ImgWrapper = styled.div`
-  .img {
-    border-bottom: solid 1px #000;
-    border-top: solid 1px #000;
-  }
-`;
-
-export const WebsiteDescription = styled.p`
-  // font-style: italic;
-  padding: 5px 0;
-  @media only screen and (max-width: 531px) {
-  }
-`;
-
-export const WebsiteTags = styled.div`
-  padding: 12px 10px;
-  @media only screen and (max-width: 531px) {
-  }
-`;
-
-export const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  // background: blue;
-  margin: 20px 0 0 5px 10px;
-  width: 45%;
-  @media only screen and (max-width: 834px) {
-    width: 60%;
-  }
-  @media only screen and (max-width: 600px) {
-    width: 50%;
-  }
-  @media only screen and (max-width: 599px) {
-    width: 82%;
-  }
-`;
-
-export const Button = styled.button`
-  background: #0892a5;
-  border: 1px solid #000;
-  width: 130px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  border-radius: 3px;
-  a {
-    text-decoration: none;
-    color: #000;
-    // background: aquamarine;
-    // text-shadow: 1px 1px 1px #000;
-    padding: 5px;
-  }
-  a:hover {
-    transition: 1s;
-    background: #0892a5;
-    color: aquamarine;
-    // text-shadow: 1px 1px 1px #000;
-  }
-  &:hover {
-    transition: 1s;
-    background: #0892a5;
-    color: aquamarine;
-  }
-  @media only screen and (max-width: 768px) {
-    font-size: 15px;
-  }
-`;
-
-export const ContactCTA = styled.div`
-  p {
-    margin: 5px;
-  }
-  @media only screen and (max-width: 834px) {
-    padding: 7px 10px 0 5px;
-  }
-`;
 // END STYLES
 
 const Home = ({ websites }) => {
@@ -186,74 +80,24 @@ const Home = ({ websites }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <IndexWrapper>
+        <Wrapper>
           <Aside />
-          <IndexContainer>
-            <section id="services">
-              <Intro />
-            </section>
-
-            <section id="works" className="section-spacing">
-              <WebsitesGridDescription>
-                <h2 className="title">Latest Projects</h2>
-              </WebsitesGridDescription>
-              <WebsitesContainer>
+          <Container>
+            <Intro />
+            <section className="section-spacing">
+              <h2 className="title">Latest Projects</h2>
+              <WebsitesGrid>
                 {websites &&
                   websites.map((website, index) => (
                     <span key={index}>
-                      <Sq>
-                        <WebsiteTags>
-                          <b style={{ paddingRight: "7px" }}>made with:</b>
-                          <i>{website.tags}</i>
-                        </WebsiteTags>
-
-                        <ImgWrapper>
-                          <img
-                            src={urlFor(website.websiteImg)}
-                            width="100%"
-                            alt=""
-                            className="img"
-                          />
-                        </ImgWrapper>
-                        <Sq2>
-                          <WebsiteTitle>{website.websiteTitle}</WebsiteTitle>
-
-                          <WebsiteDescription>
-                            {website.description}
-                          </WebsiteDescription>
-                          <ButtonWrapper>
-                            <Button>
-                              <Link href={website.projectLink}>visit site</Link>
-                              <AiOutlineLink />
-                            </Button>
-                            <Button>
-                              <Link href={website.codeLink}>view code</Link>
-                              <AiFillGithub />
-                            </Button>
-                          </ButtonWrapper>
-                        </Sq2>
-                      </Sq>
+                      <Website website={website} />
                     </span>
                   ))}
-              </WebsitesContainer>
+              </WebsitesGrid>
             </section>
-
-            <section id="contact" className="section-spacing">
-              <h2 className="title">Contact</h2>
-              <ContactCTA>
-                <p>
-                  Has my portfolio piqued your interest? If so, you can reach me
-                  at devdesignsbyelsa@gmail.com, or simply fill out the form
-                  below!
-                </p>
-                <p style={{ paddingTop: "15px" }}>
-                  Looking forward to hearing from you!
-                </p>
-              </ContactCTA>
-              <ContactForm />
-            </section>
-          </IndexContainer>
-        </IndexWrapper>
+            <Contact />
+          </Container>
+        </Wrapper>
       </motion.div>
     </>
   );
