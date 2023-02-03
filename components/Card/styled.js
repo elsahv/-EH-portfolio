@@ -1,7 +1,3 @@
-import Link from "next/link";
-import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
-import { urlFor } from "../utils/image";
-
 import styled from "styled-components";
 
 export const Sq = styled.div`
@@ -18,15 +14,20 @@ export const WebsiteTags = styled.div`
   //
 `;
 
-const Sq2 = styled.div`
+export const Sq2 = styled.div`
   // background: green;
   padding: 15px 10px;
 `;
 
-const ImgWrapper = styled.div`
+export const ImgWrapper = styled.div`
+  cursor: pointer;
   .img {
     border-bottom: solid 1px #000;
     border-top: solid 1px #000;
+  }
+  &:hover {
+    opacity: 0.8;
+    transition: 1s;
   }
 `;
 
@@ -93,40 +94,3 @@ export const Button = styled.button`
     font-size: 15px;
   }
 `;
-
-export default function Card({ website }) {
-  return (
-    <Sq>
-      <Sq2>
-        <WebsiteTags>
-          <b style={{ paddingRight: "7px" }}>made with:</b>
-          <i>{website.tags}</i>
-        </WebsiteTags>
-      </Sq2>
-
-      <ImgWrapper>
-        <img
-          src={urlFor(website.websiteImg)}
-          width="100%"
-          alt=""
-          className="img"
-        />
-      </ImgWrapper>
-      <Sq2>
-        <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
-        <WebsiteDescription>{website.description}</WebsiteDescription>
-
-        <ButtonWrapper>
-          <Button>
-            <Link href={website.projectLink}>visit site</Link>
-            <AiOutlineLink />
-          </Button>
-          <Button>
-            <Link href={website.codeLink}>view code</Link>
-            <AiFillGithub />
-          </Button>
-        </ButtonWrapper>
-      </Sq2>
-    </Sq>
-  );
-}

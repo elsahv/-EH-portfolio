@@ -23,7 +23,9 @@ const Intro = () => {
   return (
     <section>
       <Description>
-        {/* (<p>{"I've seen the movie."}</p>) */}
+        <p>
+          I build landing pages for small businesses and creatives starting out.
+        </p>
         <p>
           - Welcome to my portfolio! For the last couple years, {"I've"} gained
           an interest in programming using Javascript and Javascript frameworks.

@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import sanityClient from "../utils/client";
-
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Intro from "../components/Intro";
-import Website from "../components/Website";
-import Contact from "../components/Contact";
+import Card from "../components/Card";
+import ContactForm from "../components/ContactForm";
 
 // STYLES
 export const Wrapper = styled.div`
@@ -86,17 +85,29 @@ const Home = ({ websites }) => {
           <Container>
             <Intro />
             <section className="section-spacing">
-              <h2 className="title">Latest Projects</h2>
+              <h2 className="title">Latest Designs</h2>
               <WebsitesGrid>
                 {websites &&
                   websites.map((website, index) => (
                     <span key={index}>
-                      <Website website={website} />
+                      <Card website={website} />
                     </span>
                   ))}
               </WebsitesGrid>
             </section>
-            <Contact />
+
+            <section className="section-spacing">
+              <h2 className="title">Contact</h2>
+              <p>
+                Has my portfolio piqued your interest? If so, you can reach me
+                at devdesignsbyelsa@gmail.com, or simply fill out the form
+                below!
+              </p>
+              <p style={{ paddingTop: "15px" }}>
+                Looking forward to hearing from you!
+              </p>
+              <ContactForm />
+            </section>
           </Container>
         </Wrapper>
       </motion.div>
