@@ -1,10 +1,11 @@
 import Head from "next/head";
+import Link from "next/link";
+
 import Image from "next/image";
 import sanityClient from "../utils/client";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Intro from "../components/Intro";
 import Card from "../components/Card";
 import ContactForm from "../components/ContactForm";
 
@@ -18,8 +19,8 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "ls"
-      "rs";
+      "rs"
+      "ls";
   }
 `;
 
@@ -83,9 +84,29 @@ const Home = ({ websites }) => {
         <Wrapper>
           <Aside />
           <Container>
-            <Intro />
             <section className="section-spacing">
               <h2 className="title">Latest Designs</h2>
+              {/* <p>
+                - Welcome to my portfolio!
+                For the last couple years, {"I've"} gained an interest in
+                programming using Javascript and Javascript frameworks. Along
+                with my passion for learning unique web designs, I have built
+                (and am currently building!) a few different websites. My most
+                ambitious project involves building a web design side hustle for
+                <a href="https://writingtobetterhealth.com">
+                  Dietitans/Nutritionists.
+                </a>
+              </p> */}
+
+              <p>
+                - Listed below are some of my more complete featured projects,
+                you can also see the code for my other projects
+                <a href="https://github.com/elsahv">in progress.</a>I am always
+                looking for opportunities to further my skills, and work with
+                other like minded people in tech. If you would like to contact
+                me can reach me
+                <Link href="/#contact">here.</Link>
+              </p>
               <WebsitesGrid>
                 {websites &&
                   websites.map((website, index) => (

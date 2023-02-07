@@ -18,6 +18,10 @@ const Aside = () => {
             Hi there, {"I'm"} Elsa. {"I'm"} a web developer based in Joshua
             Tree, CA.
           </p>
+          <p>
+            I build landing pages for small businesses and creatives starting
+            out.
+          </p>
           <ImageWrapper>
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
