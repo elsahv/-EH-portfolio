@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-
-import Image from "next/image";
 import sanityClient from "../utils/client";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
@@ -10,7 +8,7 @@ import Card from "../components/Card";
 import ContactForm from "../components/ContactForm";
 
 // STYLES
-export const Wrapper = styled.div`
+export const IndexGrid = styled.div`
   display: grid;
   grid-template-areas: "ls rs rs rs ";
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -19,12 +17,12 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "rs"
-      "ls";
+      "ls"
+      "rs";
   }
 `;
 
-export const Container = styled.div`
+export const IndexContainer = styled.div`
   background: #fff;
   // opacity: 0.9;
   grid-area: rs;
@@ -81,9 +79,9 @@ const Home = ({ websites }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Wrapper>
+        <IndexGrid>
           <Aside />
-          <Container>
+          <IndexContainer>
             <section className="section-spacing">
               <h2 className="title">Latest Designs</h2>
               {/* <p>
@@ -129,8 +127,8 @@ const Home = ({ websites }) => {
               </p>
               <ContactForm />
             </section>
-          </Container>
-        </Wrapper>
+          </IndexContainer>
+        </IndexGrid>
       </motion.div>
     </>
   );
