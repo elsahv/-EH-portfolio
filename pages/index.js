@@ -40,6 +40,10 @@ export const IndexContainer = styled.div`
     border-bottom: none;
     padding: 50px 0 0 7px;
   }
+  a {
+    color: #000;
+    margin: 0 3px;
+  }
 `;
 
 export const WebsitesGrid = styled.div`
@@ -84,17 +88,17 @@ const Home = ({ websites }) => {
           <IndexContainer>
             <section className="section-spacing">
               <h2 className="title">Latest Designs</h2>
-              {/* <p>
-                - Welcome to my portfolio!
-                For the last couple years, {"I've"} gained an interest in
-                programming using Javascript and Javascript frameworks. Along
-                with my passion for learning unique web designs, I have built
-                (and am currently building!) a few different websites. My most
-                ambitious project involves building a web design side hustle for
+              <p>
+                - Welcome to my portfolio! For the last couple years, {"I've"}{" "}
+                gained an interest in programming using Javascript and
+                Javascript frameworks. Along with my passion for learning unique
+                web designs, I have built (and am currently building!) a few
+                different websites. My most ambitious project involves building
+                a web design side hustle for
                 <a href="https://writingtobetterhealth.com">
                   Dietitans/Nutritionists.
                 </a>
-              </p> */}
+              </p>
 
               <p>
                 - Listed below are some of my more complete featured projects,
@@ -115,7 +119,7 @@ const Home = ({ websites }) => {
               </WebsitesGrid>
             </section>
 
-            <section className="section-spacing">
+            <section id="contact" className="section-spacing">
               <h2 className="title">Contact</h2>
               <p>
                 Has my portfolio piqued your interest? If so, you can reach me
