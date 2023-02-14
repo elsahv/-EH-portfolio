@@ -31,7 +31,7 @@ export const IndexContainer = styled.div`
   border-left: solid 1px #000;
   border-bottom: solid 1px #000;
   @media only screen and (max-width: 1024px) {
-  padding: 60px 10px 0px 20px;
+  padding: 20px 10px 0px 20px;
   }
   }
 
@@ -42,7 +42,6 @@ export const IndexContainer = styled.div`
   }
   a {
     color: #000;
-    margin: 0 3px;
   }
 `;
 
@@ -68,6 +67,13 @@ export const WebsitesGrid = styled.div`
     grid-gap: 3em;
   }
 `;
+
+export const IntroContent = styled.div`
+  padding: 20px 0 30px;
+  @media only screen and (max-width: 1024px) {
+    padding: 20px 10px 30px;
+  }
+`;
 // END STYLES
 
 const Home = ({ websites }) => {
@@ -86,30 +92,18 @@ const Home = ({ websites }) => {
         <IndexGrid>
           <Aside />
           <IndexContainer>
-            <section className="section-spacing">
+            <section className="">
+              <IntroContent>
+                <p>
+                  Listed below are some of my featured websites, all built using
+                  Javascript code. I am always looking for opportunities to
+                  further my skills, and work with other like minded people in
+                  tech. If you would like to contact me can reach me{" "}
+                  <Link href="/#contact">here.</Link>
+                </p>
+              </IntroContent>
               <h2 className="title">Latest Designs</h2>
-              <p>
-                - Welcome to my portfolio! For the last couple years, {"I've"}{" "}
-                gained an interest in programming using Javascript and
-                Javascript frameworks. Along with my passion for learning unique
-                web designs, I have built (and am currently building!) a few
-                different websites. My most ambitious project involves building
-                a web design side hustle for
-                <a href="https://writingtobetterhealth.com">
-                  Dietitans/Nutritionists.
-                </a>
-              </p>
-              <br />
-              <br />
-              <p>
-                - Listed below are some of my more complete featured projects,
-                you can also see the code for my other projects
-                <a href="https://github.com/elsahv">in progress.</a>I am always
-                looking for opportunities to further my skills, and work with
-                other like minded people in tech. If you would like to contact
-                me can reach me
-                <Link href="/#contact">here.</Link>
-              </p>
+
               <WebsitesGrid>
                 {websites &&
                   websites.map((website, index) => (
@@ -122,12 +116,12 @@ const Home = ({ websites }) => {
 
             <section id="contact" className="section-spacing">
               <h2 className="title">Contact</h2>
-              <p>
+              <p style={{ padding: "10px 5px" }}>
                 Has my portfolio piqued your interest? If so, you can reach me
                 at devdesignsbyelsa@gmail.com, or simply fill out the form
                 below!
               </p>
-              <p style={{ paddingTop: "15px" }}>
+              <p style={{ padding: "5px" }}>
                 Looking forward to hearing from you!
               </p>
               <ContactForm />

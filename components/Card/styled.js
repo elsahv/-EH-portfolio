@@ -49,15 +49,15 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   // background: blue;
-  margin: 20px 0 0 5px 10px;
-  width: 45%;
+  margin: 25px 0 0 5px 10px;
+  width: 46%;
+  @media only screen and (max-width: 1024px) {
+    width: 41%;
+  }
   @media only screen and (max-width: 834px) {
     width: 60%;
   }
   @media only screen and (max-width: 600px) {
-    width: 50%;
-  }
-  @media only screen and (max-width: 599px) {
     width: 82%;
   }
 `;

@@ -33,7 +33,6 @@ main {
   section {
     padding: 15px 50px;
     margin: 40px;
-    // background: green;
   @media only screen and (max-width: 1024px) {
   padding: 0;
   margin: 0px;
