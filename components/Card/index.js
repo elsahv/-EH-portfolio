@@ -2,8 +2,7 @@ import Link from "next/link";
 import { urlFor } from "../../utils/image";
 import {
   Sq,
-  WebsiteTags,
-  Sq2,
+  ContentPadding,
   ImgWrapper,
   WebsiteTitle,
   WebsiteDescription,
@@ -14,12 +13,10 @@ import {
 export default function Card({ website }) {
   return (
     <Sq>
-      <Sq2>
-        <WebsiteTags>
-          <b style={{ paddingRight: "7px" }}>made with:</b>
-          <i>{website.tags}</i>
-        </WebsiteTags>
-      </Sq2>
+      <ContentPadding>
+        <b style={{ paddingRight: "7px" }}>made with:</b>
+        <i>{website.tags}</i>
+      </ContentPadding>
 
       <ImgWrapper>
         <Link href={website.projectLink}>
@@ -31,7 +28,7 @@ export default function Card({ website }) {
           />
         </Link>
       </ImgWrapper>
-      <Sq2>
+      <ContentPadding>
         <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
         <WebsiteDescription>{website.description}</WebsiteDescription>
 
@@ -43,7 +40,7 @@ export default function Card({ website }) {
             <Link href={website.codeLink}>view code</Link>
           </Button>
         </ButtonWrapper>
-      </Sq2>
+      </ContentPadding>
     </Sq>
   );
 }

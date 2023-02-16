@@ -7,14 +7,7 @@ export const Sq = styled.div`
   // background: teal;
 `;
 
-export const WebsiteTags = styled.div`
-  //   padding: 12px 10px;
-  //   @media only screen and (max-width: 531px) {
-  //   }
-  //
-`;
-
-export const Sq2 = styled.div`
+export const ContentPadding = styled.div`
   // background: green;
   padding: 15px 10px;
 `;
@@ -54,7 +47,8 @@ export const Button = styled.button`
   // background: #0892a5;
   border: 1px solid #000;
   font-size: 15px;
-  margin-right: 7px;
+  margin-right: 10px;
+  padding: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
