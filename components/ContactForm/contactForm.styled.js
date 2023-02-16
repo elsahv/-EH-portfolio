@@ -17,7 +17,6 @@ export const ContactCTA = styled.div`
 `;
 
 export const Form = styled.form`
-  // background: green;
   padding-left: 5px;
   padding-bottom: 20px;
   display: flex;
@@ -38,7 +37,7 @@ export const Form = styled.form`
     }
   }
   .btn {
-    background: aquamarine;
+    // background: aquamarine;
     color: #000;
     width: 30%;
     padding: 0px 5px;
@@ -48,8 +47,8 @@ export const Form = styled.form`
     cursor: pointer;
 
     &:hover {
-      background: #0892a5;
-      color: aquamarine;
+      // background: #0892a5;
+      color: #0892a5;
       transition: 1s;
     }
     @media only screen and (max-width: 820px) {

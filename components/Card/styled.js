@@ -40,7 +40,7 @@ export const WebsiteTitle = styled.h3`
 
 export const WebsiteDescription = styled.p`
   // font-style: italic;
-  // padding: 5px 0;
+  padding: 5px 2px;
   @media only screen and (max-width: 531px) {
   }
 `;
@@ -63,10 +63,10 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #0892a5;
+  // background: #0892a5;
   border: 1px solid #000;
   width: 130px;
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,17 +79,7 @@ export const Button = styled.button`
     // text-shadow: 1px 1px 1px #000;
     padding: 5px;
   }
-  a:hover {
-    transition: 1s;
-    background: #0892a5;
-    color: aquamarine;
-    // text-shadow: 1px 1px 1px #000;
-  }
-  &:hover {
-    transition: 1s;
-    background: #0892a5;
-    color: aquamarine;
-  }
+
   @media only screen and (max-width: 768px) {
     font-size: 15px;
   }
