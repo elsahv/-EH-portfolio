@@ -41,32 +41,20 @@ export const WebsiteTitle = styled.h3`
 export const WebsiteDescription = styled.p`
   // font-style: italic;
   padding: 5px 2px;
+  margin-bottom: 5px;
   @media only screen and (max-width: 531px) {
   }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  // background: blue;
-  margin: 25px 0 0 5px 10px;
-  width: 46%;
-  @media only screen and (max-width: 1024px) {
-    width: 41%;
-  }
-  @media only screen and (max-width: 834px) {
-    width: 60%;
-  }
-  @media only screen and (max-width: 600px) {
-    width: 82%;
-  }
 `;
 
 export const Button = styled.button`
   // background: #0892a5;
   border: 1px solid #000;
-  width: 130px;
   font-size: 15px;
+  margin-right: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +63,6 @@ export const Button = styled.button`
   a {
     text-decoration: none;
     color: #000;
-    // background: aquamarine;
-    // text-shadow: 1px 1px 1px #000;
     padding: 5px;
   }
 

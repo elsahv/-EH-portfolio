@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { urlFor } from "../../utils/image";
 import {
   Sq,
@@ -39,11 +38,9 @@ export default function Card({ website }) {
         <ButtonWrapper>
           <Button>
             <Link href={website.projectLink}>visit site</Link>
-            <AiOutlineLink />
           </Button>
           <Button>
             <Link href={website.codeLink}>view code</Link>
-            <AiFillGithub />
           </Button>
         </ButtonWrapper>
       </Sq2>
