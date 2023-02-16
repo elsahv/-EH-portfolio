@@ -48,7 +48,7 @@ export const IndexContainer = styled.div`
 export const WebsitesGrid = styled.div`
   opacity: 0.9;
   // background: teal;
-  padding-top: 10px;
+  // padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3em;
@@ -69,7 +69,7 @@ export const WebsitesGrid = styled.div`
 `;
 
 export const IntroContent = styled.div`
-  padding: 20px 0 30px;
+  padding: 5px 0 30px;
   @media only screen and (max-width: 1024px) {
     padding: 20px 10px 30px;
   }
@@ -116,14 +116,12 @@ const Home = ({ websites }) => {
 
             <section id="contact" className="section-spacing">
               <h2 className="title">Contact</h2>
-              <p style={{ padding: "10px 5px" }}>
+              <p style={{ padding: "5px 0px" }}>
                 Has my portfolio piqued your interest? If so, you can reach me
                 at devdesignsbyelsa@gmail.com, or simply fill out the form
                 below!
               </p>
-              <p style={{ padding: "5px" }}>
-                Looking forward to hearing from you!
-              </p>
+              <p>Looking forward to hearing from you!</p>
               <ContactForm />
             </section>
           </IndexContainer>

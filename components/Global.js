@@ -20,7 +20,7 @@ main {
   }
   p{
     font-size: 17px;
-    margin: 5px 0;
+    // margin: 5px 0;
     line-height: 1.5;
     // color: red;
     opacity: 0.9;
@@ -40,7 +40,8 @@ main {
   }
   .title {
     font-size: 32px;
-    text-decoration: underline;
+    // text-decoration: underline;
+    padding-top: 100px;
     // color: blue;
   @media only screen and (max-width: 1024px) {
   padding: 0 0 0 5px;

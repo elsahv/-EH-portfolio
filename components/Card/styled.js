@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Sq = styled.div`
-  border: solid 2px gray;
+  border: solid 1px #000;
   margin: 10px 0;
-  border-radius: 5px;
+  // border-radius: 5px;
   // background: teal;
 `;
 
