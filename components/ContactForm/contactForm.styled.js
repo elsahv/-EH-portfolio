@@ -47,8 +47,9 @@ export const Form = styled.form`
     cursor: pointer;
 
     &:hover {
-      // background: #0892a5;
-      color: #0892a5;
+      background: #0892a5;
+      text-shadow: 1px 1px 1px teal;
+      color: aquamarine;
       transition: 1s;
     }
     @media only screen and (max-width: 820px) {

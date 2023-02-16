@@ -44,7 +44,6 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  // background: #0892a5;
   border: 1px solid #000;
   font-size: 15px;
   margin-right: 10px;
@@ -58,6 +57,9 @@ export const Button = styled.button`
     text-decoration: none;
     color: #000;
     padding: 5px;
+  }
+  &:hover {
+    background: #0892a5;
   }
 
   @media only screen and (max-width: 768px) {
