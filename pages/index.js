@@ -102,7 +102,7 @@ const Home = ({ websites }) => {
                   <Link href="/#contact">here.</Link>
                 </p>
               </IntroContent>
-              <h2 className="title">Latest Designs</h2>
+              <h2 className="title">Featured Projects</h2>
 
               <WebsitesGrid>
                 {websites &&
