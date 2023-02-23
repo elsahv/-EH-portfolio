@@ -29,17 +29,19 @@ export default function Card({ website }) {
         </Link>
       </ImgWrapper>
       <ContentPadding>
-        <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
-        <WebsiteDescription>{website.description}</WebsiteDescription>
+        <div style={{ height: "120px" }}>
+          <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
+          <WebsiteDescription>{website.description}</WebsiteDescription>
 
-        <ButtonWrapper>
-          <Button>
-            <Link href={website.projectLink}>visit site</Link>
-          </Button>
-          <Button>
-            <Link href={website.codeLink}>view code</Link>
-          </Button>
-        </ButtonWrapper>
+          <ButtonWrapper>
+            <Button>
+              <Link href={website.projectLink}>visit site</Link>
+            </Button>
+            <Button>
+              <Link href={website.codeLink}>view code</Link>
+            </Button>
+          </ButtonWrapper>
+        </div>
       </ContentPadding>
     </Sq>
   );

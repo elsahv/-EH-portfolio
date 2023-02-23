@@ -5,22 +5,21 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: cormorant-garamond;
     scroll-behavior: smooth;
+    font-family: 'Cormorant Garamond', serif;
+
   }
  
 main {
   background: lightgray;
-  @media only screen and (max-width: 1024px) {
-  // background: none;
-  }
+ 
 }
   html {
     scroll-behavior: smooth;
   }
   p{
     font-size: 17px;
-    // margin: 5px 0;
     line-height: 1.5;
     // color: red;
     opacity: 0.9;

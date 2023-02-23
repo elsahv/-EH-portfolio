@@ -4,7 +4,6 @@ export const Sq = styled.div`
   border: solid 1px #000;
   margin: 10px 0;
   // border-radius: 5px;
-  // background: teal;
 `;
 
 export const ContentPadding = styled.div`
@@ -17,6 +16,7 @@ export const ImgWrapper = styled.div`
   .img {
     border-bottom: solid 1px #000;
     border-top: solid 1px #000;
+    height: 300px;
   }
   &:hover {
     opacity: 0.8;
