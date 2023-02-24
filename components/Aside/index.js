@@ -14,7 +14,7 @@ const Aside = () => {
     <>
       <AsideWrapper>
         <AsideContainer>
-          <p>
+          <p style={{ fontSize: "18px" }}>
             Hi there, {"I'm"} Elsa. I build websites for
             <a href="https://writingtobetterhealth.com">dietitians</a>
             and

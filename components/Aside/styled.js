@@ -5,7 +5,9 @@ export const AsideWrapper = styled.div`
   background: #fff;
   border-right: solid 2px black;
   border-bottom: solid 2px black;
-
+  p {
+    // font-size: 20px;
+  }
   @media only screen and (max-width: 600px) {
     width: 100%;
     border-bottom: none;
