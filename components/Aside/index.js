@@ -15,8 +15,10 @@ const Aside = () => {
       <AsideWrapper>
         <AsideContainer>
           <p>
-            Hi there, {"I'm"} Elsa. {"I'm"} a web developer based in Joshua
-            Tree, CA.
+            Hi there, {"I'm"} Elsa. I build websites for
+            <a href="https://writingtobetterhealth.com">dietitians</a>
+            and
+            <a href="https://laughingcoyote.dev">small business owners.</a>
           </p>
 
           <ImageWrapper>
@@ -33,6 +35,7 @@ const Aside = () => {
                 </h2>
                 <TimelineDate> 2020-2023:</TimelineDate>
                 <p>
+                  {/* {"I'm"} a web developer based in Joshua Tree, CA. */}
                   Taught myself programming and web design through various (and
                   super helpful!) youtube developers. Also utilized other
                   resources such as: freecodecamp, the odin project, geeks for

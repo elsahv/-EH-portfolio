@@ -21,7 +21,7 @@ export const AsideContainer = styled.div`
   color: #000;
   a {
     color: #000;
-    padding: 2px;
+    padding: 5px;
   }
   p {
     margin: 10px 2px;
