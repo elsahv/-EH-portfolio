@@ -8,7 +8,7 @@ import {
   WebsiteTitle,
   WebsiteDescription,
   ImgWrapper,
-  TextWrapper,
+  Padding,
   Wrapper,
 } from "../../components/Slug.styled";
 
@@ -21,7 +21,7 @@ const FeaturedWebsites = ({ websitetitle, websiteImg, description, body }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <Wrapper>
-          <TextWrapper>
+          <Padding>
             <WebsiteTitle>{websitetitle}</WebsiteTitle>
             <WebsiteDescription>{description}</WebsiteDescription>
 
@@ -34,10 +34,10 @@ const FeaturedWebsites = ({ websitetitle, websiteImg, description, body }) => {
                 height="100%"
               />
             </ImgWrapper>
-          </TextWrapper>
-          <TextWrapper>
+          </Padding>
+          <Padding>
             <PortableText value={body} />
-          </TextWrapper>
+          </Padding>
         </Wrapper>
       </motion.div>
     </>
