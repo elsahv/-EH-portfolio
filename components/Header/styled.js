@@ -17,9 +17,10 @@ export const Logo = styled.h1`
   padding-top: 10px;
   padding-left: 10px;
   font-size: 32px;
-  // background: green;
-  color: #000;
-  // text-shadow: 1px 1px 1px #000;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
   @media only screen and (max-width: 599px) {
     font-size: 25px;
   }

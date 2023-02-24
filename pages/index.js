@@ -38,7 +38,7 @@ const Home = ({ websites }) => {
                   <Link href="/#contact">here.</Link>
                 </p>
               </IntroContent>
-              <h2 className="title">Featured Projects</h2>
+              <h2 className="title">Featured Websites</h2>
 
               <WebsitesGrid>
                 {websites &&

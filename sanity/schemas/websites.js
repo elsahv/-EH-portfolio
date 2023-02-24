@@ -41,7 +41,11 @@ export default {
         hotspot: true,
       },
     },
-
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+    },
     {
       name: "tags",
       title: "Tags",

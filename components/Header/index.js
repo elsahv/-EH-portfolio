@@ -12,7 +12,9 @@ const HeaderSection = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <Header>
-          <Logo>Elsa Hovey</Logo>
+          <Logo>
+            <Link href="/">Elsa Hovey</Link>
+          </Logo>
           <Nav>
             <NavMenu>
               <Link href="/#contact">
