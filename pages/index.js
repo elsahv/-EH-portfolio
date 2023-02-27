@@ -31,10 +31,11 @@ const Home = ({ websites }) => {
             <section className="">
               <IntroContent>
                 <p>
-                  Listed below are some of my featured websites, all built using
-                  Javascript code. I am always looking for opportunities to
-                  further my skills, and work with other like minded people in
-                  tech. If you would like to contact me can reach me{" "}
+                  Listed below are my featured websites, all currently in
+                  progress.
+                  <br />I am always looking for opportunities to further my
+                  skills... and work with other like minded people in tech. If
+                  you would like to contact me, you can reach me{" "}
                   <Link href="/#contact">here.</Link>
                 </p>
               </IntroContent>

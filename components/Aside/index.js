@@ -35,35 +35,32 @@ const Aside = () => {
                 </h2>
                 <TimelineDate> 2020-2023:</TimelineDate>
                 <p>
-                  {/* {"I'm"} a web developer based in Joshua Tree, CA. */}
-                  Taught myself programming and web design through various (and
-                  super helpful!) youtube developers. Also utilized other
-                  resources such as: freecodecamp, the odin project, geeks for
-                  geeks.
+                  {"I'm"} based in Joshua Tree, CA. My days are spent working on
+                  my websites, and freelance projects. I am also very interested
+                  in working with other developers to gain team building
+                  experience, and build up a network to bounce ideas off of.
                 </p>
                 <p>
-                  Spent this time, and am currently building up my featured
-                  projects
-                </p>
-              </li>
-              <li>
-                <TimelineDate> 2016-2020:</TimelineDate>
-                <p>Worked in restaurants and assisted living kitchens.</p>
-                <p>
-                  Worked as a Dietary Manager from 2018-2020.... loved it until
-                  I desired a change, mainly for finding more creative
-                  employment.
-                </p>
-                <p>
-                  In 2019, I became interested with programming and started
-                  learning Javascript.
+                  During the last few years, {"I've"} learned how to program
+                  websites using javascript and javascript frameworks. {"I've"}{" "}
+                  utilized resources such as: youtube developer tutorials,
+                  Freecodecamp, The Odin Project and Geeks for Geeks.
                 </p>
               </li>
               <li>
-                <TimelineDate>2016</TimelineDate>
+                <TimelineDate> 2008-2020:</TimelineDate>
                 <p>
-                  Completed Bachelors of Science in Nutrition and Food Science,
-                  Cal State San Bernardino
+                  All of my work experience and studies had revolved around food
+                  during this time. I worked in small restaurants, assisted
+                  living kitchens, and learned how to cook.{" "}
+                </p>
+
+                <p>
+                  In 2016, I graduated with a bachelors degree in Nutrition and
+                  Food Science. From 2018-2020, I worked as a dietary manager,
+                  and loved it until I desired a change. That was when I started
+                  looking for more creative employment in web design and
+                  progamming.
                 </p>
               </li>
             </ul>

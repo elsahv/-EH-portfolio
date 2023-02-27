@@ -29,7 +29,7 @@ export default function Card({ website }) {
         </Link>
       </ImgWrapper>
       <ContentPadding>
-        <div style={{ height: "110px" }}>
+        <div style={{ height: "145px" }}>
           <WebsiteTitle>{website.websitetitle}</WebsiteTitle>
           <WebsiteDescription>{website.description}</WebsiteDescription>
 
