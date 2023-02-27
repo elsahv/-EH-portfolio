@@ -19,7 +19,11 @@ export default function Card({ website }) {
       </ContentPadding>
 
       <ImgWrapper>
-        <Link href={`featured-websites/${website.slug.current}`}>
+        {/*
+       //* UNCOMMENT LINK WHEN SLUG IS READY
+        */}
+        {/* <Link href={`featured-websites/${website.slug.current}`}> */}
+        <Link href={website.projectLink}>
           <img
             src={urlFor(website.websiteImg)}
             width="100%"
