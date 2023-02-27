@@ -4,7 +4,7 @@ export const Sq = styled.div`
   border: solid 1px #000;
   margin: 10px 0;
   // border-radius: 5px;
-  // height: 800px;
+  height: 530px;
 `;
 
 export const ContentPadding = styled.div`

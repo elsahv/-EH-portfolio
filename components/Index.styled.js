@@ -6,7 +6,7 @@ export const IndexGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "ls"
@@ -24,6 +24,7 @@ export const IndexContainer = styled.div`
   border-bottom: solid 1px #000;
   @media only screen and (max-width: 1024px) {
   padding: 20px 10px 0px 20px;
+  // padding-right: 50px;
   }
   }
 
