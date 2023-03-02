@@ -11,6 +11,7 @@ import {
   WebsitesGrid,
   IntroContent,
 } from "../components/Index.styled.js";
+import PkgRate from "../components/PkgRate";
 
 const Home = ({ websites }) => {
   return (
@@ -39,8 +40,8 @@ const Home = ({ websites }) => {
                   <Link href="/#contact">here.</Link>
                 </p>
               </IntroContent>
-              <h2 className="title">Featured Websites</h2>
-
+              <PkgRate />
+              {/* <h2 className="title">Featured Websites</h2>
               <WebsitesGrid>
                 {websites &&
                   websites.map((website, index) => (
@@ -48,7 +49,7 @@ const Home = ({ websites }) => {
                       <Card website={website} />
                     </span>
                   ))}
-              </WebsitesGrid>
+              </WebsitesGrid> */}
             </section>
 
             <section id="contact" className="section-spacing">

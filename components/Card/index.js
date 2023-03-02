@@ -22,8 +22,8 @@ export default function Card({ website }) {
         {/*
        //* UNCOMMENT LINK WHEN SLUG IS READY
         */}
-        {/* <Link href={`featured-websites/${website.slug.current}`}> */}
-        <Link href={website.projectLink}>
+        <Link href={`featured-websites/${website.slug.current}`}>
+          {/* <Link href={website.projectLink}> */}
           <img
             src={urlFor(website.websiteImg)}
             width="100%"
