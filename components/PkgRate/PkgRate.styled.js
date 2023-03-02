@@ -31,11 +31,6 @@ export const Title = styled.h2`
   }
 `;
 
-export const Description = styled.p`
-  font-size: 20px;
-  margin: 10px 0;
-`;
-
 export const Grid = styled.div`
   // background: teal;
   display: grid;
@@ -77,7 +72,7 @@ export const Content = styled.div`
 `;
 
 export const ItemTitle = styled.h3`
-  font-size: 20px;
+  font-size: 25px;
   padding-top: 5px;
   padding-bottom: 3px;
   @media only screen and (max-width: 531px) {

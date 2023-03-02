@@ -1,19 +1,58 @@
 import Head from "next/head";
 import Link from "next/link";
-import sanityClient from "../utils/client";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
-import Card from "../components/Card";
 import ContactForm from "../components/ContactForm";
-import {
-  IndexGrid,
-  IndexContainer,
-  WebsitesGrid,
-  IntroContent,
-} from "../components/Index.styled.js";
+import styled from "styled-components";
+
+export const IndexGrid = styled.div`
+  display: grid;
+  grid-template-areas: "ls rs rs rs ";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ls"
+      "rs";
+  }
+`;
+
+export const IndexContainer = styled.div`
+  background: #fff;
+  // opacity: 0.9;
+  grid-area: rs;
+  display: grid;
+  grid-gap: 2em;
+  border-left: solid 1px #000;
+  border-bottom: solid 1px #000;
+  @media only screen and (max-width: 1024px) {
+  padding: 20px 10px 0px 20px;
+  // padding-right: 50px;
+  }
+  }
+
+  @media only screen and (max-width: 600px) {
+    border-left: none;
+    border-bottom: none;
+    padding: 50px 0 0 7px;
+  }
+  a {
+    color: #000;
+  }
+`;
+
+export const IntroContent = styled.div`
+  padding: 5px 0 30px;
+  @media only screen and (max-width: 1024px) {
+    padding: 20px 10px 30px;
+  }
+`;
+
 import PkgRate from "../components/PkgRate";
 
-const Home = ({ websites }) => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -41,15 +80,6 @@ const Home = ({ websites }) => {
                 </p>
               </IntroContent>
               <PkgRate />
-              {/* <h2 className="title">Featured Websites</h2>
-              <WebsitesGrid>
-                {websites &&
-                  websites.map((website, index) => (
-                    <span key={index}>
-                      <Card website={website} />
-                    </span>
-                  ))}
-              </WebsitesGrid> */}
             </section>
 
             <section id="contact" className="section-spacing">
@@ -70,21 +100,3 @@ const Home = ({ websites }) => {
 };
 
 export default Home;
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "websites"] | order(_createdAt asc)';
-  const websites = await sanityClient.fetch(query);
-  if (!websites.length) {
-    return {
-      props: {
-        websites: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        websites,
-      },
-    };
-  }
-};

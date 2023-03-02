@@ -3,7 +3,6 @@ import content from "./data";
 import {
   Wrapper,
   Title,
-  Description,
   Container,
   Grid,
   Content,
@@ -16,10 +15,6 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
     <Wrapper>
       <Container>
         <Title>Featured Websites</Title>
-        {/* <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa odit
-          consequatur saepe laudantium commodi reic.
-        </Description> */}
       </Container>
       <Container>
         <Grid>
@@ -37,10 +32,10 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
               </ImgWrapper>
               <Content>
                 <ItemTitle>{item.title}</ItemTitle>
-                <ul>
-                  <li>{item.description}</li>
-                  <li>{item.madeWith}</li>
-                </ul>
+                <>
+                  <p>{item.description}</p>
+                  {/* <li>{item.madeWith}</li> */}
+                </>
               </Content>
             </div>
           ))}
