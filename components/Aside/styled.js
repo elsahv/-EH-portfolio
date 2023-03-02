@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const IntroContent = styled.div`
+  padding: 5px 0 30px;
+  @media only screen and (max-width: 1024px) {
+    padding: 20px 10px 30px;
+  }
+`;
+
 export const AsideWrapper = styled.div`
   grid-area: ls;
   background: #fff;

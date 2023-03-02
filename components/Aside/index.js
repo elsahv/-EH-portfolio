@@ -7,6 +7,7 @@ import {
   ImageWrapper,
   TimelineWrapper,
   TimelineDate,
+  IntroContent,
 } from "./styled";
 
 const Aside = () => {
@@ -24,6 +25,15 @@ const Aside = () => {
           <ImageWrapper>
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
+          <IntroContent>
+            <p>
+              Listed below are my featured websites, all currently in progress.
+              <br />I am always looking for opportunities to further my
+              skills... and work with other like minded people in tech. If you
+              would like to contact me, you can reach me{" "}
+              <Link href="/#contact">here.</Link>
+            </p>
+          </IntroContent>
         </AsideContainer>
 
         <AsideContainer style={{ borderTop: "solid 2px #000" }}>

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  // padding: 30px 250px;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,20 +22,13 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h2`
-  // text-decoration: underline;
-  font-size: 30px;
-  padding-top: 30px;
-  @media only screen and (max-width: 531px) {
-    font-size: 30px;
-  }
-`;
-
 export const Grid = styled.div`
   // background: teal;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2em;
+  grid-gap: 7em 5em;
+  .overlay {
+  }
 
   @media only screen and (max-width: 834px) {
     grid-template-columns: 1fr;
@@ -44,13 +37,13 @@ export const Grid = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  margin: 10px 0;
+  margin: 5px 0;
   border: 1px solid #000;
-  .img {
-    // border-radius: 5%;
-    // width: 100%;
-    // height: 100%;
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
   }
+
   @media only screen and (max-width: 834px) {
     padding-top: 60px;
   }
@@ -61,21 +54,11 @@ export const ImgWrapper = styled.div`
   }
 `;
 
-export const Content = styled.div`
-  padding-left: 10px;
-  padding-bottom: 50px;
-
-  ul {
-    padding-left: 20px;
-    font-size: 20px;
-  }
-`;
-
 export const ItemTitle = styled.h3`
-  font-size: 25px;
-  padding-top: 5px;
-  padding-bottom: 3px;
+  font-size: 32px;
+  padding: 3px 0;
+  margin-top: 10px;
   @media only screen and (max-width: 531px) {
-    font-size: 17px;y
+    font-size: 17px;
   }
 `;

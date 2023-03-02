@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
+import WebsiteGrid from "../components/WebsiteGrid";
 import ContactForm from "../components/ContactForm";
 import styled from "styled-components";
 
@@ -29,7 +30,6 @@ export const IndexContainer = styled.div`
   border-bottom: solid 1px #000;
   @media only screen and (max-width: 1024px) {
   padding: 20px 10px 0px 20px;
-  // padding-right: 50px;
   }
   }
 
@@ -43,14 +43,12 @@ export const IndexContainer = styled.div`
   }
 `;
 
-export const IntroContent = styled.div`
-  padding: 5px 0 30px;
-  @media only screen and (max-width: 1024px) {
-    padding: 20px 10px 30px;
-  }
-`;
-
-import PkgRate from "../components/PkgRate";
+// export const IntroContent = styled.div`
+//   padding: 5px 0 30px;
+//   @media only screen and (max-width: 1024px) {
+//     padding: 20px 10px 30px;
+//   }
+// `;
 
 const Home = () => {
   return (
@@ -69,7 +67,7 @@ const Home = () => {
           <Aside />
           <IndexContainer>
             <section className="">
-              <IntroContent>
+              {/* <IntroContent>
                 <p>
                   Listed below are my featured websites, all currently in
                   progress.
@@ -78,8 +76,8 @@ const Home = () => {
                   you would like to contact me, you can reach me{" "}
                   <Link href="/#contact">here.</Link>
                 </p>
-              </IntroContent>
-              <PkgRate />
+              </IntroContent> */}
+              <WebsiteGrid />
             </section>
 
             <section id="contact" className="section-spacing">

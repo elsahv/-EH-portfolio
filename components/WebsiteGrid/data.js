@@ -1,5 +1,7 @@
-import ImageOne from "../../public/images/jake.jpg";
-import ImageTwo from "../../public/images/aerogarden.jpg";
+import ImageOne from "../../public/images/coyote.png";
+import ImageTwo from "../../public/images/wtbh.png";
+import ImageThree from "../../public/images/jungle.png";
+import ImageFour from "../../public/images/rq.png";
 
 const content = [
   {
@@ -23,7 +25,7 @@ const content = [
 
   {
     id: 3,
-    image: ImageTwo,
+    image: ImageThree,
     title: "The Indoor Jungle Project",
     description:
       "A photo album blog, documenting my houseplants and what I've learned so far",
@@ -32,7 +34,7 @@ const content = [
   },
   {
     id: 4,
-    image: ImageOne,
+    image: ImageFour,
     title: "The Running Quail",
     description:
       "A small survey to gather info for The Running Quail, a full stack app for the small businesses, residents, and tourists located in Morongo Basin area. ",
