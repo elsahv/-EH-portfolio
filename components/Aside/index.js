@@ -30,7 +30,8 @@ const Aside = () => {
           <IntroContent>
             <WebsiteCTA>
               <p className="desktop">
-                All of my featured website projects are listed here.
+                All of my featured website projects are listed here. Click on
+                each image to view website!
                 <BsArrowRightCircleFill
                   style={{
                     marginLeft: "5px",
@@ -40,7 +41,8 @@ const Aside = () => {
                 />
               </p>
               <p className="mobile">
-                All of my featured website projects are listed below.
+                All of my featured website projects are listed below. Click on
+                each image to view website!
                 <BsArrowDownCircleFill
                   style={{ marginLeft: "5px", marginTop: "15px" }}
                 />

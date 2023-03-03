@@ -19,6 +19,7 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
                   className="img"
                   alt="about-me"
                   layout="responsive"
+                  height="1100px"
                 />
               </a>
             </ImgWrapper>

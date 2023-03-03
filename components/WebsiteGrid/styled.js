@@ -36,9 +36,6 @@ export const ImgWrapper = styled.div`
   margin: 5px 0;
   border: 1px solid #000;
 
-  .img {
-    // border: 1px solid #000;
-  }
   &:hover {
     opacity: 0.7;
     transition: 1s;
