@@ -73,7 +73,7 @@ export const ErrorStyles = styled.div`
 
 export const Input = styled.input`
   height: 50px;
-  border-radius: 5px;
+  // border-radius: 5px;
   width: 500px;
 
   @media only screen and (max-width: 820px) {
@@ -85,7 +85,7 @@ export const Input = styled.input`
 `;
 export const Textarea = styled.textarea`
   height: 170px;
-  border-radius: 5px;
+  // border-radius: 5px;
   // margin: 40px 0;
 `;
 
