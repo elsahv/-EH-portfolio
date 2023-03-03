@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import content from "./data";
-import { Wrapper, Container, Grid, ItemTitle, ImgWrapper } from "./styled";
+import { Container, Grid, ItemTitle, ImgWrapper } from "./styled";
 
 export default function PkgRate({ title, description, madeWith, listItem2 }) {
   return (
-    // <Wrapper>
     <Container>
       <Grid>
         {content.map((item, index) => (
@@ -29,6 +28,5 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
         ))}
       </Grid>
     </Container>
-    // </Wrapper>
   );
 }

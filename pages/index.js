@@ -43,13 +43,6 @@ export const IndexContainer = styled.div`
   }
 `;
 
-// export const IntroContent = styled.div`
-//   padding: 5px 0 30px;
-//   @media only screen and (max-width: 1024px) {
-//     padding: 20px 10px 30px;
-//   }
-// `;
-
 const Home = () => {
   return (
     <>
@@ -67,16 +60,6 @@ const Home = () => {
           <Aside />
           <IndexContainer>
             <section className="">
-              {/* <IntroContent>
-                <p>
-                  Listed below are my featured websites, all currently in
-                  progress.
-                  <br />I am always looking for opportunities to further my
-                  skills... and work with other like minded people in tech. If
-                  you would like to contact me, you can reach me{" "}
-                  <Link href="/#contact">here.</Link>
-                </p>
-              </IntroContent> */}
               <WebsiteGrid />
             </section>
 

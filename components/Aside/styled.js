@@ -57,14 +57,12 @@ export const AsideContainer = styled.div`
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
-    // padding-left: 30px;
-    // padding-top: 30px;
+
     border-bottom: none;
   }
 
   @media only screen and (max-width: 531px) {
     font-size: 17px;
-    // padding: 30px 20px;
   }
 `;
 
