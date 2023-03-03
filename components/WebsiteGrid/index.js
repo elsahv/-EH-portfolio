@@ -5,24 +5,29 @@ import { Wrapper, Container, Grid, ItemTitle, ImgWrapper } from "./styled";
 
 export default function PkgRate({ title, description, madeWith, listItem2 }) {
   return (
-    <Wrapper>
-      <Container>
-        <Grid>
-          {content.map((item, index) => (
-            <div key={index}>
-              <ItemTitle>{item.title}</ItemTitle>
+    // <Wrapper>
+    <Container>
+      <Grid>
+        {content.map((item, index) => (
+          <div key={index}>
+            <ItemTitle>{item.title}</ItemTitle>
 
-              <ImgWrapper>
-                <a href={item.listItem2}>
-                  <Image src={item.image} alt="about-me" layout="responsive" />
-                </a>
-              </ImgWrapper>
-              <p style={{ padding: "10px 3px" }}>{item.description}</p>
-              <div>{item.madeWith}</div>
-            </div>
-          ))}
-        </Grid>
-      </Container>
-    </Wrapper>
+            <ImgWrapper>
+              <a href={item.listItem2}>
+                <Image
+                  src={item.image}
+                  className="img"
+                  alt="about-me"
+                  layout="responsive"
+                />
+              </a>
+            </ImgWrapper>
+            <p style={{ padding: "10px 3px" }}>{item.description}</p>
+            <div>{item.madeWith}</div>
+          </div>
+        ))}
+      </Grid>
+    </Container>
+    // </Wrapper>
   );
 }
