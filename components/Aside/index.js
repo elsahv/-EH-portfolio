@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../../public/images/portfolio-pic.jpg";
+import { BsArrowRightCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 import {
   AsideWrapper,
   AsideContainer,
@@ -8,6 +9,7 @@ import {
   TimelineWrapper,
   TimelineDate,
   IntroContent,
+  WebsiteCTA,
 } from "./styled";
 
 const Aside = () => {
@@ -26,12 +28,29 @@ const Aside = () => {
             <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
           </ImageWrapper>
           <IntroContent>
+            <WebsiteCTA>
+              <p className="desktop">
+                All of my featured website projects are listed here.
+                <BsArrowRightCircleFill
+                  style={{
+                    marginLeft: "5px",
+                    marginTop: "5px",
+                    color: "gray",
+                  }}
+                />
+              </p>
+              <p className="mobile">
+                All of my featured website projects are listed below.
+                <BsArrowDownCircleFill
+                  style={{ marginLeft: "5px", marginTop: "15px" }}
+                />
+              </p>
+            </WebsiteCTA>
+            <br />
             <p>
-              Listed below are my featured websites, all currently in progress.
-              <br />I am always looking for opportunities to further my
-              skills... and work with other like minded people in tech. If you
-              would like to contact me, you can reach me{" "}
-              <Link href="/#contact">here.</Link>
+              I am always looking for opportunities to further my skills... and
+              work with other like minded people in tech. If you would like to
+              contact me, you can reach me <Link href="/#contact">here.</Link>
             </p>
           </IntroContent>
         </AsideContainer>

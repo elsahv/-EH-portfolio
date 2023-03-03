@@ -7,6 +7,23 @@ export const IntroContent = styled.div`
   }
 `;
 
+export const WebsiteCTA = styled.div`
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  @media only screen and (max-width: 1024px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+`;
+
 export const AsideWrapper = styled.div`
   grid-area: ls;
   background: #fff;
