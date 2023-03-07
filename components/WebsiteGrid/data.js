@@ -9,7 +9,7 @@ const content = [
     image: ImageOne,
     title: "Laughing Coyote",
     description:
-      "The beginnings of a full stack app: built to assist small business owners with building landing pages and brochure websites.",
+      "Currently a freelancing, artist blogging site. As I learn more, this will be a full stack app: built to assist small business owners with building landing pages and brochure websites.",
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://laughingcoyote.dev",
   },
@@ -18,7 +18,7 @@ const content = [
     image: ImageTwo,
     title: "Writing to Better Health",
     description:
-      "A future web design business and content for dietitians and nutritionists ",
+      "A small blog regarding nutrition and mental wellness. Eventually, this will be a web design business and content for dietitians and nutritionists.",
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://writingtobetterhealth.com",
   },
