@@ -24,7 +24,7 @@ export const Form = styled.form`
   flex-direction: column;
   .input-fields {
     background: #fff;
-    border: solid 2px gray;
+    border: solid 2px #000;
     padding-left: 10px;
     padding-top: 5px;
     color: #000;
@@ -73,7 +73,6 @@ export const ErrorStyles = styled.div`
 
 export const Input = styled.input`
   height: 50px;
-  // border-radius: 5px;
   width: 500px;
 
   @media only screen and (max-width: 820px) {
@@ -85,8 +84,6 @@ export const Input = styled.input`
 `;
 export const Textarea = styled.textarea`
   height: 170px;
-  // border-radius: 5px;
-  // margin: 40px 0;
 `;
 
 export const SuccessMessageStyles = styled.div`

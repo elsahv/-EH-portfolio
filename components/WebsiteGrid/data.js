@@ -32,15 +32,6 @@ const content = [
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://theindoorjungleproject.com",
   },
-  {
-    id: 4,
-    image: ImageFour,
-    title: "The Running Quail",
-    description:
-      "A small survey to gather info for The Running Quail, a full stack app for the small businesses, residents, and tourists located in Morongo Basin area. ",
-    listItem1: "made with:next.js | styled-components | sanity.io",
-    listItem2: "https://therunningquail.com",
-  },
 ];
 
 export default content;

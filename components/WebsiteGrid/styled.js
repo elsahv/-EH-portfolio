@@ -33,6 +33,7 @@ export const ImgWrapper = styled.div`
 
   &:hover {
     opacity: 0.7;
+    // transform: rotate(2deg);
     transition: 1s;
   }
 `;
