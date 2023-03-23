@@ -24,6 +24,7 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
                 </a>
               </ImgWrapper>
               <p style={{ padding: "10px 3px" }}>{item.description}</p>
+
               <div>{item.madeWith}</div>
             </Sq>
           </div>

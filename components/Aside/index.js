@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../../public/images/portfolio-pic.jpg";
+import Tools from "../Tools";
 import { BsArrowRightCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 import {
   AsideWrapper,
@@ -71,6 +72,7 @@ const Aside = () => {
                   in working with other developers to gain team building
                   experience, and build up a network to bounce ideas off of.
                 </p>
+                <Tools />
                 <p>
                   During the last few years, {"I've"} learned how to program
                   websites using javascript and javascript frameworks. {"I've"}{" "}
