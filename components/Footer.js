@@ -13,7 +13,7 @@ export const Footer = styled.footer`
 const FooterSection = () => {
   return (
     <Footer>
-      <p>Copyright &copy; {today.getFullYear()}</p>
+      <p className="">Copyright &copy; {today.getFullYear()}</p>
     </Footer>
   );
 };

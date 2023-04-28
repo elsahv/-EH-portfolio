@@ -65,7 +65,7 @@ const Home = () => {
 
             <section id="contact" className="section-spacing">
               <h2 className="title">Contact</h2>
-              <p style={{ padding: "5px 0px" }}>
+              <p className="" style={{ padding: "5px 0px" }}>
                 Has my portfolio piqued your interest? If so, you can reach me
                 at devdesignsbyelsa@gmail.com, or simply fill out the form
                 below!

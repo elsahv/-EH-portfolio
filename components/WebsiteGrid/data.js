@@ -1,7 +1,6 @@
 import ImageOne from "../../public/images/coyote.png";
 import ImageTwo from "../../public/images/wtbh.png";
-import ImageThree from "../../public/images/jungle.png";
-import ImageFour from "../../public/images/rq.png";
+import ImageThree from "../../public/images/hoveyroofing.png";
 
 const content = [
   {
@@ -26,11 +25,10 @@ const content = [
   {
     id: 3,
     image: ImageThree,
-    title: "The Indoor Jungle Project",
-    description:
-      "A photo album blog, documenting my houseplants and what I've learned so far",
+    title: "HoveyRoofing",
+    description: "A website regarding small business HoveyRoofing",
     listItem1: "made with:next.js | styled-components | sanity.io",
-    listItem2: "https://theindoorjungleproject.com",
+    listItem2: "https://hoveyroofing.com",
   },
 ];
 
