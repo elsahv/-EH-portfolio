@@ -11,7 +11,7 @@ export default function PkgRate({ title, description, madeWith, listItem2 }) {
             <div className="">
               <h2 className="text-3xl pb-1 pl-1">{item.title}</h2>
 
-              <div className="m-y-1 border border-black hover:contrast-50">
+              <div className="m-y-1 border border-black hover:contrast-50 transition duration-150ms delay-300ms">
                 <a href={item.listItem2}>
                   <Image
                     src={item.image}

@@ -14,7 +14,7 @@ const HeaderSection = () => {
           <div className="font-bold  py-3 text-3xl">
             <Link href="/">Elsa Hovey</Link>
           </div>
-          <nav>
+          <nav className="m-1 pr-1">
             <div className="flex list-none pt-1 text-4xl cursor-pointer">
               <Link className="" href="/#contact">
                 <AiOutlineMail />

@@ -2,17 +2,7 @@ import { useRef, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import { RiMailSendLine } from "react-icons/ri"; /* ---- REACT ICONS*/
-import {
-  Wrapper,
-  Form,
-  Label,
-  ErrorStyles,
-  Input,
-  Textarea,
-  SuccessMessageStyles,
-  IconWrapper,
-} from "./contactForm.styled";
+import { RiMailSendLine } from "react-icons/ri";
 
 const ContactForm = () => {
   const [successMessage, setSuccessMessage] = useState(false);
@@ -51,7 +41,7 @@ const ContactForm = () => {
             .then(() => {
               actions.resetForm();
               setSuccessMessage(true);
-              // setTimeout(() => setSuccessMessage(false));
+              setTimeout(() => setSuccessMessage(false));
               console.log("message sent");
             });
         } catch (error) {
@@ -59,37 +49,37 @@ const ContactForm = () => {
         }
       },
     });
+
   return (
-    <Wrapper>
-      <Form ref={form} onSubmit={handleSubmit}>
-        {/* NAME */}
-        <Label htmlFor="name">
+    <div>
+      <form ref={form} onSubmit={handleSubmit} className=" flex flex-col">
+        {/* //* NAME */}
+        <label id="form-label" htmlFor="name">
           {errors.name && touched.name ? (
-            <ErrorStyles>{errors.name}</ErrorStyles>
+            <div className="error-msg">{errors.name}</div>
           ) : (
             ""
           )}
-        </Label>
-        <Input
-          className="input-fields"
+        </label>
+        <input
+          className="form-input"
           value={values.name}
           onBlur={handleBlur}
           onChange={handleChange}
           type="text"
           name="name"
-          placeholder="Enter name"
+          placeholder="enter name"
         />
-
-        {/* EMAIL */}
-        <Label>
+        {/* //*EMAIL */}
+        <label id="form-label" htmlFor="email">
           {errors.email && touched.email ? (
-            <ErrorStyles>{errors.email}</ErrorStyles>
+            <div className="error-msg">{errors.email}</div>
           ) : (
             ""
           )}
-        </Label>
-        <Input
-          className="input-fields"
+        </label>
+        <input
+          className="form-input"
           value={values.email}
           onBlur={handleBlur}
           onChange={handleChange}
@@ -97,17 +87,16 @@ const ContactForm = () => {
           name="email"
           placeholder="Enter email"
         />
-
-        {/* MESSAGE */}
-        <Label>
+        {/* //* MESSAGE */}
+        <label id="form-label" htmlFor="name">
           {errors.message && touched.message ? (
-            <ErrorStyles>{errors.message}</ErrorStyles>
+            <div className="error-msg">{errors.message}</div>
           ) : (
             ""
           )}
-        </Label>
-        <Textarea
-          className="input-fields"
+        </label>
+        <textarea
+          className="form-input"
           value={values.message}
           onBlur={handleBlur}
           onChange={handleChange}
@@ -115,19 +104,27 @@ const ContactForm = () => {
           name="message"
           placeholder="Enter Message"
         />
-
         {/* BUTTON */}
-        <Input className="btn" type="submit" value="send message" />
-        {successMessage && (
-          <SuccessMessageStyles>
-            <IconWrapper>
-              <RiMailSendLine />
-            </IconWrapper>
-            Message Sent! You will be contacted within 1 business day
-          </SuccessMessageStyles>
-        )}
-      </Form>
-    </Wrapper>
+        <input
+          className="form-input bg-orange"
+          id="btn"
+          type="submit"
+          value="send message"
+        />
+        {/* //todo figure out */}
+        <>
+          {successMessage && (
+            <div className="flex justify-center align-middle absolute">
+              <div className="text-lg mr-1">
+                <RiMailSendLine />
+              </div>
+              Message Sent! You will be contacted within 1 business day
+            </div>
+          )}
+        </>
+        {/* //todo end */}
+      </form>
+    </div>
   );
 };
 
