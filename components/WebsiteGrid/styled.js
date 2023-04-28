@@ -1,32 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  padding-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 50px;
-  }
-
-  @media only screen and (max-width: 531px) {
-    padding: 10px;
-  }
-`;
-
-export const Grid = styled.div`
-  // background: teal;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 7em 5em;
-
-  @media only screen and (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    grid-gap: 1em;
-  }
-`;
-
 export const Sq = styled.div`
   h2 {
     font-size: 30px;

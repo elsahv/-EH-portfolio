@@ -12,5 +12,45 @@
 
   }
  
+ 
+  main {
+  background: lightgray;
+ 
+}
+  html {
+    scroll-behavior: smooth;
+  }
+  p{
+    font-size: 17px;
+    line-height: 1.5;
+    opacity: 0.9;
+    @media only screen and (max-width: 1024px) {
+      margin: 1px 0 5px 0;
 
-  
+    }
+  }
+ 
+
+
+  section {
+    padding: 15px 50px;
+    margin: 40px;
+  @media only screen and (max-width: 1024px) {
+  padding: 0;
+  margin: 0px;
+  }
+  }
+  .title {
+    font-size: 32px;
+    padding-top: 100px;
+  @media only screen and (max-width: 1024px) {
+  padding: 0 0 0 5px;
+    font-size: 27px;
+
+  }
+  }
+  .section-spacing {
+    @media only screen and (max-width: 1024px) {
+      padding-top: 65px;
+      }
+  }
