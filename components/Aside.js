@@ -2,27 +2,23 @@ import Link from "next/link";
 import Image from "next/image";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 import Tools from "./Tools";
-import ContactForm from "./ContactForm";
-import { BsArrowRightCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 
 const Aside = () => {
   return (
     <>
-      <div className="bg-white border-black border-b-2 border-r-2">
+      <div className="bg-seasalt border-black border-b-2 border-r-2">
         <div className="flex justify-center flex-col p-5">
-          <p className="">
-            Hi there, {"I'm"} Elsa. All of my featured website projects are
-            listed here.
-          </p>
-          <BsArrowRightCircleFill />
-          <div className="relative pr-[80px] pl-1 my-3">
-            <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
+          <div className="">
+            <span className="font-bold text-lg">Hi there, {"I'm"} Elsa.</span>
+            <p className="block">
+              I am always looking for opportunities to further my skills... and
+              work with other like minded people in tech. If you would like to
+              contact me, you can reach me <Link href="/#contact">here.</Link>
+            </p>
+            <div className="relative 2 pr-[80px] pl-1 my-3 2xl:w-full lg:w-3/4 pt-5">
+              <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
+            </div>
           </div>
-          <p>
-            I am always looking for opportunities to further my skills... and
-            work with other like minded people in tech. If you would like to
-            contact me, you can reach me <Link href="/#contact">here.</Link>
-          </p>
         </div>
 
         <div
@@ -32,7 +28,7 @@ const Aside = () => {
           <div>
             <ul>
               <li>
-                <h2 style={{ paddingBottom: "10px" }}>
+                <h2 className="text-2xl font-bold pb-5">
                   A little bit about me...
                 </h2>
                 <div className="font-bold"> 2020-2023:</div>
@@ -68,7 +64,6 @@ const Aside = () => {
               </li>
             </ul>
             dfds
-            <ContactForm />
           </div>
         </div>
       </div>

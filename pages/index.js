@@ -2,6 +2,7 @@ import Head from "next/head";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
 import WebsiteGrid from "../components/WebsiteGrid";
+import ContactForm from "../components/ContactForm";
 
 const Home = () => {
   return (
@@ -16,12 +17,21 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <div className="grid grid-cols-4">
+        <div className="grid 2xl:grid-cols-4">
           <section className="col-span-1 pr-3">
             <Aside />
           </section>
-          <section className="px-[55px] pt-[55px] bg-white border-b border-l border-black col-span-3">
+          <section className="px-[55px] pt-[55px] bg-seasalt border-b border-l border-black col-span-3">
             <WebsiteGrid />
+            <div className="w-1/2 mt-[150px] p-5">
+              <h2 className="text-3xl">Contact</h2>
+              <p>
+                Has my portfolio piqued your interest....? If so, you can
+                contact me at devdesignsbyelsa@gmail.com Looking forward to
+                hearing from you!
+              </p>
+              <ContactForm />
+            </div>
           </section>
         </div>
       </motion.div>

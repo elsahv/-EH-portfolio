@@ -10,7 +10,7 @@ const HeaderSection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <header className="w-full bg-white relative border border-b-2 border-black flex justify-between p-y-2 pl-3  ">
+        <header className="w-full bg-#f9f9f9 relative border border-b-2 border-black flex justify-between p-y-2 pl-3  ">
           <div className="font-bold  py-3 text-3xl">
             <Link href="/">Elsa Hovey</Link>
           </div>

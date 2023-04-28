@@ -1,16 +1,11 @@
 import Image from "next/image";
-
 import content from "./data";
-import { RiComputerLine } from "react-icons/ri";
 
 const Tools = () => {
   return (
     <>
       <div className="mt-[50px] py-5">
-        <h3>
-          <RiComputerLine style={{ marginRight: "10px" }} />
-          Tech/ Skillset:
-        </h3>
+        <h3 className="text-lg font-bold">Tech/ Skillset:</h3>
         <div className="grid grid-cols-4 gap-1">
           {content.map((item, index) => (
             <div key={index}>

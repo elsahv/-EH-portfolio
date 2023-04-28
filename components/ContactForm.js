@@ -106,8 +106,7 @@ const ContactForm = () => {
         />
         {/* BUTTON */}
         <input
-          className="form-input bg-orange"
-          id="btn"
+          className="form-input bg-teal -200 mt-5 w-1/5"
           type="submit"
           value="send message"
         />
