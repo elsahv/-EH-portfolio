@@ -8,14 +8,14 @@ const Aside = () => {
     <>
       <div className="bg-seasalt border-black border-b-2 border-r-2">
         <div className="flex justify-center flex-col p-5">
-          <div className="">
-            <span className="font-bold text-lg">Hi there, {"I'm"} Elsa.</span>
-            <p className="block">
-              I am always looking for opportunities to further my skills... and
-              work with other like minded people in tech. If you would like to
-              contact me, you can reach me <Link href="/#contact">here.</Link>
+          <div className="bg-teal flex 2xl:flex-col lg:flex-row">
+            <p className=" 2xl:w-full lg:w-1/2 flex items-center">
+              Hi there, {"I'm"} Elsa.I am always looking for opportunities to
+              further my skills... and work with other like minded people in
+              tech. If you would like to contact me, you can reach me{" "}
+              <Link href="/#contact">here.</Link>
             </p>
-            <div className="relative 2 pr-[80px] pl-1 my-3 2xl:w-full lg:w-3/4 pt-5">
+            <div className="relative 2 pr-[80px] pl-1 my-3 pt-5 2xl:w-full lg:w-1/2">
               <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
             </div>
           </div>
@@ -63,7 +63,6 @@ const Aside = () => {
                 </p>
               </li>
             </ul>
-            dfds
           </div>
         </div>
       </div>

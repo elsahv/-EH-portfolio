@@ -17,7 +17,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <div className="grid 2xl:grid-cols-4">
+        <div className="grid 2xl:grid-cols-4 lg:grid-cols-1">
           <section className="col-span-1 pr-3">
             <Aside />
           </section>
