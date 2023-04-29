@@ -7,17 +7,16 @@ const Aside = () => {
   return (
     <>
       <div className="bg-seasalt border-black border-b-2 border-r-2">
-        <div className="flex justify-center flex-col p-5">
-          <div className="bg-teal flex 2xl:flex-col lg:flex-row">
-            <p className=" 2xl:w-full lg:w-1/2 flex items-center">
-              Hi there, {"I'm"} Elsa.I am always looking for opportunities to
-              further my skills... and work with other like minded people in
-              tech. If you would like to contact me, you can reach me{" "}
-              <Link href="/#contact">here.</Link>
-            </p>
-            <div className="relative 2 pr-[80px] pl-1 my-3 pt-5 2xl:w-full lg:w-1/2">
-              <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
-            </div>
+        <div className="p-5">
+          <p className=" 2xl:w-full lg:w-1/2 flex items-center">
+            Hi there, {"I'm"} Elsa.I am always looking for opportunities to
+            further my skills... and work with other like minded people in tech.
+            If you would like to contact me, you can reach me here
+          </p>
+
+          {/* //*SELF IMAGE*/}
+          <div className="relative pl-1 my-3 pt-5 pr-[80px] 2xl:w-full lg:w-1/2 md:w-1/2 sm:mr-[55px]">
+            <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />{" "}
           </div>
         </div>
 

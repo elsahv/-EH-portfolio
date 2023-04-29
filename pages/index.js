@@ -18,10 +18,14 @@ const Home = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <div className="grid 2xl:grid-cols-4 lg:grid-cols-1">
-          <section className="col-span-1 pr-3">
+          {/* //* SECTION 1- MARGIN RIGHT ADJUST */}
+          <section className="col-span-1 pr-3 2xl:mr-1 lg:mr-[155px] md:mr-[155px] sm:mr-0">
             <Aside />
           </section>
-          <section className="px-[55px] pt-[55px] bg-seasalt border-b border-l border-black col-span-3">
+
+          {/* //* SECTION 2- MARGIN RIGHT ADJUST */}
+
+          <section className="px-[55px] pt-[55px] lg:mr-[165px] lg:border-right  bg-seasalt border-b border-l border-black 2xl:col-span-3 lg:col-span-2">
             <WebsiteGrid />
             <div className="w-1/2 mt-[150px] p-5">
               <h2 className="text-3xl">Contact</h2>
