@@ -14,8 +14,8 @@ const Aside = () => {
             If you would like to contact me, you can reach me here
           </p>
           {/* //*SELF IMAGE*/}
-          <div className="relative pl-1 my-3 pt-5 2xl:pr-[80px] lg:pr-[50px] 2xl:w-full lg:w-1/2 md:w- sm:mr-[55px]">
-            <Image src={PortfolioPic} alt="elsa hovey" layout="" />{" "}
+          <div className="relative pl-1 my-3 pt-5 2xl:pr-[80px] lg:pr-[50px] 2xl:w-full lg:w-1/2">
+            <Image src={PortfolioPic} alt="elsa hovey" />
           </div>
         </div>
         <div className="flex justify-center flex-col p-5 border-t-2 border-black">

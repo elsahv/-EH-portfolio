@@ -27,17 +27,19 @@ const Home = () => {
 
           <section
             id="index-margin"
-            className="bg-seasalt px-[55px] 2xl:col-span-3 lg:col-span-2 overflow-auto border-l border-b border-black lg:border-r-2 md:border-r-2 sm:border-r-2"
+            className="bg-seasalt  2xl:col-span-3 lg:col-span-2 overflow-auto border-l border-b border-black lg:border-r-2 md:border-r-2 sm:border-r-2"
           >
-            <WebsiteGrid />
-            <div className="w-1/2 p-5 mt-[150px]">
-              <h2 className="text-3xl">Contact</h2>
-              <p>
-                Has my portfolio piqued your interest....? If so, you can
-                contact me at devdesignsbyelsa@gmail.com Looking forward to
-                hearing from you!
-              </p>
-              <ContactForm />
+            <div className="2xl:px-[100px] py-[20px] lg:pl-5 pr-5">
+              <WebsiteGrid />
+              <div className="w-1/2 p-5 mt-[150px]">
+                <h2 className="text-3xl">Contact</h2>
+                <p>
+                  Has my portfolio piqued your interest....? If so, you can
+                  contact me at devdesignsbyelsa@gmail.com Looking forward to
+                  hearing from you!
+                </p>
+                <ContactForm />
+              </div>
             </div>
           </section>
         </div>
