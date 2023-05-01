@@ -6,7 +6,7 @@ import Tools from "./Tools";
 const Aside = () => {
   return (
     <>
-      <div className="bg-seasalt border-r-2 border-b-2 border-black">
+      <div className="bg-seasalt 2xl:border-r-2 border-b-2 border-black">
         <div className="pt-[40px] p-5 flex 2xl:flex-col lg:flex-row md:flex-row sm:flex flex-col">
           <p className="p-2 2xl:w-full lg:w-1/2 2xl:pt-0 lg:pt-[65px] md:pt-[50px] pr-5 sm:pt-[20px]">
             Hi there, {"I'm"} Elsa.I am always looking for opportunities to
