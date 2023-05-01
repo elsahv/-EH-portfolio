@@ -4,8 +4,8 @@ import content from "./data";
 
 export default function PkgRate({ title, description, madeWith, listItem2 }) {
   return (
-    <div className="flex justify-center flex-col pt-1">
-      <div className="grid 2xl:grid-cols-2 gap-y-10 gap-x-20 xl:grid-cols-1">
+    <div className="flex justify-center flex-col pt-5 bg-seasalt">
+      <div className="2xl:pt-[30px] grid 2xl:grid-cols-2 gap-y-10 gap-x-20 xl:grid-cols-1">
         {content.map((item, index) => (
           <div key={index}>
             <div className="">

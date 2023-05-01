@@ -23,7 +23,6 @@
     opacity: 0.9;
     @media only screen and (max-width: 1024px) {
       margin: 1px 0 5px 0;
-
     }
   }
  
@@ -52,3 +51,16 @@
 .error-msg {
   color: coral;
 }
+
+ 
+@media only screen and (max-width: 1024px) {
+#index-margin{
+  margin-right: 80px;
+}
+}
+
+@media only screen and (max-width: 599px) {
+  #index-margin{
+    margin-right: 0px;
+  }
+  }

@@ -19,13 +19,16 @@ const Home = () => {
       >
         <div className="grid 2xl:grid-cols-4 lg:grid-cols-1">
           {/* //* SECTION 1- MARGIN LEFT ADJUST */}
-          <section className="col-span-1 pr-3 2xl:mr-1 lg:mr-[155px] md:mr-[155px] sm:mr-0">
+          <section id="index-margin" className="col-span-1 2xl:pr-4">
             <Aside />
           </section>
 
           {/* //* SECTION 2- MARGIN RIGHT ADJUST */}
 
-          <section className="px-[55px] 2xl:mr-[0] lg:mr-[165px] lg:border-right bg-seasalt border-b border-l border-black 2xl:col-span-3 lg:col-span-2 overflow-auto">
+          <section
+            id="index-margin"
+            className="bg-seasalt px-[55px] 2xl:col-span-3 lg:col-span-2 overflow-auto border-l border-b border-black lg:border-r-2 md:border-r-2 sm:border-r-2"
+          >
             <WebsiteGrid />
             <div className="w-1/2 p-5 mt-[150px]">
               <h2 className="text-3xl">Contact</h2>

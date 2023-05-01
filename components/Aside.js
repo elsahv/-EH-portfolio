@@ -6,23 +6,18 @@ import Tools from "./Tools";
 const Aside = () => {
   return (
     <>
-      <div className="bg-seasalt border-black border-b-2 border-r-2">
-        {/* //TODO FLEX */}
-
-        <div className="p-5 flex 2xl:flex-col lg:flex-row sm:flex flex-col">
-          <p className=" 2xl:w-full lg:w-1/2 flex items-center">
+      <div className="bg-seasalt border-r-2 border-b-2 border-black">
+        <div className="pt-[40px] p-5 flex 2xl:flex-col lg:flex-row md:flex-row sm:flex flex-col">
+          <p className="p-2 2xl:w-full lg:w-1/2 2xl:pt-0 lg:pt-[65px] md:pt-[50px] pr-5 sm:pt-[20px]">
             Hi there, {"I'm"} Elsa.I am always looking for opportunities to
             further my skills... and work with other like minded people in tech.
             If you would like to contact me, you can reach me here
           </p>
-
           {/* //*SELF IMAGE*/}
-          <div className="relative pl-1 my-3 pt-5 pr-[80px] 2xl:w-full lg:w-1/2 md:w-1/2 sm:mr-[55px]">
+          <div className="relative pl-1 my-3 pt-5 2xl:pr-[80px] lg:pr-[50px] 2xl:w-full lg:w-1/2 md:w- sm:mr-[55px]">
             <Image src={PortfolioPic} alt="elsa hovey" layout="" />{" "}
           </div>
         </div>
-        {/* //*TODO  FLEX END*/}
-
         <div className="flex justify-center flex-col p-5 border-t-2 border-black">
           <div>
             <ul>
