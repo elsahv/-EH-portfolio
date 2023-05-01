@@ -27,7 +27,7 @@ const Home = () => {
 
           <section
             id="index-margin"
-            className="bg-seasalt  2xl:col-span-3 lg:col-span-2 overflow-auto border-l border-b border-black lg:border-r-2 md:border-r-2 sm:border-r-2"
+            className="bg-seasalt 2xl:col-span-3 lg:col-span-2 overflow-auto border-l border-b border-black lg:border-r-2 md:border-r-2 sm:border-r-2"
           >
             <div className="2xl:px-[100px] py-[20px] lg:pl-5 pr-5">
               <WebsiteGrid />
