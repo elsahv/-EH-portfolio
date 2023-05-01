@@ -7,7 +7,9 @@ const Aside = () => {
   return (
     <>
       <div className="bg-seasalt border-black border-b-2 border-r-2">
-        <div className="p-5">
+        {/* //TODO FLEX */}
+
+        <div className="p-5 flex 2xl:flex-col lg:flex-row sm:flex flex-col">
           <p className=" 2xl:w-full lg:w-1/2 flex items-center">
             Hi there, {"I'm"} Elsa.I am always looking for opportunities to
             further my skills... and work with other like minded people in tech.
@@ -16,14 +18,12 @@ const Aside = () => {
 
           {/* //*SELF IMAGE*/}
           <div className="relative pl-1 my-3 pt-5 pr-[80px] 2xl:w-full lg:w-1/2 md:w-1/2 sm:mr-[55px]">
-            <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />{" "}
+            <Image src={PortfolioPic} alt="elsa hovey" layout="" />{" "}
           </div>
         </div>
+        {/* //*TODO  FLEX END*/}
 
-        <div
-          className="flex justify-center flex-col p-5"
-          style={{ borderTop: "solid 2px #000" }}
-        >
+        <div className="flex justify-center flex-col p-5 border-t-2 border-black">
           <div>
             <ul>
               <li>
