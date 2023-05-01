@@ -31,7 +31,7 @@ const Home = () => {
           >
             <div className="2xl:px-[100px] py-[20px] lg:pl-5 pr-5">
               <WebsiteGrid />
-              <div className="w-1/2 p-5 mt-[150px]">
+              <div className="2xl:w-1/2 sm:w-full p-5 mt-[150px]">
                 <h2 className="text-3xl">Contact</h2>
                 <p>
                   Has my portfolio piqued your interest....? If so, you can
