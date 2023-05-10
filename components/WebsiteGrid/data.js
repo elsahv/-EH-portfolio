@@ -8,7 +8,7 @@ const content = [
     image: ImageOne,
     title: "Laughing Coyote",
     description:
-      "Currently a freelancing, artist blogging site. As I learn more, this will be a full stack app: built to assist small business owners with building landing pages and brochure websites.",
+      "Currently a freelancing landing page, revolving around web design service for small businesses and creatives.",
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://laughingcoyote.dev",
   },
@@ -17,7 +17,7 @@ const content = [
     image: ImageTwo,
     title: "Writing to Better Health",
     description:
-      "A small blog regarding nutrition and mental wellness. Eventually, this will be a web design business and content for dietitians and nutritionists.",
+      "A small blog regarding nutrition and mental wellness. I'm currently working towards creating a web design business, and content for dietitians and nutritionists.",
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://writingtobetterhealth.com",
   },
@@ -26,7 +26,7 @@ const content = [
     id: 3,
     image: ImageThree,
     title: "HoveyRoofing",
-    description: "A website regarding small business HoveyRoofing",
+    description: "A website for small business, HoveyRoofing from Redlands, CA",
     listItem1: "made with:next.js | styled-components | sanity.io",
     listItem2: "https://hoveyroofing.com",
   },
