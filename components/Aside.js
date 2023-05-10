@@ -11,7 +11,10 @@ const Aside = () => {
           <p className="p-2 2xl:w-full lg:w-1/2 2xl:pt-0 lg:pt-[65px] md:pt-[50px] pr-5 sm:pt-[20px]">
             Hi there, {"I'm"} Elsa.I am always looking for opportunities to
             further my skills... and work with other like minded people in tech.
-            If you would like to contact me, you can reach me here
+            If you would like to contact me, you can reach me
+            <Link className="px-2 underline" href="/#contact">
+              here
+            </Link>
           </p>
           {/* //*SELF IMAGE*/}
           <div className="relative pl-1 my-3 pt-5 2xl:pr-[80px] lg:pr-[50px] 2xl:w-full lg:w-1/2">
