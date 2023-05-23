@@ -35,6 +35,8 @@ const Aside = () => {
                   in working with other developers to gain team building
                   experience, and build up a network to bounce ideas off of.
                 </p>
+                {/* //todo make visible when site is ready */}
+                {/* <Link href="https://theindoorjungleproject.com">cta</Link> */}
                 <Tools />
                 <p>
                   During the last few years, {"I've"} learned how to program
