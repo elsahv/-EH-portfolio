@@ -18,15 +18,14 @@ export default function WebsiteGrid({
             </h2>
 
             <div className="m-y-1 border border-black drop-shadow-lg hover:contrast-50 transition duration-150ms delay-300ms">
-              <a href={item.listItem2}>
+              <Link href={item.listItem2}>
                 <Image
                   src={item.image}
                   className="img"
                   alt="about-me"
-                  layout="responsive"
                   height="1100px"
                 />
-              </a>
+              </Link>
             </div>
             <p className="mt-1 p-1 2xl:mb-[50px] lg:mb-[100px] md:mb-[100px]">
               {item.description}
