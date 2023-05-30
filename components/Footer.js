@@ -1,3 +1,5 @@
+"use client";
+
 const today = new Date();
 
 const FooterSection = () => {

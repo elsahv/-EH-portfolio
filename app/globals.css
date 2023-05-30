@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+main {
+    background: #CDD1E2;
+  }
+ 
+    p{
+      font-size: 17px;
+      line-height: 1.5;
+      opacity: 0.9;
+      @media only screen and (max-width: 1024px) {
+        margin: 1px 0 5px 0;
+      }
+    }
+   
+  
+   
+  
+  /* //*CONTACT FORM */
+  #form-label {
+    padding:  2px;
+    margin-top: 20px;
+  }
+  
+  /* //*FORM INPUT STYLES */
+  .form-input {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 1px 5px 5px;
+  }
+     
+  
+  
+  #message {
+    height: 150px;
+  }
+  
+  .error-msg {
+    color: coral;
+  }
+  
+   
+  @media only screen and (max-width: 1024px) {
+  #index-margin{
+    margin-right: 80px;
+    border-right:solid 2px #000;
+  
+  }
+  }
+  
+  @media only screen and (max-width: 599px) {
+    #index-margin{
+      margin-right: 10px;
+    }
+    }

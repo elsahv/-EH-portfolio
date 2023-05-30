@@ -11,7 +11,7 @@ const Tools = () => {
             <div key={index}>
               <h4>{item.tech}</h4>
               <div className="w-[55px]">
-                <Image src={item.image} alt="about-me" layout="responsive" />
+                <Image src={item.image} alt="about-me" />
               </div>
             </div>
           ))}
