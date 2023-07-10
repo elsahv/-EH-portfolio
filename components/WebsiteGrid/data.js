@@ -13,18 +13,9 @@ const content = [
     listItem1: "made with:next.js | tailwind | sanity.io",
     listItem2: "https://laughingcoyote.dev",
   },
-  {
-    id: 2,
-    image: ImageTwo,
-    title: "Writing to Better Health",
-    description:
-      "A small blog regarding nutrition and mental wellness. I'm currently working towards creating a web design business, and content for dietitians and nutritionists.",
-    listItem1: "made with:next.js | tailwind | sanity.io",
-    listItem2: "https://writingtobetterhealth.com",
-  },
 
   {
-    id: 3,
+    id: 2,
     image: ImageThree,
     title: "HoveyRoofing",
     description: "A website for small business, HoveyRoofing from Redlands, CA",
@@ -32,7 +23,7 @@ const content = [
     listItem2: "https://hoveyroofing.com",
   },
   {
-    id: 4,
+    id: 3,
     image: ImageFour,
     title: "The Indoor Jungle Project",
     description:
@@ -40,6 +31,15 @@ const content = [
     listItem1: "made with: PHP | Custom WordPress theme | SASS",
     listItem2: "https://theindoorjungleproject.com",
   },
+  // {
+  //   id: 2,
+  //   image: ImageTwo,
+  //   title: "Writing to Better Health",
+  //   description:
+  //     "A small blog regarding nutrition and mental wellness. I'm currently working towards creating a web design business, and content for dietitians and nutritionists.",
+  //   listItem1: "made with:next.js | tailwind | sanity.io",
+  //   listItem2: "https://writingtobetterhealth.com",
+  // },
 ];
 
 export default content;
