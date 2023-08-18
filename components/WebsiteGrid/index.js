@@ -9,7 +9,7 @@ export default function WebsiteGrid({
   listItem2,
 }) {
   return (
-    <div className="flex justify-center flex-col 2xl:pt-5 px-4 lg:px-0 lg:justify-start bg-seasalt">
+    <div className="bg-seasalt flex justify-center flex-col 2xl:pt-5 px-4 lg:px-0 lg:justify-start">
       <div className="pt-[30px] grid 2xl:grid-cols-2 sm:grid-cols-1 2xl:gap-y-10 gap-x-20 lg:gap-auto">
         {content.map((item, index) => (
           <div key={index}>
